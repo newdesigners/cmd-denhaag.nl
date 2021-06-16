@@ -1,5 +1,70 @@
 .header {
+  @apply h-header fixed top-0 w-full overflow-hidden;
+
+  &__container {
+    @apply flex justify-between items-center flex-wrap h-full;
+  }
+
+  &__option {
+    @apply w-full flex;
+  }
+
   &__logo {
-    width: 24px;
+    @apply w-logo py-20;
+  }
+
+  &__aside {
+    @apply flex items-center py-20;
+  }
+
+  &__dark {
+    @apply w-dark-icon mr-20;
+  }
+
+  &__menu {
+    @apply w-menu h-menu bg-blue flex items-center justify-center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 15% 100%);
+  }
+
+  &__navigation {
+    @apply w-full pt-40;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    @apply pb-20;
+  }
+
+  &__link {
+    @apply text-blue text-h3 font-bold font-poppins;
+  }
+
+  &--open {
+    @apply bg-primary h-full max-h-full border-0;
+
+    .header {
+      &__container {
+        @apply content-start;
+      }
+
+      &__logo {
+        &-src {
+          path.logo-text {
+            @apply fill-light;
+          }
+        }
+      }
+
+      &__dark {
+        &-src {
+          path.dark-fill {
+            @apply fill-light;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div
     id="burger-wrapper"
-    class="flex justify-center items-center rounded-full pl-0.625"
+    class="flex justify-center items-center rounded-full pl-3 pb-5"
     :class="classes"
   >
     <tasty-burger-button
@@ -21,9 +21,9 @@ export default {
     return {
       type: "spin",
       isActive: false,
-      size: "s",
-      color: "#2D2D2D",
-      activeColor: "#2D2D2D"
+      size: "xs",
+      color: "#F2F2F2",
+      activeColor: "#F2F2F2F2"
     };
   },
   props: {
@@ -33,12 +33,12 @@ export default {
     onToggle(active) {
       this.$parent.$refs.header.classList.toggle('header--open');
     },
-    onMenu(active) {
-      this.isActive = active;
-    }
   },
 };
 </script>
 
-<style>
+<style scoped>
+  .hamburger:focus, .hamburger:hover {
+    @apply opacity-100;
+  }
 </style>
