@@ -1,0 +1,36 @@
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html > body > #__nuxt > #__layout {
+    @apply overflow-hidden;
+
+    > div {
+      @apply flex flex-col min-h-screen;
+    }
+  }
+
+  *::selection {
+  }
+
+  html {
+    height: -webkit-fill-available;
+  }
+
+  body {
+    @apply relative min-h-screen font-roboto text-body lg:text-body-lg;
+    min-height: -webkit-fill-available;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  }
+}
