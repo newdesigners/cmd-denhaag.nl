@@ -1,5 +1,23 @@
 <template>
   <header ref="header" class="header">
+    <div class="header__top">
+      <div class="container">
+        <ul class="header__list">
+          <li class="header__item" @click="close">
+            <NuxtLink to="voor-bedrijven" class="header__link">Voor bedrijven</NuxtLink>
+          </li>
+          <li class="header__item" @click="close">
+            <NuxtLink to="voor-bedrijven" class="header__link">Huidige studenten</NuxtLink>
+          </li>
+          <li class="header__item" @click="close">
+            <NuxtLink to="/" class="header__link">CMD-IxD</NuxtLink> | <NuxtLink to="/" class="header__link">CMD-UXD</NuxtLink>
+          </li>
+        </ul>
+        <div class="header__dark">
+          <Resources type="dark" classes="header__dark-src" />
+        </div>
+      </div>
+    </div>
     <div class="container header__container">
       <NuxtLink to="/" class="header__logo">
         <Resources type="logo" classes="header__logo-src" />
@@ -16,6 +34,19 @@
         <ul class="header__list">
           <li v-for="item in items" :key="item.text" class="header__item" @click="close">
             <NuxtLink :to="item.link" class="header__link">{{ item.text }}</NuxtLink>
+          </li>
+        </ul>
+      </div>
+      <div class="header__navigation header__navigation--side">
+        <ul class="header__list">
+          <li class="header__item" @click="close">
+            <NuxtLink to="voor-bedrijven" class="header__link">Voor bedrijven</NuxtLink>
+          </li>
+          <li class="header__item" @click="close">
+            <NuxtLink to="voor-bedrijven" class="header__link">Huidige studenten</NuxtLink>
+          </li>
+          <li class="header__item" @click="close">
+            <NuxtLink to="/" class="header__link">CMD-IxD</NuxtLink> | <NuxtLink to="/" class="header__link">CMD-UXD</NuxtLink>
           </li>
         </ul>
       </div>

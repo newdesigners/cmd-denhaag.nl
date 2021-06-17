@@ -21,10 +21,12 @@ module.exports = {
       8: "8px",
       9: "9px",
       10: "10px",
+      15: "15px",
       20: "20px",
       40: "40px",
-      24: "24rem",
+      85: "85px",
       'header': "theme(height.header)",
+      'header-lg': "theme(height.header-lg)",
     },
     extend: {
       container: {
@@ -61,6 +63,7 @@ module.exports = {
         ],
       },
       fontSize: {
+        'small': ['12px', { lineHeight: '18px'}],
         'body': ['14px', { lineHeight: '21px'}],
         'body-lg': ['18px', { lineHeight: '27px'}],
         'h1-home': ['24px', { lineHeight: '36px'}],
@@ -76,11 +79,14 @@ module.exports = {
       },
       width: {
         'logo': '66px',
+        'logo-lg': '145px',
         'menu': '45px',
         'dark-icon': '20px',
+        'initial': 'initial',
       },
       height: {
         'header': '85px',
+        'header-lg': '176px',
         'menu': '45px',
       },
       maxHeight: {

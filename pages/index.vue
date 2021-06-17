@@ -18,6 +18,6 @@ export default {
 
 <style scoped>
   section {
-    @apply pt-header;
+    @apply pt-header lg:pt-header-lg;
   }
 </style>

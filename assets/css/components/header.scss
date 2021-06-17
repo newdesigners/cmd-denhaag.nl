@@ -1,5 +1,35 @@
 .header {
-  @apply h-header fixed top-0 w-full overflow-hidden;
+  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible;
+
+  &__top {
+    @apply hidden w-full lg:block bg-primary;
+
+    .container {
+      @apply flex justify-end py-15 items-center;
+    }
+
+    .header {
+      &__list {
+        @apply flex text-gray pr-20;
+      }
+
+      &__item {
+        @apply text-small font-poppins font-semibold text-gray pr-20 pb-0;
+      }
+
+      &__link {
+        @apply text-small font-poppins font-semibold text-gray;
+      }
+
+      &__dark {
+        &-src {
+          path {
+            @apply fill-light;
+          }
+        }
+      }
+    }
+  }
 
   &__container {
     @apply flex justify-between items-center flex-wrap h-full;
@@ -10,11 +40,11 @@
   }
 
   &__logo {
-    @apply w-logo py-20;
+    @apply w-logo py-20 lg:w-logo-lg;
   }
 
   &__aside {
-    @apply flex items-center py-20;
+    @apply flex items-center py-20 lg:hidden;
   }
 
   &__dark {
@@ -27,15 +57,34 @@
   }
 
   &__navigation {
-    @apply w-full pt-40;
+    @apply w-full pt-40 lg:w-initial lg:pt-0;
+
+    &--side {
+      @apply flex justify-end pt-85 lg:hidden;
+
+      .header {
+        &__item {
+          @apply text-gray pb-15 text-right;
+        }
+
+        &__link {
+          @apply text-gray text-body font-semibold;
+        }
+
+      }
+    }
   }
 
   &__list {
-
+    @apply lg:flex;
   }
 
   &__item {
-    @apply pb-20;
+    @apply pb-20 text-blue text-h3 font-bold font-poppins lg:pb-0 lg:pr-40;
+
+    &:last-of-type {
+      @apply lg:pr-0;
+    }
   }
 
   &__link {
@@ -67,4 +116,8 @@
       }
     }
   }
+}
+
+a.nuxt-link-exact-active {
+  @apply underline lg:no-underline;
 }
