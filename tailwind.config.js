@@ -24,10 +24,14 @@ module.exports = {
       12: "12px",
       15: "15px",
       20: "20px",
+      36: "36px",
       40: "40px",
+      50: "50px",
       85: "85px",
+      105: "105px",
       'header': "theme(height.header)",
       'header-lg': "theme(height.header-lg)",
+      'container': "theme(container.padding)",
     },
     extend: {
       container: {
@@ -36,7 +40,7 @@ module.exports = {
       },
       colors: {
         //Base
-        transparent: 'tran sparent',
+        transparent: 'transparent',
         current: 'currentColor',
         primary: {
           DEFAULT: '#223343',
@@ -86,10 +90,15 @@ module.exports = {
         'dark-icon': '20px',
         'initial': 'initial',
       },
+      maxWidth: {
+        'footer-column': '400px'
+      },
       height: {
         'header': '85px',
         'header-lg': '176px',
         'menu': '45px',
+        'footer-line': '200%',
+        'initial': 'initial',
       },
       maxHeight: {
         'header': '85px',
@@ -97,6 +106,19 @@ module.exports = {
       fill: theme => ({
         'light': '#f2f2f2',
       }),
+      zIndex: {
+        '-10': '-10',
+        '-20': '-20',
+      },
+      skew: {
+      '-4': '-4deg',
+      },
+      inset: {
+        '-4%': '-4%'
+      },
+      transformOrigin: {
+        'full': '100%',
+      },
     }
   },
   variants: {

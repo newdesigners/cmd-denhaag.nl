@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <section class="container footer__container">
-      <div class="footer__subscription">
+      <div class="footer__column footer__subscription">
         <h3 class="footer__title">Schrijf je in</h3>
         <a href="#" target="_blank" class="footer__link">
           <span class="footer__link-text">CMD-IxD</span>
@@ -12,20 +12,24 @@
           <Resources type="share" classes="footer__link-icon" />
         </a>
       </div>
-      <div class="footer__menu">
+      <div class="footer__column footer__menu">
         <h3 class="footer__title">Menu</h3>
         <ul class="footer__menu-list">
-          <li class="footer__menu-item"><NuxtLink to="/over-cmd" class="link footer__link">Over CMD-IxD</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/toekomst" class="link footer__link">Toekomst</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/projecten" class="link footer__link">Projecten</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/verhalen" class="link footer__link">Verhalen</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/campus" class="link footer__link">Campus</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/voor-bedrijven" class="link footer__link">Voor bedrijven</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/huidige-studenten" class="link footer__link">Huidige studenten</NuxtLink></li>
-          <li class="footer__menu-item"><NuxtLink to="/" class="link footer__link"><span class="language">CMD-IxD</span> | <span class="language">CMD-UXD</span></NuxtLink></li>
+          <div class="footer__menu-container">
+            <li class="footer__menu-item"><NuxtLink to="/over-cmd" class="link footer__link">Over CMD-IxD</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/toekomst" class="link footer__link">Toekomst</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/projecten" class="link footer__link">Projecten</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/verhalen" class="link footer__link">Verhalen</NuxtLink></li>
+          </div>
+          <div class="footer__menu-container">
+            <li class="footer__menu-item"><NuxtLink to="/campus" class="link footer__link">Campus</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/voor-bedrijven" class="link footer__link">Voor bedrijven</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/huidige-studenten" class="link footer__link">Huidige studenten</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/" class="link footer__link"><span class="language">CMD-IxD</span> | <span class="language">CMD-UXD</span></NuxtLink></li>
+          </div>
         </ul>
       </div>
-      <div class="footer__social">
+      <div class="footer__column footer__social">
         <h3 class="footer__title">Social media</h3>
         <a href="https://www.instagram.com/dehaagsecmd/" rel="noopener noreferrer" target="_blank" class="footer__social-link">
           <figure class="footer__social-icon">
