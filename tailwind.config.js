@@ -29,6 +29,7 @@ module.exports = {
       50: "50px",
       85: "85px",
       105: "105px",
+      170: "170px",
       'header': "theme(height.header)",
       'header-lg': "theme(height.header-lg)",
       'container': "theme(container.padding)",
@@ -88,6 +89,7 @@ module.exports = {
         'menu': '45px',
         'icon': '16px',
         'dark-icon': '20px',
+        'hand-point': '33px',
         'initial': 'initial',
       },
       maxWidth: {
@@ -104,7 +106,8 @@ module.exports = {
         'header': '85px',
       },
       fill: theme => ({
-        'light': '#f2f2f2',
+        'light': theme('colors.gray'),
+        'blue' : theme('colors.blue'),
       }),
       zIndex: {
         '-10': '-10',

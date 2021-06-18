@@ -10,7 +10,7 @@
 
     .header {
       &__list {
-        @apply flex text-gray pr-20;
+        @apply flex text-gray pr-20 hover:cursor-pointer;
       }
 
       &__item {
@@ -18,7 +18,7 @@
       }
 
       &__link {
-        @apply text-small font-poppins font-semibold text-gray;
+        @apply text-small font-poppins font-semibold text-gray hover:text-yellow;
       }
 
       &__dark {
@@ -48,7 +48,7 @@
   }
 
   &__dark {
-    @apply w-dark-icon mr-20;
+    @apply w-dark-icon mr-20 hover:cursor-pointer;
   }
 
   &__menu {
@@ -88,7 +88,11 @@
   }
 
   &__link {
-    @apply text-blue text-h3 font-bold font-poppins;
+    @apply text-blue text-h3 font-bold font-poppins hover:text-primary;
+
+    &.nuxt-link-exact-active {
+      @apply text-primary;
+    }
   }
 
   &--open {

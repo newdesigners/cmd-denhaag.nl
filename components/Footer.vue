@@ -50,12 +50,22 @@
           <figcaption class="footer__link">/CMDHHS</figcaption>
         </a>
       </div>
+      <aside class="footer__pointer" @click="scrollToTop">
+        <figure class="footer__pointer-figure">
+          <Resources type="hand-point" classes="footer__pointer-src" />
+        </figure>
+      </aside>
     </section>
   </footer>
 </template>
 
 <script>
 export default {
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
+  }
 };
 </script>
 

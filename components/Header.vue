@@ -10,7 +10,7 @@
             <NuxtLink to="voor-bedrijven" class="header__link">Huidige studenten</NuxtLink>
           </li>
           <li class="header__item" @click="close">
-            <NuxtLink to="/" class="header__link">CMD-IxD</NuxtLink> | <NuxtLink to="/" class="header__link">CMD-UXD</NuxtLink>
+            <span class="header__link">CMD-IxD</span> | <span class="header__link">CMD-UXD</span>
           </li>
         </ul>
         <div class="header__dark">
