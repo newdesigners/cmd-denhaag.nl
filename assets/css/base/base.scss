@@ -23,7 +23,7 @@
   }
 
   body {
-    @apply relative min-h-screen font-roboto text-body lg:text-body-lg;
+    @apply relative min-h-screen font-roboto text-body lg:text-body-lg text-primary font-normal;
     min-height: -webkit-fill-available;
   }
 
@@ -33,7 +33,7 @@
   h4,
   h5,
   h6 {
-    @apply font-poppins font-bold;
+    @apply font-poppins font-bold text-primary pb-10;
   }
 
   h1 {

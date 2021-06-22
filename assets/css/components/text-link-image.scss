@@ -1,0 +1,29 @@
+.text-link-image {
+  &__container {
+
+  }
+
+  &__copy {
+    @apply mb-20;
+  }
+
+  &__title {
+
+  }
+
+  &__description {
+    @apply pb-10;
+  }
+
+  &__link {
+    @apply text-h4;
+  }
+
+  &__figure {
+    @apply w-full;
+  }
+
+  &__image {
+    
+  }
+}
