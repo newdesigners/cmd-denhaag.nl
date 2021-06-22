@@ -1,10 +1,10 @@
 .text-link-image {
   &__container {
-
+    @apply md:flex items-center mb-50 md:mb-120;
   }
 
   &__copy {
-    @apply mb-20;
+    @apply mb-20 md:flex-1 md:pr-20 xl:pr-85;
   }
 
   &__title {
@@ -12,7 +12,7 @@
   }
 
   &__description {
-    @apply pb-10;
+    @apply pb-10 lg:pb-20;
   }
 
   &__link {
@@ -20,10 +20,10 @@
   }
 
   &__figure {
-    @apply w-full;
+    @apply w-full md:w-1/2 xl:max-w-text-link-image-image;
   }
 
   &__image {
-    
+
   }
 }

@@ -31,6 +31,7 @@ module.exports = {
       85: "85px",
       100: "100px",
       110: "110px",
+      120: "120px",
       105: "105px",
       170: "170px",
       200: "200px",
@@ -104,6 +105,7 @@ module.exports = {
         'home-intro-title-sm': '53%',
         'home-intro-title-md': '50%',
         'home-intro-title-lg': '690px',
+        'text-link-image-image': '740px',
       },
       height: {
         'header': '85px',
