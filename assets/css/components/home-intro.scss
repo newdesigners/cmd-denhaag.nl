@@ -1,0 +1,25 @@
+.home-intro {
+  &__container {
+    @apply relative h-video lg:h-video-lg mb-110 lg:mb-200; 
+  }
+
+  &__title {
+    @apply text-white font-black text-h1-home lg:text-h1-home-lg px-10 pt-30 max-w-home-intro-title sm:max-w-home-intro-title-sm md:max-w-home-intro-title-md lg:max-w-home-intro-title-lg lg:px-50 lg:pt-100 lg:pr-0;
+  }
+
+  &__background {
+    @apply w-full absolute top-0 left-0 h-full -z-10 mx-auto px-container;
+
+    &-src {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__button {
+    @apply w-home-button absolute -bottom-20 left-1/2 transform -translate-x-1/2 sm:w-initial sm:-bottom-30 lg:-bottom-50 lg:right-50 lg:-translate-x-0 lg:left-unset;
+
+    &-src {
+      @apply w-full; 
+    }
+  }
+}

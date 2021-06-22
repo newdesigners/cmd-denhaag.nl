@@ -24,12 +24,16 @@ module.exports = {
       12: "12px",
       15: "15px",
       20: "20px",
+      30: "30px",
       36: "36px",
       40: "40px",
       50: "50px",
       85: "85px",
+      100: "100px",
+      110: "110px",
       105: "105px",
       170: "170px",
+      200: "200px",
       'header': "theme(height.header)",
       'header-lg': "theme(height.header-lg)",
       'container': "theme(container.padding)",
@@ -91,9 +95,15 @@ module.exports = {
         'dark-icon': '20px',
         'hand-point': '33px',
         'initial': 'initial',
+        'home-button': '260px',
+        'home-video': 'calc(100% - 40px)'
       },
       maxWidth: {
-        'footer-column': '400px'
+        'footer-column': '400px',
+        'home-intro-title': '75%',
+        'home-intro-title-sm': '53%',
+        'home-intro-title-md': '50%',
+        'home-intro-title-lg': '690px',
       },
       height: {
         'header': '85px',
@@ -101,6 +111,8 @@ module.exports = {
         'menu': '45px',
         'footer-line': '200%',
         'initial': 'initial',
+        'video': '250px',
+        'video-lg': '450px',
       },
       maxHeight: {
         'header': '85px',
@@ -117,7 +129,8 @@ module.exports = {
       '-4': '-4deg',
       },
       inset: {
-        '-4%': '-4%'
+        '-4%': '-4%',
+        'unset': 'unset',
       },
       transformOrigin: {
         'full': '100%',
