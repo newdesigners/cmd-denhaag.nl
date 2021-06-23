@@ -1,10 +1,6 @@
 .post {
   @apply px-0 md:px-container mb-50 md:mb-150;
 
-  &__title {
-
-  }
-
   &__intro {
     @apply md:w-7/12 md:max-w-post;
   }

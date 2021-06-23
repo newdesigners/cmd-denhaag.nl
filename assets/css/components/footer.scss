@@ -19,10 +19,6 @@
     @apply lg:w-1/4;
   }
 
-  &__subscription {
-
-  }
-
   &__column {
     @apply xl:max-w-footer-column;
   }
@@ -76,10 +72,6 @@
 
     &-icon {
       @apply pr-10;
-    }
-
-    &-src {
-
     }
   }
 

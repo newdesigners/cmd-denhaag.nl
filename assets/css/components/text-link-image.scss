@@ -7,10 +7,6 @@
     @apply mb-20 md:flex-1 md:pr-20 xl:pr-85;
   }
 
-  &__title {
-
-  }
-
   &__description {
     @apply pb-10 lg:pb-20;
   }
@@ -21,9 +17,5 @@
 
   &__figure {
     @apply w-full md:w-1/2 xl:max-w-text-link-image-image;
-  }
-
-  &__image {
-
   }
 }
