@@ -28,11 +28,13 @@ module.exports = {
       36: "36px",
       40: "40px",
       50: "50px",
+      60: "60px",
       85: "85px",
       100: "100px",
       110: "110px",
       120: "120px",
       105: "105px",
+      150: "150px",
       170: "170px",
       200: "200px",
       'header': "theme(height.header)",
@@ -106,6 +108,7 @@ module.exports = {
         'home-intro-title-md': '50%',
         'home-intro-title-lg': '690px',
         'text-link-image-image': '740px',
+        'post': '846px',
       },
       height: {
         'header': '85px',
@@ -115,6 +118,7 @@ module.exports = {
         'initial': 'initial',
         'video': '250px',
         'video-lg': '450px',
+        'post-image': '560px',
       },
       maxHeight: {
         'header': '85px',
@@ -144,5 +148,7 @@ module.exports = {
       container: [],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

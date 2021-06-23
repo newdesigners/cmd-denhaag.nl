@@ -1,0 +1,31 @@
+.post {
+  @apply px-0 md:px-container mb-50 md:mb-150;
+
+  &__title {
+
+  }
+
+  &__intro {
+    @apply md:w-7/12 md:max-w-post;
+  }
+
+  &__excerpt {
+    @apply pb-20;
+  }
+
+  &__figure {
+    @apply px-0 w-full xl:h-post-image;
+  }
+
+  &__image {
+    @apply w-full xl:h-full object-cover object-top;
+  }
+
+  &__content {
+    @apply md:w-2/3;
+  }
+
+  &__body {
+    @apply max-w-full;
+  }
+}
