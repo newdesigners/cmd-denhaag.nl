@@ -14,11 +14,11 @@
   }
 
   &__figure {
-    @apply px-0 w-full xl:h-post-image;
+    @apply px-0 w-full md:h-post-image;
   }
 
   &__image {
-    @apply w-full xl:h-full object-cover object-top;
+    @apply w-full md:h-full object-cover object-top;
   }
 
   &__content {

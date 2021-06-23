@@ -88,7 +88,8 @@ module.exports = {
         'h3': ['18px', { lineHeight: '27px' }],
         'h3-lg': ['24px', { lineHeight: '36px' }],
         'h4': ['16px', { lineHeight: '24px' }],
-        'h4-lg': ['24px', { lineHeight: '36px' }],
+        'h4-lg': ['18px', { lineHeight: '27px' }],
+        'post-preview': ['22px', { lineHeight: '33px' }],
       },
       width: {
         'logo': '66px',
@@ -99,7 +100,11 @@ module.exports = {
         'hand-point': '33px',
         'initial': 'initial',
         'home-button': '260px',
-        'home-video': 'calc(100% - 40px)'
+        'home-video': 'calc(100% - 40px)',
+        '42%': '42%',
+      },
+      minWidth: {
+        'post-preview': '590px',
       },
       maxWidth: {
         'footer-column': '400px',
@@ -109,6 +114,8 @@ module.exports = {
         'home-intro-title-lg': '690px',
         'text-link-image-image': '740px',
         'post': '846px',
+        'post-preview-image': '305px',
+        'post-preview-copy': '360px',
       },
       height: {
         'header': '85px',
@@ -119,6 +126,8 @@ module.exports = {
         'video': '250px',
         'video-lg': '450px',
         'post-image': '560px',
+        'post-preview-image': '180px',
+        'post-preview-image-lg': '200px',
       },
       maxHeight: {
         'header': '85px',
@@ -132,7 +141,7 @@ module.exports = {
         '-20': '-20',
       },
       skew: {
-      '-4': '-4deg',
+      '-4': '-4deg', 
       },
       inset: {
         '-4%': '-4%',

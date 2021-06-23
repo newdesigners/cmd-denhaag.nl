@@ -1,5 +1,5 @@
 <template>
-  <section class="container text-link-image__container" v-editable="blok">
+  <div class="container text-link-image__container" v-editable="blok">
     <div class="text-link-image__copy">
       <h2 class="text-link-image__title">{{ blok.title }}</h2>
       <p class="text-link-image__description">{{ blok.description }}</p>
@@ -8,7 +8,7 @@
     <figure class="text-link-image__figure">
       <img class="text-link-image__image" :src="blok.image.filename" :alt="blok.image.alt" />
     </figure>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -11,6 +11,14 @@
 
 <script>
 export default {
+  async fetch(context) {
+    // Loading reference data - Stories in our case
+    if(context.store.state.stories.loaded !== '1') {
+      let storiesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: 'draft' });
+      context.store.commit('stories/setStories', storiesRefRes.data.stories);
+      context.store.commit('stories/setLoaded', '1');
+    }
+  },
   data () {
     return {
       story: { content: {} }
@@ -18,13 +26,13 @@ export default {
   },
   mounted () {
     this.$storybridge(() => {
-      const storyblokInstance = new StoryblokBridge()
+      const storyblokInstance = new StoryblokBridge();
  
       // Use the input event for instant update of content
       storyblokInstance.on('input', (event) => {
-        console.log(this.story.content)
+        console.log(this.story.content);
         if (event.story.id === this.story.id) {
-          this.story.content = event.story.content
+          this.story.content = event.story.content;
         }
       })
  
@@ -47,14 +55,14 @@ export default {
     return context.app.$storyapi.get('cdn/stories/home', {
       version: 'draft'
     }).then((res) => {
-      return res.data
+      return res.data;
     }).catch((res) => {
       if (!res.response) {
-        console.error(res)
-        context.error({ statusCode: 404, message: 'Failed to receive content form api' })
+        console.error(res);
+        context.error({ statusCode: 404, message: 'Failed to receive content form api' });
       } else {
-        console.error(res.response.data)
-        context.error({ statusCode: res.response.status, message: res.response.data })
+        console.error(res.response.data);
+        context.error({ statusCode: res.response.status, message: res.response.data });
       }
     })
   }
