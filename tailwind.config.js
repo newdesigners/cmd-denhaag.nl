@@ -102,6 +102,7 @@ module.exports = {
         'home-button': '260px',
         'home-video': 'calc(100% - 40px)',
         '42%': '42%',
+        '24%': '24%',
       },
       minWidth: {
         'post-preview': '590px',
@@ -116,6 +117,9 @@ module.exports = {
         'post': '846px',
         'post-preview-image': '305px',
         'post-preview-copy': '360px',
+        'text': '512px',
+        'testimonial': '281px',
+        'testimonial-lg': '327px',
       },
       height: {
         'header': '85px',

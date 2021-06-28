@@ -1,0 +1,41 @@
+.testimonial {
+  &__container {
+    @apply pt-60;
+  }
+
+  &__copy {
+    @apply pb-20 lg:pb-40;
+  }
+
+  &__description {
+    @apply max-w-text;
+  }
+
+  &__list {
+    @apply flex flex-col items-center sm:flex-wrap sm:flex-row sm:items-start xl:justify-between;
+  }
+
+  &__item {
+    @apply max-w-testimonial sm:mr-7 xl:max-w-testimonial-lg xl:w-24% xl:mr-0;
+  }
+
+  &__figure {
+    @apply w-full mb-10;
+  }
+
+  &__image {
+    @apply w-full h-auto;
+  }
+
+  &__name {
+    @apply pb-10;
+
+    &-title {
+      @apply text-blue pb-10;
+    }
+  }
+
+  &__quote {
+    @apply pb-20 pr-30;
+  }
+}
