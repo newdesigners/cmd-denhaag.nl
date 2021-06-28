@@ -117,7 +117,7 @@ module.exports = {
         'post': '846px',
         'post-preview-image': '305px',
         'post-preview-copy': '360px',
-        'text': '512px',
+        'text': '522px',
         'testimonial': '281px',
         'testimonial-lg': '327px',
       },
