@@ -1,6 +1,6 @@
 .text-link-image {
   &__container {
-    @apply md:flex items-center;
+    @apply md:flex items-center pt-60 lg:pt-100;
   }
 
   &__copy {
