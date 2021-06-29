@@ -23,7 +23,7 @@
   }
 
   body {
-    @apply relative min-h-screen font-roboto text-body lg:text-body-lg text-primary font-normal;
+    @apply relative min-h-screen font-roboto text-body lg:text-body-lg text-primary font-normal bg-gray;
     min-height: -webkit-fill-available;
   }
 

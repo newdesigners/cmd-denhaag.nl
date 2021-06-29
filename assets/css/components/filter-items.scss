@@ -8,12 +8,46 @@
   }
 
   &__filter {
+    @apply pb-30;
+
     &-list {
       @apply flex;
     }
 
     &-item {
       @apply capitalize pr-30;
+    }
+
+    &--active {
+      @apply text-primary;
+    }
+  }
+
+  &__items {
+    clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+    @apply bg-white px-20;
+
+    &-list {
+      @apply pt-40 pb-50;
+    }
+
+    &-item {
+      @apply pb-20; 
+
+      &-title {
+        
+      }
+
+      &-description {
+
+      }
+    }
+
+    &--active {
+    }
+
+    &--hide {
+      @apply hidden;
     }
   }
 }
