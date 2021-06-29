@@ -1,5 +1,5 @@
 .header {
-  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible z-50 bg-white lg:h-initial;
+  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible z-50 bg-gray lg:h-initial;
 
   &__top {
     @apply hidden w-full lg:block bg-primary;

@@ -24,6 +24,7 @@ module.exports = {
       12: "12px",
       15: "15px",
       20: "20px",
+      25: "25px",
       30: "30px",
       36: "36px",
       40: "40px",
@@ -103,6 +104,7 @@ module.exports = {
         'home-video': 'calc(100% - 40px)',
         '42%': '42%',
         '24%': '24%',
+        '31%': '31%',
       },
       minWidth: {
         'post-preview': '590px',
@@ -120,6 +122,7 @@ module.exports = {
         'text': '522px',
         'testimonial': '281px',
         'testimonial-lg': '327px',
+        'filter-items': '260px',
       },
       height: {
         'header': '85px',

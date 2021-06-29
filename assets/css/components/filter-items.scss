@@ -25,29 +25,22 @@
 
   &__items {
     clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
-    @apply bg-white px-20;
+    @apply bg-white px-20 lg:px-40 mb-20;
 
     &-list {
-      @apply pt-40 pb-50;
+      @apply py-50 lg:py-100 flex flex-col items-center sm:flex-row sm:justify-start sm:items-start sm:flex-wrap sm:justify-around lg:justify-start 2xl:justify-around;
     }
 
     &-item {
-      @apply pb-20; 
-
-      &-title {
-        
-      }
-
-      &-description {
-
-      }
-    }
-
-    &--active {
+      @apply pb-20 sm:w-5/12 lg:w-31% lg:mr-40 lg:mr-25 lg:pb-40 max-w-filter-items lg:mb-12;
     }
 
     &--hide {
       @apply hidden;
+    }
+
+    @media screen and (min-width: 768px) {
+      clip-path: polygon(2% 0, 100% 3%, 100% 94%, 0% 100%);
     }
   }
 }

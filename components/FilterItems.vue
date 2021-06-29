@@ -11,7 +11,9 @@
           :key="key"
           :class="{ 'filter-items__filter--active': item === selected  }"
           @click="onClick(item)"
-        >{{ item }}</li>
+        >
+          {{ item }}
+        </li>
       </ul>
     </div>
     <div class="filter-items__items">
@@ -25,6 +27,9 @@
           <p class="filter-items__item-item-description">{{ item.description }}</p>
         </li>
       </ul>
+    </div>
+    <div class="filter-items__link">
+      <NuxtLink class="link" :to="blok.link_url.cached_url">{{ blok.link_text }}</NuxtLink>
     </div>
   </div>
 </template>
@@ -44,7 +49,6 @@ export default {
   },
   methods: {
     onClick(i) {
-      console.log(i );
       this.selected = i;
     },
 	}
