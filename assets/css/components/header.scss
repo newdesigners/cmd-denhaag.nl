@@ -95,7 +95,7 @@
   }
 
   &--open {
-    @apply bg-primary h-full max-h-full border-0;
+    @apply bg-primary h-full max-h-full border-0 lg:bg-gray h-initial;
 
     .header {
       &__container {
@@ -105,7 +105,7 @@
       &__logo {
         &-src {
           path.logo-text {
-            @apply fill-light;
+            @apply fill-light lg:fill-current;
           }
         }
       }

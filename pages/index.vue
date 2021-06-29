@@ -18,6 +18,12 @@ export default {
       context.store.commit('stories/setStories', storiesRefRes.data.stories);
       context.store.commit('stories/setLoaded', '1');
     }
+
+    if(context.store.state.projects.loaded !== '1') {
+      let projectsRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: 'draft' });
+      context.store.commit('projects/setProjects', projectsRefRes.data.stories);
+      context.store.commit('projects/setLoaded', '1');
+    }
   },
   data () {
     return {

@@ -5,9 +5,9 @@
       <p class="featured-post__description">{{ blok.description }}</p>
       <NuxtLink v-if="blok.link_url" :to="blok.link_url.cached_url" class="link featured-post__link">{{ blok.link_text }}</NuxtLink>
     </div>
-    <ul class="featured-post__list" v-if="sortedStories">
+    <ul class="featured-post__list" v-if="sortedProjects">
       <li
-        v-for="article in sortedStories"
+        v-for="article in sortedProjects"
         :key="article._uid"
         class="feature-post__item">
         <PostPreview
@@ -30,18 +30,18 @@ export default {
     }
   },
   computed: {
-    sortedStories() {
+    sortedProjects() {
       // Load reference data/content from store
-      const featuredStories = this.$store.state.stories.stories.filter((story) => {
-        return this.blok.stories.includes(story.uuid);
+      const featuredProjects = this.$store.state.projects.projects.filter((project) => {
+        return this.blok.projects.includes(project.uuid);
       })
  
       // Enable the ordering of the article previews
-      featuredStories.sort((a, b) => {
-        return this.blok.stories.indexOf(a.uuid) - this.blok.stories.indexOf(b.uuid);
+      featuredProjects.sort((a, b) => {
+        return this.blok.projects.indexOf(a.uuid) - this.blok.projects.indexOf(b.uuid);
       })
  
-      return featuredStories;
+      return featuredProjects;
     }
   }
 }
