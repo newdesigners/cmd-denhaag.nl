@@ -141,6 +141,7 @@ module.exports = {
         'post-image': '560px',
         'post-preview-image': '180px',
         'post-preview-image-lg': '200px',
+        'page-intro-media': '200px',
       },
       maxHeight: {
         'header': '85px',

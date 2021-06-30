@@ -1,0 +1,45 @@
+.page-intro {
+  &__container {
+
+  }
+
+  &__title {
+
+  }
+
+  &__content {
+
+  }
+
+  &__paragraph {
+    @apply pb-20;
+  }
+
+  &__play {
+    @apply absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10;
+
+    &-src {
+      @apply w-60;
+    }
+  }
+
+  &__media {
+    @apply relative;
+  }
+
+  &__video {
+    @apply h-page-intro-media w-full;
+
+    &-src {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__button {
+    @apply absolute bottom-0 left-1/2 transform translate-y-1/2 -translate-x-1/2 z-10;
+
+    &-src {
+      @apply w-home-button max-w-none;
+    }
+  }
+}
