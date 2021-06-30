@@ -16,7 +16,7 @@
         <h3 class="footer__title">Menu</h3>
         <ul class="footer__menu-list">
           <div class="footer__menu-container">
-            <li class="footer__menu-item"><NuxtLink to="/over-cmd" class="link footer__link">Over CMD-IxD</NuxtLink></li>
+            <li class="footer__menu-item"><NuxtLink to="/over-cmd-ixd" class="link footer__link">Over CMD-IxD</NuxtLink></li>
             <li class="footer__menu-item"><NuxtLink to="/toekomst" class="link footer__link">Toekomst</NuxtLink></li>
             <li class="footer__menu-item"><NuxtLink to="/projecten" class="link footer__link">Projecten</NuxtLink></li>
             <li class="footer__menu-item"><NuxtLink to="/verhalen" class="link footer__link">Verhalen</NuxtLink></li>

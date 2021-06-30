@@ -14,7 +14,7 @@
       </figure>
     <figure class="page-intro__button">
       <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
-    </figure>
+    </figure> 
     </div>
   </div>
 </template>

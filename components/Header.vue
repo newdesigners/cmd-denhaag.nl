@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       items: [
-        { link: "/over-cmd", text: "Over CMD-IxD" },
+        { link: "/over-cmd-ixd", text: "Over CMD-IxD" },
         { link: "/toekomst", text: "Toekomst" },
         { link: "/projecten", text: "Projecten" },
         { link: "/verhalen", text: "Verhalen" },
