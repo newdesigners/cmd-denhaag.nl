@@ -107,6 +107,7 @@ module.exports = {
         'logo-lg': '145px',
         'menu': '45px',
         'icon': '16px',
+        'check-icon': '16px',
         'dark-icon': '20px',
         'hand-point': '33px',
         'initial': 'initial',
@@ -114,6 +115,7 @@ module.exports = {
         'home-video': 'calc(100% - 40px)',
         '24%': '24%',
         '31%': '31%',
+        '32%': '32%',
         '42%': '42%',
         '45%': '45%',
         '48%': '48%',
@@ -135,6 +137,7 @@ module.exports = {
         'testimonial': '281px',
         'testimonial-lg': '327px',
         'filter-items': '260px',
+        'title-text-list-text': '630px',
         'tabs-list': '645px',
       },
       height: {

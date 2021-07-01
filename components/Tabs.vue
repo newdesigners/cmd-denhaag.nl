@@ -41,7 +41,6 @@
         </div>
       </article>
     </div>
-    <pre>{{ blok }}</pre>
   </div>
 </template>
 

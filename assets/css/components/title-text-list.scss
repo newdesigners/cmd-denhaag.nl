@@ -1,0 +1,57 @@
+.title-text-list {
+  &__container {
+    @apply pt-60 lg:pt-160;
+  }
+
+  &__content {
+    @apply relative;
+  }
+
+  &__title {
+    @apply pb-20;
+  }
+
+  &__paragraph {
+    @apply pb-20 lg:max-w-title-text-list-text lg:pb-40;
+  }
+
+  &__list {
+    @apply sm:px-30 sm:flex sm:flex-wrap justify-between lg:px-60 2xl:px-100;
+
+    &-container {
+      @apply bg-white px-20 py-40 mb-20 lg:mb-5 lg:py-60;
+      clip-path: polygon(0 0, 93% 0, 100% 96%, 0% 100%);
+
+      @media screen and (min-width: 640px) {
+        clip-path: polygon(4% 0, 94% 0, 100% 94%, 0% 100%);
+      }
+    }
+  }
+
+  &__item {
+    @apply pb-40 sm:w-48% lg:w-32%;
+
+    &-title {
+
+    }
+
+    &-list {
+    }
+
+    &-item {
+      @apply flex text-h4 font-semibold mb-10 items-center font-poppins text-primary-light;
+    }
+
+    &-icon {
+      @apply w-check-icon mr-10;
+    }
+  }
+
+  &__hand {
+    @apply hidden lg:block absolute bottom-0 left-1/2 w-hand-point z-10 transform -translate-x-1/2;
+  }
+
+  &__variant {
+    @apply text-blue underline md:text-right;
+  }
+}
