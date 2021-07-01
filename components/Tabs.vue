@@ -26,8 +26,22 @@
             </ul>
           </div>
         </div>
+        <div class="tabs__external">
+          <Resources type="hand-point-right" classes="tabs__hand" />
+          <div class="tabs__links">
+            <a v-if="blok.link_external_url" :href="blok.link_external_url.cached_url" target="_blank" rel="noopener noreferrer" class="link tabs__link">
+              <span>{{ blok.link_external_text }}</span>
+              <Resources type="share" classes="tabs__icon" />
+            </a>
+            <a v-if="blok.link_download_src" :href="blok.link_download_src.filename" target="_blank" rel="noopener noreferrer" class="link tabs__link">
+              <span>{{ blok.link_download_text }}</span>
+              <Resources type="download" classes="tabs__icon" />
+            </a>
+          </div>
+        </div>
       </article>
     </div>
+    <pre>{{ blok }}</pre>
   </div>
 </template>
 

@@ -52,7 +52,7 @@
       </div>
       <aside class="footer__pointer" @click="scrollToTop">
         <figure class="footer__pointer-figure">
-          <Resources type="hand-point" classes="footer__pointer-src" />
+          <Resources type="hand-point-up" classes="footer__pointer-src" />
         </figure>
       </aside>
     </section>

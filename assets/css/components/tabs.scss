@@ -38,12 +38,12 @@
       @apply pb-10 md:flex justify-between lg:pb-20;
 
       &-paragraph {
-        @apply pb-20 w-48%;
+        @apply pb-20 md:w-48%;
       }
     }
 
     &-list {
-      @apply md:flex justify-between;
+      @apply md:flex justify-between mb-20;
 
       &-title {
         @apply lg:pb-20;
@@ -71,6 +71,34 @@
           clip-path: polygon(0 9%, 100% 0, 92% 100%, 4% 90%);
         }
       }
+    }
+  }
+
+  &__external {
+    @apply flex justify-end items-center;
+  }
+
+  &__links {
+    @apply flex flex-col items-end;
+  }
+
+  &__link {
+    @apply flex text-h4;
+
+    &:first-of-type {
+      @apply pb-10;
+    }
+  }
+
+  &__hand {
+    @apply w-80 mr-20 lg:mr-30;
+  }
+
+  &__icon {
+    @apply w-18 ml-12;
+
+    & path {
+      @apply fill-blue;
     }
   }
 }
