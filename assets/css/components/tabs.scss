@@ -1,0 +1,58 @@
+.tabs {
+  &__container {
+    @apply pt-60 lg:pt-150;
+  }
+
+  &__title {
+    @apply lg:pb-20;
+  }
+
+  &__nav {
+    @apply pb-20;
+
+    &-list {
+      @apply flex justify-between sm:justify-start sm:pr-34;
+    }
+
+    &-item {
+      &--active {
+        @apply text-primary;
+      }
+    }
+  }
+  
+  &__section {
+
+  }
+
+  &__content {
+    @apply hidden;
+
+    &--active {
+      @apply block;
+    }
+
+    &-copy {
+      @apply pb-10;
+
+      &-paragraph {
+        @apply pb-20;
+      }
+    }
+
+    &-list {
+      &-left, &-right {
+        @apply bg-white px-20 py-30 mb-10;
+        clip-path: polygon(4% 0, 100% 8%, 98% 91%, 0% 100%);
+      }
+
+      &-item {
+        @apply font-semibold pb-5;
+      }
+
+      &-right {
+        clip-path: polygon(0 9%, 100% 0, 92% 100%, 2% 90%);
+      }
+    }
+  }
+}
