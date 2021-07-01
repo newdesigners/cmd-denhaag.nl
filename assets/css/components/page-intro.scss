@@ -1,8 +1,4 @@
 .page-intro {
-  &__container {
-
-  }
-
   &__title {
     @apply lg:pb-30;
   }
@@ -29,6 +25,14 @@
 
   &__video {
     @apply h-video w-full lg:h-post-image;
+
+    &-src {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__image {
+    @apply h-page-intro-media sm:h-video lg:h-post-image;
 
     &-src {
       @apply w-full h-full object-cover;
