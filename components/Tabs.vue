@@ -1,10 +1,9 @@
 <template>
   <div class="container tabs__container" v-editable="blok">
-    <pre>{{ blok.tabs }}</pre>
     <h1 class="tabs__title">{{ blok.title }}</h1>
     <div class="tabs__nav">
       <ul class="tabs__nav-list">
-        <li class=" link tab__nav-item" v-for="(item, index) in blok.tabs" :key="item._uid" :class="{ 'tabs__nav-item--active': index === selected }" @click="onClick(index)">{{ item.title }}</li>
+        <li class=" link tabs__nav-item" v-for="(item, index) in blok.tabs" :key="item._uid" :class="{ 'tabs__nav-item--active': index === selected }" @click="onClick(index)">{{ item.title }}</li>
       </ul>
     </div>
     <div class="tabs__section">

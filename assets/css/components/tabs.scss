@@ -11,10 +11,12 @@
     @apply pb-20;
 
     &-list {
-      @apply flex justify-between sm:justify-start sm:pr-34;
+      @apply flex justify-between sm:justify-start;
     }
 
     &-item {
+      @apply sm:pr-34 md:pr-40;
+
       &--active {
         @apply text-primary;
       }
@@ -33,25 +35,41 @@
     }
 
     &-copy {
-      @apply pb-10;
+      @apply pb-10 md:flex justify-between lg:pb-20;
 
       &-paragraph {
-        @apply pb-20;
+        @apply pb-20 w-48%;
       }
     }
 
     &-list {
+      @apply md:flex justify-between;
+
+      &-title {
+        @apply lg:pb-20;
+      }
+
       &-left, &-right {
-        @apply bg-white px-20 py-30 mb-10;
+        @apply bg-white px-20 py-30 mb-10 sm:pl-30 md:w-1/2 lg:pl-60 lg:py-60;
         clip-path: polygon(4% 0, 100% 8%, 98% 91%, 0% 100%);
       }
 
       &-item {
-        @apply font-semibold pb-5;
+        @apply font-semibold pb-5 lg:pb-15;
+      }
+
+      &-left {
+        @media screen and (min-width: 768px) {
+          clip-path: polygon(4% 0, 92% 10%, 96% 91%, 0% 100%);
+        }
       }
 
       &-right {
         clip-path: polygon(0 9%, 100% 0, 92% 100%, 2% 90%);
+
+        @media screen and (min-width: 768px) {
+          clip-path: polygon(0 9%, 100% 0, 92% 100%, 4% 90%);
+        }
       }
     }
   }

@@ -133,6 +133,7 @@ module.exports = {
         'testimonial': '281px',
         'testimonial-lg': '327px',
         'filter-items': '260px',
+        'tabs-list': '645px',
       },
       height: {
         'header': '85px',
