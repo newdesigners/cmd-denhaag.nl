@@ -95,7 +95,7 @@
   }
 
   &--open {
-    @apply bg-primary h-full max-h-full border-0 lg:bg-gray h-initial;
+    @apply bg-primary h-full max-h-full border-0 lg:bg-gray lg:h-initial;
 
     .header {
       &__container {

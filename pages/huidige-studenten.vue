@@ -58,7 +58,7 @@ export default {
     // const fullSlug = (context.route.path == '/' || context.route.path == '') ? 'home' : context.route.path
  
     // Load the JSON from the API - loadig the home content (index page)
-    return context.app.$storyapi.get('cdn/stories/verhalen/', {
+    return context.app.$storyapi.get('cdn/stories/huidige-studenten', {
       version: 'draft'
     }).then((res) => {
       return res.data;

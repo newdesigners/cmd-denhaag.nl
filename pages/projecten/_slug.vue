@@ -35,10 +35,10 @@ export default {
   },
   asyncData (context) {
     // Load the JSON from the API
-    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
- 
+    let version = context.query._storyblok || context.isDev ? 'draft' : 'published';
+
     return context.app.$storyapi.get(`cdn/stories/projecten/${context.params.slug}`, {
-      version: version
+      version: 'draft'
     }).then((res) => {
       return res.data
     }).catch((res) => {
