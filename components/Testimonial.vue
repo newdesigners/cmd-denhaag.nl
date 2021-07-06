@@ -7,7 +7,7 @@
     <ul class="testimonial__list">
       <li class="testimonial__item" v-for="quote in blok.testimonials" :key="quote._uid">
         <figure class="testimonial__figure">
-          <img :src="quote.image.filename" :alt="quote.image.alt" class="testimonial__image" />
+          <img v-if="quote.image" :src="quote.image.filename" :alt="quote.image.alt" class="testimonial__image" />
         </figure>
         <h3 class="testimonial__name">{{ quote.name }}</h3>
         <h4 class="testimonial__name-title">{{ quote.title }}</h4>
