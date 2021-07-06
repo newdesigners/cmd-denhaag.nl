@@ -1,0 +1,41 @@
+.list-post {
+  &__container {
+    @apply pt-60 lg:pt-140;
+  }
+
+  &__figure {
+    @apply w-full h-post-preview-image lg:h-post-preview-image-lg;
+  }
+
+  &__image {
+    @apply w-full h-full object-cover;
+  }
+
+  &__list {
+    @apply lg:flex flex-wrap justify-between;
+
+    .feature-post__item {
+      @apply lg:w-49%;
+    }
+
+    .post-preview {
+      @apply lg:min-w-unset;
+    }
+  }
+
+  &__load { 
+    @apply hover:cursor-pointer flex justify-center items-center pt-30;
+    
+    span {
+      @apply mr-10;
+    }
+
+    &-icon {
+      @apply w-chevron-icon;
+
+      path {
+        @apply stroke-blue;  
+      }
+    }
+  }
+}

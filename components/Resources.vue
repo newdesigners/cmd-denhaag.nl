@@ -51,6 +51,11 @@
       <path d="M2.91 5.04L0 7.92 10.182 18 24 2.88 21.09 0 10.183 12.24l-7.273-7.2z" fill="#FFBA00"/>
     </svg>
 
+    <!-- Chevron Down Icon -->
+    <svg v-if="type === 'chevron-down'" :class="classes" viewBox="0 0 26 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.56 1l12.064 12L25 1" stroke="#223343" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
     <!-- Linkedin -->
     <svg v-if="type === 'linkedin'" :class="classes" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2.183 0C.863 0 0 .867 0 2.006 0 3.12.837 4.01 2.132 4.01h.025c1.346 0 2.183-.891 2.183-2.005C4.315.866 3.503 0 2.183 0zM.228 5.596h3.859v11.609H.228V5.596zM13.558 5.324c-2.082 0-3.478 1.956-3.478 1.956V5.596H6.222v11.609h3.858v-6.483c0-.347.025-.693.127-.942.28-.693.914-1.41 1.98-1.41 1.396 0 1.955 1.064 1.955 2.625v6.21H18v-6.656c0-3.566-1.904-5.225-4.442-5.225z" fill="#DF3E64"/>

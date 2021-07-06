@@ -1,5 +1,5 @@
 .post-preview {
-  @apply block mb-20 sm:flex sm:flex-wrap sm:items-center sm:min-w-post-preview;
+  @apply block mb-20 sm:flex sm:flex-wrap sm:min-w-post-preview;
 
   &__figure {
     @apply w-full h-post-preview-image mb-9 sm:max-w-post-preview-image sm:h-post-preview-image-lg sm:pr-20 sm:mb-0;
@@ -14,7 +14,7 @@
   }
 
   &__title {
-    @apply font-roboto text-post-preview pb-10 md:text-h3-lg;
+    @apply font-roboto text-post-preview pb-10 md:text-h3-lg pt-20 lg:pt-25;
   }
 
   &__excerpt {

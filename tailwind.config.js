@@ -42,6 +42,7 @@ module.exports = {
       120: "120px",
       124: "124px",
       130: "130px",
+      140: "140px",
       150: "150px",
       160: "160px",
       170: "170px",
@@ -109,6 +110,7 @@ module.exports = {
         'icon': '16px',
         'check-icon': '16px',
         'dark-icon': '20px',
+        'chevron-icon': '20px',
         'hand-point': '33px',
         'initial': 'initial',
         'home-button': '260px',
@@ -123,9 +125,11 @@ module.exports = {
         '42%': '42%',
         '45%': '45%',
         '48%': '48%',
+        '49%': '49%',
       },
       minWidth: {
         'post-preview': '590px',
+        'unset': 'unset',
       },
       maxWidth: {
         'footer-column': '400px',
@@ -166,6 +170,9 @@ module.exports = {
       fill: theme => ({
         'light': theme('colors.gray'),
         'blue' : theme('colors.blue'),
+      }),
+      stroke: theme => ({
+        'blue': theme('colors.blue'),
       }),
       zIndex: {
         '-10': '-10',

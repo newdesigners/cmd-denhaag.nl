@@ -25,12 +25,12 @@ export default {
       context.store.commit('projects/setLoaded', '1');
     }
   },
-  data () {
+  data() {
     return {
       story: { content: {} }
     }
   },
-  mounted () {
+  mounted() {
     this.$storybridge(() => {
       const storyblokInstance = new StoryblokBridge();
  
@@ -52,7 +52,7 @@ export default {
       })
     })
   },
-  asyncData (context) {
+  asyncData(context) {
     // // This what would we do in real project
     // const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     // const fullSlug = (context.route.path == '/' || context.route.path == '') ? 'home' : context.route.path

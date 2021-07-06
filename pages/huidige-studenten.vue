@@ -11,26 +11,12 @@
 
 <script>
 export default {
-  async fetch(context) {
-    // Loading reference data - Stories in our case
-    if(context.store.state.stories.loaded !== '1') {
-      let storiesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: 'draft' });
-      context.store.commit('stories/setStories', storiesRefRes.data.stories);
-      context.store.commit('stories/setLoaded', '1');
-    }
-
-    if(context.store.state.projects.loaded !== '1') {
-      let projectsRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: 'draft' });
-      context.store.commit('projects/setProjects', projectsRefRes.data.stories);
-      context.store.commit('projects/setLoaded', '1');
-    }
-  },
-  data () {
+  data() {
     return {
       story: { content: {} }
     }
   },
-  mounted () {
+  mounted() {
     this.$storybridge(() => {
       const storyblokInstance = new StoryblokBridge();
  
@@ -52,7 +38,7 @@ export default {
       })
     })
   },
-  asyncData (context) {
+  asyncData(context) {
     // // This what would we do in real project
     // const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     // const fullSlug = (context.route.path == '/' || context.route.path == '') ? 'home' : context.route.path

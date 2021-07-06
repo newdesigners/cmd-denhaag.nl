@@ -6,12 +6,12 @@
  
 <script>
 export default {
-  data () {
+  data() {
     return {
       story: { content: {} }
     }
   },
-  mounted () {
+  mounted() {
     this.$storybridge(() => {
       const storyblokInstance = new StoryblokBridge()
  
@@ -33,7 +33,7 @@ export default {
       })
     })
   },
-  asyncData (context) {
+  asyncData(context) {
     // Load the JSON from the API
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published';
  
