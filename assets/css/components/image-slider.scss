@@ -1,0 +1,33 @@
+.image-slider {
+  &__container {
+    @apply px-0 lg:px-container relative sm:px-container pb-8 pt-60 lg:pt-150;
+  }
+
+  &__item {
+    &-figure {
+      @apply w-full lg:h-image-slider-lg;
+    } 
+
+    &-image {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__dots {
+    @apply absolute z-10 bottom-15 lg:bottom-25 right-0 flex hover:cursor-pointer !important;
+
+    &-indicator {
+      @apply w-slider-indicator h-slider-indicator bg-primary-very-light mr-10;
+    }
+  }
+
+  &__description {
+    @apply text-body font-normal lg:text-h3 font-roboto;
+  }
+
+  .slick-active {
+    .image-slider__dots-indicator {
+      @apply bg-blue w-slider-indicator-active;
+    }
+  }
+}

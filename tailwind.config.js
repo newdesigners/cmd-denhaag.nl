@@ -113,6 +113,8 @@ module.exports = {
         'initial': 'initial',
         'home-button': '260px',
         'home-video': 'calc(100% - 40px)',
+        'slider-indicator': '50px',
+        'slider-indicator-active': '70px',
         '24%': '24%',
         '31%': '31%',
         '32%': '32%',
@@ -152,6 +154,8 @@ module.exports = {
         'post-preview-image': '180px',
         'post-preview-image-lg': '200px',
         'page-intro-media': '200px',
+        'slider-indicator': '5px',
+        'image-slider-lg': '700px',
       },
       maxHeight: {
         'header': '85px',

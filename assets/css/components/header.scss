@@ -90,7 +90,7 @@
     @apply text-blue text-h3 font-bold font-poppins hover:text-primary;
 
     &.nuxt-link-exact-active, &.nuxt-link-active {
-      @apply text-primary;
+      @apply lg:text-primary;
     }
   }
 
