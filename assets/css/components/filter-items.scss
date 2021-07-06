@@ -3,9 +3,26 @@
     @apply pt-60 lg:pt-150;
   }
 
-  &__description {
-    @apply max-w-text pb-30 lg:pb-40;
+  &__content {
+    @apply max-w-text;
   }
+
+  &__copy {
+    @apply sm:flex justify-between items-center;
+  }
+
+  &__description {
+    @apply sm:max-w-filter-items-text pb-30 lg:pb-40;
+  }
+
+  &__illustration {
+    @apply pb-30 sm:pb-0 flex justify-center md:flex-1;
+  }
+
+  &__image {
+    @apply w-filter-items-illustration md:w-filter-items-illustration-lg;
+  }
+
 
   &__filter {
     @apply pb-30;

@@ -1,8 +1,13 @@
 <template>
   <div class="container filter-items__container" v-editable="blok">
     <div class="filter-items__copy">
-      <h1 class="filter-items__title">{{ blok.title }}</h1>
-      <p class="filter-items__description">{{ blok.description }}</p>
+      <div class="filter-items__content">
+        <h1 class="filter-items__title">{{ blok.title }}</h1>
+        <p class="filter-items__description">{{ blok.description }}</p>
+      </div>
+      <figure class="filter-items__illustration">
+        <img v-if="blok.illustration" class="filter-items__image" :src="blok.illustration.filename" :alt="blok.illustration.alt" />
+      </figure>
     </div>
     <div class="filter-items__filter">
       <ul class="filter-items__filter-list">
@@ -28,7 +33,7 @@
         </li>
       </ul>
     </div>
-    <div class="filter-items__link">
+    <div class="filter-items__link" v-if="blok.link_url">
       <NuxtLink class="link" :to="blok.link_url.cached_url">{{ blok.link_text }}</NuxtLink>
     </div>
   </div>
