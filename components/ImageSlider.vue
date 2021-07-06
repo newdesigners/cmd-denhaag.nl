@@ -1,5 +1,8 @@
 <template>
   <section id="image-slider" class="image-slider" v-editable="blok">
+    <div class="container">
+      <h2 class="image-slider__title" v-if="blok.title">{{ blok.title }}</h2>
+    </div>
 		<div class="container image-slider__container">
       <VueSlickCarousel ref="carousel" v-bind="slickOptions" @beforeChange="onBeforeChange">
         <div class="image-slider__item" v-for="slide in blok.slides" :key="slide.id" v-editable="blok">
@@ -15,7 +18,7 @@
       </VueSlickCarousel>
 		</div>
     <div class="container">
-      <h3 class="image-slider__description">{{ blok.description }}</h3>
+      <h3 class="image-slider__description" v-if="blok.description">{{ blok.description }}</h3>
     </div>
   </section> 
 </template>

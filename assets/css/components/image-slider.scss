@@ -1,6 +1,12 @@
 .image-slider {
+  @apply pb-8 pt-60 lg:pt-150;
+  
   &__container {
-    @apply px-0 lg:px-container relative sm:px-container pb-8 pt-60 lg:pt-150;
+    @apply px-0 lg:px-container relative sm:px-container;
+  }
+
+  &__title {
+    @apply pb-20 lg:pb-40;
   }
 
   &__item {
