@@ -4,7 +4,8 @@
       <li
         v-for="article in showedPosts"
         :key="article._uid"
-        class="feature-post__item">
+        class="feature-post__item"
+      >
         <PostPreview
           v-if="article.content"
           :post-link="article.full_slug"
