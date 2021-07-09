@@ -1,0 +1,80 @@
+.accordion {
+  &__container {
+    @apply pt-90 lg:pt-120;
+  }
+
+  &__title {
+    @apply pb-20 lg:pb-36;
+  }
+
+  &__description {
+
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+
+    &-aside {
+      @apply flex items-center justify-between border-b-2 border-yellow hover:cursor-pointer;
+    }
+
+    &-title {
+      @apply py-10;
+    }
+
+    &--active {
+      .accordion {
+        &__article {
+          @apply block border-b-2 border-yellow pb-10;
+        }
+
+        &__item {
+          &-aside {
+            @apply border-0 pb-5;
+          }
+        }
+
+        &__chevron {
+          @apply transform rotate-180;
+        }
+      }
+    }
+  }
+
+  &__article {
+    @apply hidden;
+
+    div {
+      @apply sm:w-11/12;
+  
+      > p {
+        @apply pb-20;
+      }
+
+      h2, h3, h4, h5, h6 {
+        @apply font-semibold
+      }
+
+      ol {
+        @apply list-decimal ml-1rem pb-20;
+      }
+
+      a {
+        @apply text-h3 font-bold font-poppins text-blue relative;
+
+        &::after {
+          content: url('~assets/images/svg/link-icon.svg');
+          @apply pl-10 absolute top-2;
+        }
+      }
+    }
+  }
+
+  &__chevron {
+    @apply w-chevron-icon lg:w-chevron-icon-lg;
+  }
+
+}

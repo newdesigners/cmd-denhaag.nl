@@ -31,7 +31,7 @@
     }
 
     &-icon {
-      @apply w-chevron-icon;
+      @apply w-chevron-icon lg:w-chevron-icon-lg;
 
       path {
         @apply stroke-blue;  

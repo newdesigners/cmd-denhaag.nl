@@ -3,13 +3,13 @@
     <div class="header__top">
       <div class="container">
         <ul class="header__list">
-          <li class="header__item" @click="close">
-            <NuxtLink to="voor-bedrijven" class="header__link">Voor bedrijven</NuxtLink>
+          <li class="header__item" @click="onClose">
+            <NuxtLink to="/voor-bedrijven" class="header__link header__link--side">Voor bedrijven</NuxtLink>
           </li>
-          <li class="header__item" @click="close">
-            <NuxtLink to="voor-bedrijven" class="header__link">Huidige studenten</NuxtLink>
+          <li class="header__item" @click="onClose">
+            <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
           </li>
-          <li class="header__item" @click="close">
+          <li class="header__item" @click="onClose">
             <span class="header__link">CMD-IxD</span> | <span class="header__link">CMD-UXD</span>
           </li>
         </ul>
@@ -32,20 +32,20 @@
       </aside>
       <div class="header__navigation">
         <ul class="header__list">
-          <li v-for="item in items" :key="item.text" class="header__item" @click="close">
+          <li v-for="item in items" :key="item.text" class="header__item" @click="onClose">
             <NuxtLink :to="item.link" class="header__link">{{ item.text }}</NuxtLink>
           </li>
         </ul>
       </div>
       <div class="header__navigation header__navigation--side">
         <ul class="header__list">
-          <li class="header__item" @click="close">
-            <NuxtLink to="voor-bedrijven" class="header__link">Voor bedrijven</NuxtLink>
+          <li class="header__item" @click="onClose">
+            <NuxtLink to="/voor-bedrijven" class="header__link header__link--side">Voor bedrijven</NuxtLink>
           </li>
-          <li class="header__item" @click="close">
-            <NuxtLink to="voor-bedrijven" class="header__link">Huidige studenten</NuxtLink>
+          <li class="header__item" @click="onClose">
+            <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
           </li>
-          <li class="header__item" @click="close">
+          <li class="header__item" @click="onClose">
             <NuxtLink to="/" class="header__link">CMD-IxD</NuxtLink> | <NuxtLink to="/" class="header__link">CMD-UXD</NuxtLink>
           </li>
         </ul>
@@ -68,9 +68,9 @@ export default {
     };
   },
   methods: {
-    close() {
+    onClose() {
       this.$refs.hamburger.onToggle(false);
-    }
+    },
   },
 };
 </script>

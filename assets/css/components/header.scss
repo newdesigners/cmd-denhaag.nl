@@ -92,6 +92,12 @@
     &.nuxt-link-exact-active, &.nuxt-link-active {
       @apply lg:text-primary;
     }
+
+    &--side {
+      &.nuxt-link-exact-active, &.nuxt-link-active {
+        @apply lg:text-yellow;
+      }
+    }
   }
 
   &--open {

@@ -1,5 +1,6 @@
 <template>
   <article class="post" v-editable="blok">
+    <pre>{{ blok.body }}</pre>
     <div class="container post__intro">
       <h1 class="post__title">{{ blok.name }}</h1>
       <p class="post__excerpt">{{ blok.excerpt }}</p>
