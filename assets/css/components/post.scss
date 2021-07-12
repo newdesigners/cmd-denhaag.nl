@@ -2,7 +2,7 @@
   @apply px-0 md:px-container mb-50 md:mb-150;
 
   &__intro {
-    @apply md:w-7/12 md:max-w-post;
+    @apply md:w-2/3 lg:max-w-post;
   }
 
   &__excerpt {
@@ -22,6 +22,6 @@
   }
 
   &__body {
-    @apply max-w-full;
+    @apply lg:max-w-post;
   }
 }

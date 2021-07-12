@@ -77,6 +77,6 @@ export default {
 
 <style scoped>
   section {
-    @apply pt-header lg:pt-header-lg;
+    @apply pt-header lg:pt-40;
   }
 </style>
