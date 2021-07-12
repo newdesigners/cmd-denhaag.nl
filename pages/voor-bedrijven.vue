@@ -54,7 +54,7 @@ export default {
   },
   asyncData(context) {
     // // This what would we do in real project
-    // const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
     // const fullSlug = (context.route.path == '/' || context.route.path == '') ? 'home' : context.route.path
  
     // Load the JSON from the API - loadig the home content (index page)
