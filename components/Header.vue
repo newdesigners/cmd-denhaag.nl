@@ -10,7 +10,7 @@
             <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
           </li>
           <li class="header__item" @click="onClose">
-            <span class="header__link">CMD-IxD</span> | <span class="header__link">CMD-UXD</span>
+            <span class="header__link">CMD (Nederlands)</span> | <span class="header__link">UXD (English)</span>
           </li>
         </ul>
         <div class="header__dark">
@@ -46,7 +46,7 @@
             <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
           </li>
           <li class="header__item" @click="onClose">
-            <NuxtLink to="/" class="header__link">CMD-IxD</NuxtLink> | <NuxtLink to="/" class="header__link">CMD-UXD</NuxtLink>
+            <NuxtLink to="/" class="header__link">CMD (Nederlands)</NuxtLink> | <NuxtLink to="/" class="header__link">UXD (English)</NuxtLink>
           </li>
         </ul>
       </div>

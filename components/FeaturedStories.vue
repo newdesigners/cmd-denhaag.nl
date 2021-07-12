@@ -9,7 +9,7 @@
       <li
         v-for="article in sortedStories"
         :key="article._uid"
-        class="feature-post__item">
+        class="featured-post__item">
         <PostPreview
           v-if="article.content"
           :post-link="article.full_slug"

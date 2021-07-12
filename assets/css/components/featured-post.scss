@@ -11,6 +11,16 @@
     @apply mb-20 lg:w-3/5 mr-60 lg:pt-30 xl:pt-50 xl:w-5/12;
   }
 
+  &__item {
+    &:hover {
+      .post-preview {
+        &__title {
+          @apply text-blue;
+        }
+      }
+    }
+  }
+
   &__link {
     @apply text-h4 lg:text-h4-lg;
   }

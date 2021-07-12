@@ -25,6 +25,16 @@
 
   &__load { 
     @apply hover:cursor-pointer flex justify-center items-center pt-30;
+
+    &:hover {
+      .list-post {
+        &__load {
+          &-icon {
+            @apply stroke-blue;
+          }
+        }
+      }
+    }
     
     span {
       @apply mr-10;
