@@ -152,6 +152,7 @@ module.exports = {
         'filter-items-text': '512px',
         'title-text-list-text': '630px',
         'tabs-list': '645px',
+        'accordion-description': '451px',
       },
       height: {
         'header': '85px',

@@ -8,7 +8,11 @@
   }
 
   &__description {
+    @apply max-w-accordion-description;
 
+    &--link {
+      @apply pb-36;
+    }
   }
 
   &__list {
@@ -16,9 +20,10 @@
   }
 
   &__item {
+    @apply border-b-2 border-yellow;
 
     &-aside {
-      @apply flex items-center justify-between border-b-2 border-yellow hover:cursor-pointer;
+      @apply flex items-center justify-between /*border-b-2 border-yellow*/ hover:cursor-pointer pl-20;
     }
 
     &-title {
@@ -28,7 +33,7 @@
     &--active {
       .accordion {
         &__article {
-          @apply block border-b-2 border-yellow pb-10;
+          @apply block /*border-b-2 border-yellow*/ pb-10;
         }
 
         &__item {
@@ -45,7 +50,7 @@
   }
 
   &__article {
-    @apply hidden;
+    @apply hidden pl-20;
 
     div {
       @apply sm:w-11/12;
@@ -71,10 +76,29 @@
         }
       }
     }
+
+    &-item {
+      @apply md:flex pb-16 md:pb-8;
+    }
+
+    &-link {
+      @apply font-poppins font-bold uppercase inline-flex md:items-center;
+      
+      span {
+        @apply pr-9;
+      }
+    }
+
+    &-icon {
+      @apply w-icon;
+    }
+
+    &-description {
+      @apply md:pl-20;
+    }
   }
 
   &__chevron {
-    @apply w-chevron-icon lg:w-chevron-icon-lg;
+    @apply w-chevron-icon lg:w-chevron-icon-lg mr-20;
   }
-
 }
