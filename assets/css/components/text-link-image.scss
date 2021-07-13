@@ -1,6 +1,16 @@
 .text-link-image {
   &__container {
-    @apply md:flex items-center pt-60 lg:pt-100;
+    @apply flex flex-col md:flex-row items-center pt-60 lg:pt-100;
+
+    &--reverse {
+      @apply flex-col-reverse md:flex-row-reverse;
+
+      .text-link-image {
+        &__copy {
+          @apply pr-0 md:pl-40 xl:pl-124;
+        }
+      }
+    }
   }
 
   &__copy {
