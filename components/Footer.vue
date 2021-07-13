@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <section class="container footer__container">
+    <div class="container footer__container">
       <div class="footer__column footer__subscription">
         <h3 class="footer__title">Schrijf je in</h3>
         <a href="#" target="_blank" class="footer__link">
@@ -55,7 +55,7 @@
           <Resources type="hand-point-up" classes="footer__pointer-src" />
         </figure>
       </aside>
-    </section>
+    </div>
   </footer>
 </template>
 

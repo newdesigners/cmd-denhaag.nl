@@ -1,5 +1,5 @@
 .post {
-  @apply px-0 md:px-container mb-50 md:mb-150;
+  @apply px-0 mb-50 md:mb-150;
 
   &__intro {
     @apply md:w-2/3 lg:max-w-post;
@@ -18,10 +18,18 @@
   }
 
   &__content {
-    @apply md:w-2/3;
+    @apply sm:max-w-full md:w-2/3;
   }
 
   &__body {
     @apply lg:max-w-post;
+  }
+
+  &__read-more {
+    @apply pt-70 lg:pt-150;
+
+    &-title {
+      @apply pb-20;
+    }
   }
 }

@@ -133,6 +133,7 @@ module.exports = {
       },
       minWidth: {
         'post-preview': '590px',
+        'post-preview-copy': '290px',
         'unset': 'unset',
       },
       maxWidth: {

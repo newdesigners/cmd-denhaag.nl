@@ -13,6 +13,21 @@
     <aside class="post__gallery" v-for="slider in blok.gallery" :key="slider._uid">
       <ImageSlider :blok="slider" />
     </aside>
+    <aside class="container post__read-more">
+      <h2 class="post__read-more-title">Lees ook</h2>
+      <ul class="list-post__list" v-if="readMoreProjects">
+      <li
+        v-for="article in readMoreProjects"
+        :key="article._uid"
+        class="featured-post__item">
+        <PostPreview
+          v-if="article.content"
+          :post-link="article.full_slug"
+          :post-content="article.content"
+        />
+      </li>
+    </ul>
+    </aside>
   </article>
 </template>
  
@@ -22,6 +37,14 @@ export default {
     blok: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    readMoreProjects() {
+      // Load reference data/content from store
+      return this.$store.state.projects.projects.filter((project) => {
+        return project.content._uid !== this.blok._uid && project.full_slug !== 'projecten/';
+      }).slice(0, 2);
     }
   }
 }
