@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="postLink" class="post-preview">
+  <NuxtLink :to="`/${ postLink }`" class="post-preview">
     <figure class="post-preview__figure">
       <img :src="postContent.image.filename" :alt="postContent.image.alt" class="post-preview__image">
     </figure>

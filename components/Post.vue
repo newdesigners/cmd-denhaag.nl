@@ -10,6 +10,9 @@
     <div class="container prose lg:prose-lg xl:prose-xl post__content post__body">
       <rich-text-renderer v-if="blok.body" :document="blok.body" />
     </div>
+    <aside class="post__gallery" v-for="slider in blok.gallery" :key="slider._uid">
+      <ImageSlider :blok="slider" />
+    </aside>
   </article>
 </template>
  
