@@ -11,12 +11,7 @@
     </div>
     <div class="filter-items__filter">
       <ul class="filter-items__filter-list">
-        <li class="link filter-items__filter-item"
-          v-for="(item, key) in blok.filters"
-          :key="key"
-          :class="{ 'filter-items__filter--active': item === selected  }"
-          @click="onClick(item)"
-        >
+        <li class="link filter-items__filter-item" v-for="(item, key) in blok.filters" :key="key" :class="{ 'filter-items__filter--active': item === selected  }" @click="onClick(item)">
           {{ item }}
         </li>
       </ul>

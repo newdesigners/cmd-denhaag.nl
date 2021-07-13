@@ -24,13 +24,15 @@
   }
 
   &__load { 
-    @apply hover:cursor-pointer flex justify-center items-center pt-30;
+    @apply flex justify-center items-center pt-30 mx-auto;
 
     &:hover {
       .list-post {
         &__load {
           &-icon {
-            @apply stroke-blue;
+            path {
+              @apply stroke-primary;
+            }
           }
         }
       }

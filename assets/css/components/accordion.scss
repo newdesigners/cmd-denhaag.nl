@@ -15,10 +15,6 @@
     }
   }
 
-  &__list {
-
-  }
-
   &__item {
     @apply border-b-2 border-yellow;
 
@@ -68,7 +64,7 @@
       }
 
       a {
-        @apply text-h3 font-bold font-poppins text-blue relative;
+        @apply text-h3 font-bold font-poppins text-blue relative hover:text-blue;
 
         &::after {
           content: url('~assets/images/svg/link-icon.svg');
@@ -82,10 +78,22 @@
     }
 
     &-link {
-      @apply font-poppins font-bold uppercase inline-flex md:items-center;
+      @apply font-poppins font-bold uppercase inline-flex md:items-center hover:text-blue;
       
       span {
         @apply pr-9;
+      }
+
+      &:hover {
+        .accordion {
+          &__article {
+            &-icon {
+              path {
+                @apply fill-blue;
+              }
+            }
+          }
+        }
       }
     }
 

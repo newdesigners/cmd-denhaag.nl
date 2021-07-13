@@ -144,7 +144,8 @@ module.exports = {
         'text-link-image-image': '740px',
         'post': '846px',
         'post-preview-image': '305px',
-        'post-preview-copy': '360px',
+        'post-preview-copy': '290px',
+        'post-preview-copy-xl': '360px',
         'text': '522px',
         'testimonial': '281px',
         'testimonial-lg': '327px',
@@ -178,6 +179,7 @@ module.exports = {
       }),
       stroke: theme => ({
         'blue': theme('colors.blue'),
+        'primary': theme('colors.primary'),
       }),
       zIndex: {
         '-10': '-10',

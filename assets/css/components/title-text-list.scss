@@ -52,6 +52,6 @@
   }
 
   &__variant {
-    @apply text-blue underline md:text-right;
+    @apply text-blue underline md:text-right hover:cursor-pointer hover:text-primary;
   }
 }
