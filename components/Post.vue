@@ -17,10 +17,7 @@
       <h2 class="post__read-more-title">Lees ook</h2>
       <ul class="list-post__list" v-if="readMorePosts">
         <li
-          v-for="article in readMorePosts"
-          :key="article.uuid"
-          class="featured-post__item">
-          <pre>{{article.content.image}}</pre>
+          v-for="article in readMorePosts" :key="article.uuid" class="featured-post__item">
           <PostPreview
             v-if="article.content"
             :post-link="article.full_slug"
