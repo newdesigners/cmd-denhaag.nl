@@ -155,6 +155,10 @@ module.exports = {
         'title-text-list-text': '630px',
         'tabs-list': '645px',
         'accordion-description': '451px',
+        'image-slider-text-image': '470px',
+        'image-slider-text-illustration': '280px',
+        'image-slider-text-copy': '320px',
+        'image-slider-text-figure': '1000px',
       },
       height: {
         'header': '85px',
