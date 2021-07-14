@@ -1,32 +1,33 @@
 <template>
   <article class="post" v-editable="blok">
     <div class="container post__intro">
-      <h1 class="post__title">{{ blok.name }}</h1>
-      <p class="post__excerpt">{{ blok.excerpt }}</p>
+      <h1 class="post__title">{{ blok.content.name }}</h1>
+      <p class="post__excerpt">{{ blok.content.excerpt }}</p>
     </div>
     <figure class="container post__figure">
-      <img class="post__image" v-if="blok.image" :src="blok.image.filename" alt="" />
+      <img class="post__image" v-if="blok.content.image" :src="blok.content.image.filename" :alt="blok.content.image.alt" />
     </figure>
     <div class="container prose lg:prose-lg xl:prose-xl post__content post__body">
-      <rich-text-renderer v-if="blok.body" :document="blok.body" />
+      <rich-text-renderer v-if="blok.content.body" :document="blok.content.body" />
     </div>
-    <aside class="post__gallery" v-for="slider in blok.gallery" :key="slider._uid">
+    <aside class="post__gallery" v-for="slider in blok.content.gallery" :key="slider._uid">
       <ImageSlider :blok="slider" />
     </aside>
     <aside class="container post__read-more">
       <h2 class="post__read-more-title">Lees ook</h2>
-      <ul class="list-post__list" v-if="readMoreProjects">
-      <li
-        v-for="article in readMoreProjects"
-        :key="article._uid"
-        class="featured-post__item">
-        <PostPreview
-          v-if="article.content"
-          :post-link="article.full_slug"
-          :post-content="article.content"
-        />
-      </li>
-    </ul>
+      <ul class="list-post__list" v-if="readMorePosts">
+        <li
+          v-for="article in readMorePosts"
+          :key="article.uuid"
+          class="featured-post__item">
+          <pre>{{article.content.image}}</pre>
+          <PostPreview
+            v-if="article.content"
+            :post-link="article.full_slug"
+            :post-content="article.content"
+          />
+        </li>
+      </ul>
     </aside>
   </article>
 </template>
@@ -40,11 +41,20 @@ export default {
     }
   },
   computed: {
-    readMoreProjects() {
-      // Load reference data/content from store
-      return this.$store.state.projects.projects.filter((project) => {
-        return project.content._uid !== this.blok._uid && project.full_slug !== 'projecten/';
-      }).slice(0, 2);
+    readMorePosts() {
+      const type = this.$route.fullPath.substring(1).split('/')[0];
+ 
+      if(type === 'projecten') {
+        return this.$store.state.projects.projects.filter((p) => {
+          return p.uuid !== this.blok.uuid && p.full_slug !== 'projecten/';
+        }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
+      }
+
+      if(type === 'verhalen') {
+        return this.$store.state.stories.stories.filter((p) => {
+          return p.uuid !== this.blok.uuid && p.full_slug !== 'verhalen/';
+        }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
+      }
     }
   }
 }

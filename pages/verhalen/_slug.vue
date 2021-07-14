@@ -1,11 +1,25 @@
 <template>
   <section>
-    <Post :blok="story.content"/>
+    <Post :blok="story"/>
   </section>
 </template>
  
 <script>
 export default {
+  async fetch(context) {
+    // Loading reference data - Stories in our case
+    if(context.store.state.stories.loaded !== '1') {
+      let storiesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: 'draft' });
+      context.store.commit('stories/setStories', storiesRefRes.data.stories);
+      context.store.commit('stories/setLoaded', '1');
+    }
+
+    if(context.store.state.projects.loaded !== '1') {
+      let projectsRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: 'draft' });
+      context.store.commit('projects/setProjects', projectsRefRes.data.stories);
+      context.store.commit('projects/setLoaded', '1');
+    }
+  },
   data() {
     return {
       story: { content: {} }
