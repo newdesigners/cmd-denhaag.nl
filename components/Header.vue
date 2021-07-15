@@ -59,7 +59,6 @@ export default {
     },
     setVariant(v) {
       this.$store.commit('variants/setVariant', v);
-      console.log(this.$store.state.variants.variant);
     }
   },
   computed: {
@@ -69,7 +68,7 @@ export default {
     mainRoutes() {
       if(this.$store.state.variants.variant === 'IXD') {
         return [
-          { link: "/over-cmd-ixd", text: "Over CMD-IxD" },
+          { link: "/cmd", text: "Over CMD" },
           { link: "/toekomst", text: "Toekomst" },
           { link: "/projecten", text: "Projecten" },
           { link: "/verhalen", text: "Verhalen" },
