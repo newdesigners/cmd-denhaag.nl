@@ -63,8 +63,8 @@ export default {
     fallback: true,
     routes: function (callback) {
       const token = process.env.STORYBLOK_SPACE_TOKEN;
-      const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
-
+      const version = process.env.NODE_ENV !== 'production' ? 'draft' : 'published';
+      console.log(version);
       let cache_version = 0;  
       let toIgnore = ['home', 'en/settings', 'uxd/home'];
       
