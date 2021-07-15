@@ -53,19 +53,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      items: [
-        { link: "/over-cmd-ixd", text: "Over CMD-IxD" },
-        { link: "/toekomst", text: "Toekomst" },
-        { link: "/projecten", text: "Projecten" },
-        { link: "/verhalen", text: "Verhalen" },
-        { link: "/campus", text: "Campus"},
-      ]
-    };
-  },
-  mounted() {
-  },
   methods: {
     onClose() {
       this.$refs.hamburger.onToggle(false);

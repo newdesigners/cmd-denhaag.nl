@@ -63,10 +63,10 @@ export default {
     fallback: true,
     routes: function (callback) {
       const token = process.env.STORYBLOK_SPACE_TOKEN;
-      const version = 'draft';
+      const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
 
       let cache_version = 0;  
-      let toIgnore = ['home', 'en/settings'];
+      let toIgnore = ['home', 'en/settings', 'uxd/home'];
       
        // other routes that are not in Storyblok with their slug.
       let routes = ['/'] // adds / directly
