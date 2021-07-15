@@ -1,6 +1,6 @@
 <template>
   <div class="container text-link-image__container" :class="{ 'text-link-image__container--reverse': blok.reverse }" v-editable="blok">
-    <div class="text-link-image__copy">
+    <div class="text-link-image__test">
       <h2 class="text-link-image__title">{{ blok.title }}</h2>
       <p class="text-link-image__description">{{ blok.description }}</p>
       <NuxtLink v-if="blok.link_url" :to="blok.link_url.cached_url" class="link text-link-image__link">{{ blok.link_text }}</NuxtLink>
