@@ -19,6 +19,10 @@
 
       &__link {
         @apply text-small font-poppins font-semibold text-gray hover:text-yellow;
+
+        &--active {
+          @apply text-yellow;
+        }
       }
 
       &__dark {
@@ -69,6 +73,10 @@
 
         &__link {
           @apply text-gray text-body font-semibold;
+
+          &--active {
+            @apply text-yellow;
+          }
         }
       }
     }
@@ -89,14 +97,20 @@
   &__link {
     @apply text-blue text-h3 font-bold font-poppins hover:text-primary;
 
-    &.nuxt-link-exact-active, &.nuxt-link-active {
+    &.nuxt-link-exact-active {
       @apply lg:text-primary;
     }
 
     &--side {
-      &.nuxt-link-exact-active, &.nuxt-link-active {
-        @apply lg:text-yellow;
+      @apply text-white hover:text-yellow;
+
+      &.nuxt-link-exact-active {
+        @apply no-underline lg:text-yellow;
       }
+    }
+
+    &--active {
+      @apply text-yellow;
     }
   }
 

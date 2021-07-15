@@ -14,14 +14,15 @@ export default {
   async fetch(context) {
     // Loading reference data - Stories in our case
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
+
     if(context.store.state.stories.loaded !== '1') {
-      let storiesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: version });
+      let storiesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/stories/', version: version });
       context.store.commit('stories/setStories', storiesRefRes.data.stories);
       context.store.commit('stories/setLoaded', '1');
     }
 
     if(context.store.state.projects.loaded !== '1') {
-      let projectsRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: version });
+      let projectsRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/projects/', version: version });
       context.store.commit('projects/setProjects', projectsRefRes.data.stories);
       context.store.commit('projects/setLoaded', '1');
     }
@@ -59,7 +60,7 @@ export default {
     // const fullSlug = (context.route.path == '/' || context.route.path == '') ? 'home' : context.route.path
  
     // Load the JSON from the API - loadig the home content (index page)
-    return context.app.$storyapi.get('cdn/stories/over-cmd-ixd', {
+    return context.app.$storyapi.get('cdn/stories/uxd/about-uxd', {
       version: version
     }).then((res) => {
       return res.data;
