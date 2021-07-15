@@ -9,8 +9,8 @@
           <li class="header__item" @click="onClose">
             <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
           </li>
-          <li class="header__item" @click="onClose">
-            <span class="header__link">CMD (Nederlands)</span> | <span class="header__link">UXD (English)</span>
+          <li class="header__item">
+            <NuxtLink to="/" class="header__link header__link--side" :class="{'header__link--active': variant === 'IXD'}" @click.native="setVariant('IXD')">CMD (Nederlands)</NuxtLink> | <NuxtLink to="/uxd" class="header__link header__link--side" :class="{'header__link--active': variant === 'UXD'}" @click.native="setVariant('UXD')">UXD (English)</NuxtLink>
           </li>
         </ul>
         <div class="header__dark">
@@ -32,21 +32,18 @@
       </aside>
       <div class="header__navigation">
         <ul class="header__list">
-          <li v-for="item in items" :key="item.text" class="header__item" @click="onClose">
+          <li v-for="item in mainRoutes" :key="item.text" class="header__item" @click="onClose">
             <NuxtLink :to="item.link" class="header__link">{{ item.text }}</NuxtLink>
           </li>
         </ul>
       </div>
       <div class="header__navigation header__navigation--side">
         <ul class="header__list">
-          <li class="header__item" @click="onClose">
-            <NuxtLink to="/voor-bedrijven" class="header__link header__link--side">Voor bedrijven</NuxtLink>
+          <li v-for="item in sideRoutes" :key="item.text" class="header__item" @click="onClose">
+            <NuxtLink :to="item.link" class="header__link header__link--side">{{ item.text }}</NuxtLink>
           </li>
-          <li class="header__item" @click="onClose">
-            <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
-          </li>
-          <li class="header__item" @click="onClose">
-            <NuxtLink to="/" class="header__link">CMD (Nederlands)</NuxtLink> | <NuxtLink to="/" class="header__link">UXD (English)</NuxtLink>
+          <li class="header__item">
+            <NuxtLink to="/" class="header__link header__link--side" :class="{'header__link--active': variant === 'IXD'}" @click.native="setVariant('IXD')">CMD (Nederlands)</NuxtLink> | <NuxtLink to="/uxd" class="header__link header__link--side" :class="{'header__link--active': variant === 'UXD'}" @click.native="setVariant('UXD')">UXD (English)</NuxtLink>
           </li>
         </ul>
       </div>
@@ -67,11 +64,69 @@ export default {
       ]
     };
   },
+  mounted() {
+  },
   methods: {
     onClose() {
       this.$refs.hamburger.onToggle(false);
     },
+    setVariant(v) {
+      this.$store.commit('variants/setVariant', v);
+      console.log(this.$store.state.variants.variant);
+    }
   },
+  computed: {
+    variant() {
+      return this.$store.state.variants.variant;
+    },
+    mainRoutes() {
+      if(this.$store.state.variants.variant === 'IXD') {
+        return [
+          { link: "/over-cmd-ixd", text: "Over CMD-IxD" },
+          { link: "/toekomst", text: "Toekomst" },
+          { link: "/projecten", text: "Projecten" },
+          { link: "/verhalen", text: "Verhalen" },
+          { link: "/campus", text: "Campus"},
+        ]
+      }
+
+      if(this.$store.state.variants.variant === 'UXD') {
+        return [
+          { link: "/uxd/about-uxd", text: "About UXD" },
+          { link: "/uxd/future", text: "Future" },
+          { link: "/uxd/projects", text: "Porjects" },
+          { link: "/uxd/stories", text: "Stories" },
+          { link: "/uxd/campus", text: "Campus"},
+        ]
+      }
+    },
+    sideRoutes() {
+      if(this.$store.state.variants.variant === 'IXD') {
+        return [
+          { link: "/voor-bedrijven", text: "Voor bedrijven" },
+          { link: "/huidige-studenten", text: "Huidige studenten" },
+        ]
+      }
+
+      if(this.$store.state.variants.variant === 'UXD') {
+        return [
+          { link: "/uxd/for-companies", text: "For companies" },
+          { link: "/uxd/current-students", text: "Current students" },
+        ]
+      }
+    },
+    homeRoutes() {
+      if(this.$store.state.variants.variant === 'IXD') {
+        return '/';
+      }
+
+      if(this.$store.state.variants.variant === 'UXD') {
+        return '/uxd';
+      }
+
+      return '/';
+    }
+  }
 };
 </script>
 
