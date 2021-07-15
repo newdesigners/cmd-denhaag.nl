@@ -1,7 +1,7 @@
 <template>
   <section id="image-slider-text" class="image-slider-text" v-editable="blok">
 		<div class="container image-slider-text__container" v-if="blok.slides.length > 0">
-      <VueSlickCarousel ref="carousel" v-bind="slickOptions" @beforeChange="onBeforeChange">
+      <VueSlickCarousel ref="carousel" v-bind="slickOptions">
         <template #customPaging="page">
           <div class="link image-slider-text__dots-indicator">{{ titles[page] }}</div>
         </template>
