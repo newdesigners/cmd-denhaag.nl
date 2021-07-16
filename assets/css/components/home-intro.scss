@@ -11,7 +11,7 @@
     @apply w-full absolute top-0 left-0 h-full -z-10 mx-auto px-container;
 
     &-src {
-      @apply w-full h-full object-cover;
+      @apply w-full h-full object-cover object-top;
     }
   }
 
