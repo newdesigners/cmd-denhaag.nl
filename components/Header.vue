@@ -3,11 +3,8 @@
     <div class="header__top">
       <div class="container">
         <ul class="header__list">
-          <li class="header__item" @click="onClose">
-            <NuxtLink to="/voor-bedrijven" class="header__link header__link--side">Voor bedrijven</NuxtLink>
-          </li>
-          <li class="header__item" @click="onClose">
-            <NuxtLink to="/huidige-studenten" class="header__link header__link--side">Huidige studenten</NuxtLink>
+          <li class="header__item" v-for="item in sideRoutes" :key="item.text" @click="onClose">
+            <NuxtLink :to="item.link" class="header__link header__link--side">{{ item.text }}</NuxtLink>
           </li>
           <li class="header__item">
             <NuxtLink to="/" class="header__link header__link--side" :class="{'header__link--active': variant === 'IXD'}" @click.native="setVariant('IXD')">CMD (Nederlands)</NuxtLink> | <NuxtLink to="/uxd" class="header__link header__link--side" :class="{'header__link--active': variant === 'UXD'}" @click.native="setVariant('UXD')">UXD (English)</NuxtLink>
@@ -19,7 +16,7 @@
       </div>
     </div>
     <div class="container header__container">
-      <NuxtLink to="/" class="header__logo">
+      <NuxtLink :to="homeRoutes" class="header__logo">
         <Resources type="logo" classes="header__logo-src" />
       </NuxtLink>
       <aside class="header__aside">
@@ -80,7 +77,7 @@ export default {
         return [
           { link: "/uxd/about-uxd", text: "About UXD" },
           { link: "/uxd/future", text: "Future" },
-          { link: "/uxd/projects", text: "Porjects" },
+          { link: "/uxd/projects", text: "Projects" },
           { link: "/uxd/stories", text: "Stories" },
           { link: "/uxd/campus", text: "Campus"},
         ]

@@ -40,7 +40,7 @@
   }
 
   &__link {
-    @apply text-primary-light flex items-center font-poppins pb-10 text-h4 lg:text-h4-lg font-semibold lg:text-h4 hover:text-blue;
+    @apply text-primary-light flex items-center font-poppins pb-10 text-h4 lg:text-h4-lg font-semibold lg:text-h4 hover:text-blue hover:cursor-pointer;
   
     &-text {
       @apply pr-12;

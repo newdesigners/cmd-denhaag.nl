@@ -14,7 +14,6 @@ export default {
   async fetch(context) {
     // Loading reference data - Stories in our case
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
-
     if(context.store.state.stories.loaded !== '1') {
       let storiesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: version });
       context.store.commit('stories/setStories', storiesRefRes.data.stories);
