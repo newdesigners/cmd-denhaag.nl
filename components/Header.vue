@@ -65,7 +65,7 @@ export default {
     mainRoutes() {
       if(this.$store.state.variants.variant === 'IXD') {
         return [
-          { link: "/cmd", text: "Over CMD" },
+          { link: "/over-cmd", text: "Over CMD" },
           { link: "/toekomst", text: "Toekomst" },
           { link: "/projecten", text: "Projecten" },
           { link: "/verhalen", text: "Verhalen" },
