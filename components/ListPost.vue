@@ -38,11 +38,23 @@ export default {
   },
   mounted() {
       if(this.blok.type === 'projects') {
-        this.posts = this.$store.state.projects.projects.filter(p => p.full_slug !== 'projecten/');
+        if(this.$store.state.variants.variant === 'IXD') {
+          this.posts = this.$store.state.projects.projects.filter(p => p.full_slug !== 'projecten/');
+        }
+
+        if(this.$store.state.variants.variant === 'UXD') {
+          this.posts = this.$store.state.projects.projects.filter(p => p.full_slug !== 'uxd/projects/');
+        }
       }
 
       if(this.blok.type === 'stories') {
-        this.posts = this.$store.state.stories.stories.filter(p => p.full_slug !== 'verhalen/')
+        if(this.$store.state.variants.variant === 'IXD') {
+          this.posts = this.$store.state.stories.stories.filter(p => p.full_slug !== 'verhalen/');
+        }
+        
+        if(this.$store.state.variants.variant === 'UXD') {
+          this.posts = this.$store.state.stories.stories.filter(p => p.full_slug !== 'uxd/stories/');
+        }
       }
   },
   methods: {
