@@ -66,7 +66,13 @@ export default {
       const version = process.env.NODE_ENV !== 'production' ? 'draft' : 'published';
 
       let cache_version = 0;  
-      let toIgnore = ['home','en/settings', 'uxd/home', '/uxd/footer'];
+      let toIgnore = [
+        'home',
+        'en/settings',
+        'uxd/home',
+        'footer',
+        'uxd/footer'
+      ];
       
        // other routes that are not in Storyblok with their slug.
       let routes = ['/']; // adds / directly

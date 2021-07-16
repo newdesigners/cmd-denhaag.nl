@@ -5,7 +5,7 @@
         <h3 class="footer__title" v-if="footer">{{ footer.title }}</h3>
         <ul class="footer__links" v-if="footer">
           <li v-for="link in footer.links" :key="link.id">
-            <a :href="link.cached_url" target="_blank" class="footer__link">
+            <a :href="link.link.cached_url" target="_blank" class="footer__link">
               <span class="footer__link-text">{{ link.link_text }}</span>
               <Resources type="share" classes="footer__link-icon" />
             </a>
@@ -51,6 +51,10 @@
         </figure>
       </aside>
     </div>
+    <figure class="container footer__logo">
+      <Resources v-if="this.$store.state.variants.variant === 'IXD'" type="hhs-logo-nl" classes="footer__logo-src" />
+      <Resources v-if="this.$store.state.variants.variant === 'UXD'" type="hhs-logo-en" classes="footer__logo-src" />
+    </figure>
   </footer>
 </template>
 

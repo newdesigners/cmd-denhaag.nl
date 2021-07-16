@@ -19,6 +19,14 @@
     @apply lg:w-1/4;
   }
 
+  &__logo {
+    @apply px-40 pb-20;
+
+    &-src {
+      @apply max-w-footer-logo;
+    }
+  }
+
   &__column {
     @apply xl:max-w-footer-column;
   }

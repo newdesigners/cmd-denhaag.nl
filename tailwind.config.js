@@ -159,6 +159,7 @@ module.exports = {
         'image-slider-text-illustration': '280px',
         'image-slider-text-copy': '320px',
         'image-slider-text-figure': '1000px',
+        'footer-logo': '147px',
       },
       height: {
         'header': '85px',
