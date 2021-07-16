@@ -5,7 +5,7 @@
         <h3 class="footer__title" v-if="footer">{{ footer.title }}</h3>
         <ul class="footer__links" v-if="footer">
           <li v-for="link in footer.links" :key="link.id">
-            <a :href="link.link.cached_url" target="_blank" class="footer__link">
+            <a :href="link.link.cached_url" rel="noopener noreferrer" target="_blank" class="footer__link">
               <span class="footer__link-text">{{ link.link_text }}</span>
               <Resources type="share" classes="footer__link-icon" />
             </a>
