@@ -10,7 +10,7 @@
         <Resources type="play" classes="page-intro__play-src" />
       </figure>
       <figure class="page-intro__video">
-        <video class="page-intro__video-src" ref="video" v-if="blok.video" :src="blok.video.filename"></video>
+        <video class="page-intro__video-src" ref="video" v-if="blok.video" :src="blok.video.filename" preload="metadata"></video>
       </figure>
     <figure class="page-intro__button">
       <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
@@ -27,10 +27,22 @@ export default {
       required: true
     }
   },
+  mounted() {
+    let video = this.$refs.video;
+    video.addEventListener(
+      'fullscreenchange',
+        function(event) {
+            if (!document.fullscreenElement) {
+              video.pause();
+            }
+        },
+        false
+    );
+  },
   methods: {
     open() {
       let video = this.$refs.video;
-
+      
       if(video.requestFullscreen) {
         video.requestFullscreen();
         video.play();
