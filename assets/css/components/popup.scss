@@ -1,0 +1,39 @@
+.popup {
+  @apply bg-cover w-screen h-screen bg-no-repeat fixed top-0 left-0 z-50 overflow-y-scroll sm:flex items-center;
+  background-image: url('~/assets/images/popup-bg.png');
+  
+  &__container {
+
+  }
+
+  &__title {
+    @apply text-white text-center pt-20 pb-8 font-black md:text-h1 lg:text-h1-lg max-w-popup-title mx-auto;
+  }
+
+  &__select {
+    @apply flex flex-col items-center justify-center sm:flex-row sm:pt-50;
+  }
+
+  &__option {
+    @apply w-popup-border h-popup-border bg-contain bg-no-repeat mb-10 flex items-center justify-center md:w-popup-border-lg md:h-popup-border-lg;
+    background-image: url('~/assets/images/svg/pop-up-border-left.svg');
+    
+    &-title {
+      @apply text-white font-semibold;
+    }
+
+    &-description {
+      @apply text-white;
+    }
+
+    &--right {
+      background-image: url('~/assets/images/svg/pop-up-border-right.svg');
+
+      @apply sm:ml-50
+    }
+  }
+
+  &__copy {
+    @apply p-16 md:p-36;
+  }
+}

@@ -123,6 +123,8 @@ module.exports = {
         'slider-indicator-active': '70px',
         'filter-items-illustration': '40px',
         'filter-items-illustration-lg': '80px',
+        'popup-border': '230px',
+        'popup-border-lg': '312px',
         '24%': '24%',
         '31%': '31%',
         '32%': '32%',
@@ -160,6 +162,7 @@ module.exports = {
         'image-slider-text-copy': '320px',
         'image-slider-text-figure': '1000px',
         'footer-logo': '147px',
+        'popup-title': '680px',
       },
       height: {
         'header': '85px',
@@ -175,6 +178,8 @@ module.exports = {
         'page-intro-media': '200px',
         'slider-indicator': '5px',
         'image-slider-lg': '700px',
+        'popup-border': '230px',
+        'popup-border-lg': '312px',
       },
       maxHeight: {
         'header': '85px',
