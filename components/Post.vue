@@ -40,7 +40,6 @@ export default {
   computed: {
     readMorePosts() {
       const type = this.$route.fullPath.substring(1).split('/')[0];
- 
       if(type === 'projecten') {
         return this.$store.state.projects.projects.filter((p) => {
           return p.uuid !== this.blok.uuid && p.full_slug !== 'projecten/';

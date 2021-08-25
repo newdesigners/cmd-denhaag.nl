@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <Popup /> -->
+    <Popup />
     <component
       v-if="story.content.component"
       :key="story.content._uid"

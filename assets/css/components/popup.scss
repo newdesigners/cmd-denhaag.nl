@@ -15,9 +15,13 @@
   }
 
   &__option {
-    @apply w-popup-border h-popup-border bg-contain bg-no-repeat mb-10 flex items-center justify-center md:w-popup-border-lg md:h-popup-border-lg;
+    @apply w-popup-border h-popup-border bg-contain bg-no-repeat mb-10 flex items-center justify-center md:w-popup-border-lg md:h-popup-border-lg hover:cursor-pointer;
     background-image: url('~/assets/images/svg/pop-up-border-left.svg');
     
+    &:hover {
+      background-image: url('~/assets/images/svg/pop-up-border-left-fill.svg');
+    }
+
     &-title {
       @apply text-white font-semibold;
     }
@@ -27,9 +31,12 @@
     }
 
     &--right {
+      @apply sm:ml-50;
       background-image: url('~/assets/images/svg/pop-up-border-right.svg');
 
-      @apply sm:ml-50
+      &:hover {
+        background-image: url('~/assets/images/svg/pop-up-border-right-fill.svg');
+      }
     }
   }
 
