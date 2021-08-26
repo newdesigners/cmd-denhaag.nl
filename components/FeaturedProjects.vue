@@ -32,9 +32,19 @@ export default {
   computed: {
     sortedProjects() {
       // Load reference data/content from store
-      const featuredProjects = this.$store.state.projects.projects.filter((project) => {
-        return this.blok.projects.includes(project.uuid);
-      })
+      let featuredProjects = [];
+
+      if(this.$store.state.variants.variant === 'IXD') {
+        featuredProjects = this.$store.state.projects.projectsIXD.filter((project) => {
+          return this.blok.projects.includes(project.uuid);
+        })
+      }
+
+      if(this.$store.state.variants.variant === 'UXD') {
+        featuredProjects = this.$store.state.projects.projectsUXD.filter((project) => {
+          return this.blok.projects.includes(project.uuid);
+        })
+      }
  
       // Enable the ordering of the article previews
       featuredProjects.sort((a, b) => {

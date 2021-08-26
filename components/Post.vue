@@ -39,16 +39,30 @@ export default {
   },
   computed: {
     readMorePosts() {
-      const type = this.$route.fullPath.substring(1).split('/')[0];
-      if(type === 'projecten') {
-        return this.$store.state.projects.projects.filter((p) => {
+      //const type = this.$route.fullPath.substring(1).split('/')[0];
+      const type = this.$route.fullPath.substring(1).split('/');
+      console.log(type);
+      if(type.includes('projecten')) {
+        return this.$store.state.projects.projectsIXD.filter((p) => {
           return p.uuid !== this.blok.uuid && p.full_slug !== 'projecten/';
         }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
       }
 
-      if(type === 'verhalen') {
-        return this.$store.state.stories.stories.filter((p) => {
+      if(type.includes('projects')) {
+        return this.$store.state.projects.projectsUXD.filter((p) => {
+          return p.uuid !== this.blok.uuid && p.full_slug !== 'uxd/projects/';
+        }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
+      }
+
+      if(type.includes('verhalen')) {
+        return this.$store.state.stories.storiesIXD.filter((p) => {
           return p.uuid !== this.blok.uuid && p.full_slug !== 'verhalen/';
+        }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
+      }
+
+      if(type.includes('stories')) {
+        return this.$store.state.stories.storiesUXD.filter((p) => {
+          return p.uuid !== this.blok.uuid && p.full_slug !== 'uxd/stories/';
         }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
       }
     }

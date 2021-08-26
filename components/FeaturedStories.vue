@@ -32,10 +32,20 @@ export default {
   computed: {
     sortedStories() {
       // Load reference data/content from store
-      const featuredStories = this.$store.state.stories.stories.filter((story) => {
-        return this.blok.stories.includes(story.uuid);
-      })
- 
+      let featuredStories = [];
+
+      if(this.$store.state.variants.variant === 'IXD') {
+        featuredStories = this.$store.state.stories.storiesIXD.filter((story) => {
+          return this.blok.stories.includes(story.uuid);
+        })
+      }
+
+      if(this.$store.state.variants.variant === 'UXD') {
+        featuredStories = this.$store.state.stories.storiesUXD.filter((story) => {
+          return this.blok.stories.includes(story.uuid);
+        })
+      }
+
       // Enable the ordering of the article previews
       featuredStories.sort((a, b) => {
         return this.blok.stories.indexOf(a.uuid) - this.blok.stories.indexOf(b.uuid);

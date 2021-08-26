@@ -20,7 +20,14 @@
           </div>
           <div class="footer__menu-container">
             <li class="footer__menu-item" v-for="item in columnThree" :key="item.text"><NuxtLink :to="item.link" class="link footer__link">{{ item.text }}</NuxtLink></li>
-            <li class="footer__menu-item"><NuxtLink to="/" class="link footer__link"><span class="language">CMD (Nederlands)</span></NuxtLink><NuxtLink to="/" class="link footer__link"><span class="language">UXD (English)</span></NuxtLink></li>
+            <li class="footer__menu-item footer__menu-item--language">
+              <NuxtLink to="/" class="link footer__link" :class="{'footer__link--active': variant === 'IXD' }" @click.native="setVariant('IXD')">
+                <span class="language">CMD (Nederlands)</span>
+              </NuxtLink>
+              <span class="footer__menu-divider">|</span>
+              <NuxtLink to="/uxd" class="link footer__link" :class="{'footer__link--active': variant === 'UXD' }" @click.native="setVariant('UXD')">
+                <span class="language">UXD (English)</span>
+              </NuxtLink></li>
           </div>
         </ul>
       </div>
@@ -75,9 +82,15 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+    setVariant(v) {
+      this.$store.commit('variants/setVariant', v);
     }
   },
   computed: {
+    variant() {
+      return this.$store.state.variants.variant;
+    },
     footer() {
       if(this.$store.state.variants.variant === 'IXD') {
         return this.$store.state.footer.footerIXD[0].content;

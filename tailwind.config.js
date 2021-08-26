@@ -139,7 +139,7 @@ module.exports = {
         'unset': 'unset',
       },
       maxWidth: {
-        'footer-column': '400px',
+        'footer-column': '450px',
         'home-intro-title': '75%',
         'home-intro-title-sm': '53%',
         'home-intro-title-md': '50%',
