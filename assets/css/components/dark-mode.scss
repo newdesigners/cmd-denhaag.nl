@@ -80,15 +80,18 @@
   }
 
   .accordion {
-
     &__chevron {
       path {
         @apply stroke-yellow;
       }
     }
 
-    &__item {
-      
+    &__article {
+      &-icon {
+        path {
+          @apply fill-gray-2;
+        }
+      }
     }
   }
 }

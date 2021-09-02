@@ -19,7 +19,7 @@
     @apply border-b-2 border-yellow;
 
     &-aside {
-      @apply flex items-center justify-between /*border-b-2 border-yellow*/ hover:cursor-pointer pl-20;
+      @apply flex items-center justify-between hover:cursor-pointer pl-20;
     }
 
     &-title {
@@ -29,7 +29,7 @@
     &--active {
       .accordion {
         &__article {
-          @apply block /*border-b-2 border-yellow*/ pb-10;
+          @apply block pb-10;
         }
 
         &__item {
