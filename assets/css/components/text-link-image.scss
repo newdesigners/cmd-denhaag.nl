@@ -18,7 +18,11 @@
   }
 
   &__description {
-    @apply pb-10 lg:pb-20;
+    @apply pb-10 lg:pb-20 dark:text-gray-2;
+  }
+
+  &__title {
+    @apply dark:text-gray-2;
   }
 
   &__link {
