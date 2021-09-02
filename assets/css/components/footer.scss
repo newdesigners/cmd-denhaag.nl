@@ -3,7 +3,7 @@
 
   &:before {
     content: '';
-    @apply block absolute left-0 right-0 bottom-0 h-footer-line -z-20 top-0 transform -skew-y-6 bg-gray-2 origin-full origin-top-left lg:-skew-y-3;  
+    @apply block absolute left-0 right-0 bottom-0 h-footer-line -z-20 top-0 transform -skew-y-6 bg-gray-2 origin-full origin-top-left lg:-skew-y-3 dark:bg-primary-lightest;  
   }
 
   &__container {
@@ -43,10 +43,10 @@
         @apply flex text-primary-lightest lg:block xl:flex;
 
         .footer__link {
-          @apply text-primary-lightest;
+          @apply text-primary-lightest dark:text-gray-2;
 
           &--active {
-            @apply text-yellow;
+            @apply text-yellow dark:text-blue;
           }
         }
       }
@@ -66,7 +66,7 @@
   }
 
   &__link {
-    @apply text-primary-light flex items-center font-poppins pb-10 text-h4 lg:text-h4-lg font-semibold lg:text-h4 hover:text-blue hover:cursor-pointer;
+    @apply text-primary-light flex items-center font-poppins pb-10 text-h4 lg:text-h4-lg font-semibold lg:text-h4 hover:text-blue dark:hover:text-blue hover:cursor-pointer;
   
     &-text {
       @apply pr-12;
