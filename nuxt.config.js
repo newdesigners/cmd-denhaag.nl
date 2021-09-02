@@ -47,6 +47,7 @@ export default {
         cacheProvider: 'memory'
       }
     ],
+    'cookie-universal-nuxt',
   ],
   privateRuntimeConfig: {
     storyBlokSpaceToken: process.env.STORYBLOK_SPACE_TOKEN,
@@ -54,6 +55,10 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  router: {
+    middleware: 'variant'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

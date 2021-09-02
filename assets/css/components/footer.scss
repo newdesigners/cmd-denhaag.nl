@@ -38,6 +38,24 @@
       @apply lg:flex;
     }
 
+    &-item {
+      &--language {
+        @apply flex text-primary-lightest lg:block xl:flex;
+
+        .footer__link {
+          @apply text-primary-lightest;
+
+          &--active {
+            @apply text-yellow;
+          }
+        }
+      }
+    }
+
+    &-divider {
+      @apply font-poppins text-h4 px-2 lg:hidden xl:inline;
+    }
+
     &-container {
       @apply pr-36;
     }

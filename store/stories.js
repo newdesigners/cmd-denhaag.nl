@@ -1,11 +1,15 @@
 export const state = () => ({
-  stories: [],
+  storiesIXD: [],
+  storiesUXD: [],
   loaded: '0',
 })
  
 export const mutations = {
-  setStories(state, entries) {
-    state.stories = entries;
+  setStoriesIXD(state, entries) {
+    state.storiesIXD = entries;
+  },
+  setStoriesUXD(state, entries) {
+    state.storiesUXD = entries;
   },
   setLoaded(state, loaded) {
     state.loaded = loaded;

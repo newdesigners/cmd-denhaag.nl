@@ -1,11 +1,15 @@
 export const state = () => ({
-  projects: [],
+  projectsIXD: [],
+  projectsUXD: [],
   loaded: '0',
 })
  
 export const mutations = {
-  setProjects(state, entries) {
-    state.projects = entries;
+  setProjectsIXD(state, entries) {
+    state.projectsIXD = entries;
+  },
+  setProjectsUXD(state, entries) {
+    state.projectsUXD = entries;
   },
   setLoaded(state, loaded) {
     state.loaded = loaded;
