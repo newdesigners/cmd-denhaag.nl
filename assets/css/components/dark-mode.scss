@@ -56,4 +56,18 @@
       }
     }
   }
+
+  .image-slider {
+    &-text {
+      &__container {
+        .slick {
+          &-active {
+            .link {
+              @apply text-yellow;
+            }
+          }
+        }
+      }
+    }
+  }
 }
