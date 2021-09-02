@@ -27,7 +27,8 @@
           </div>
         </div>
         <div class="tabs__external">
-          <Resources type="hand-point-right" classes="tabs__hand" />
+          <Resources type="hand-point-right" classes="tabs__hand dark:hidden" />
+          <Resources type="hand-point-right-dark" classes="tabs__hand hidden dark:block" />
           <div class="tabs__links">
             <a v-if="blok.link_external_url" :href="blok.link_external_url.cached_url" target="_blank" rel="noopener noreferrer" class="link tabs__link">
               <span>{{ blok.link_external_text }}</span>

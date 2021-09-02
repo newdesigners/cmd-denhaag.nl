@@ -44,4 +44,16 @@
       }
     }
   }
+
+  .tabs {
+    &__link {
+      &:hover {
+        .tabs__icon {
+          path {
+            @apply fill-yellow;
+          }
+        }
+      }
+    }
+  }
 }
