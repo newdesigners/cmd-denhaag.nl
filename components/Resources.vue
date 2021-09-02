@@ -13,7 +13,7 @@
 
     <!-- Dark mode Toggle icon -->
     <svg v-if="type === 'dark'" :class="classes" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path class="dark-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4 12a8 8 0 018-8v16a8 8 0 01-8-8zm8 12C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12z" fill="#E9EBEC"/>
+      <path class="dark-fill" fill-rule="evenodd" clip-rule="evenodd" d="M4 12a8 8 0 018-8v16a8 8 0 01-8-8zm8 12C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12z" fill="#223343"/>
     </svg>
 
     <svg v-if="type === 'dark-dark'" :class="classes" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

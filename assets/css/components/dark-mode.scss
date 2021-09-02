@@ -2,4 +2,46 @@
   body {
     @apply bg-primary;
   }
+
+  .header {
+    &__dark {
+      &-src {
+        path {
+          @apply fill-yellow;
+        }
+      }
+    }
+
+    &--open {
+      .header {
+        &__dark {
+          &-src {
+            path {
+              @apply fill-yellow;
+            }
+          }
+        }
+
+        &__logo {
+          &-src {
+           path.logo-text {
+             @apply fill-light;
+           } 
+          }
+        }
+      }
+    }
+
+    &__top {
+      .header {
+        &__dark {
+          &-src {
+            path {
+              @apply fill-yellow;
+            }
+          }
+        }
+      }
+    }
+  }
 }

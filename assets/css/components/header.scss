@@ -9,6 +9,14 @@
     }
 
     .header {
+      &__dark {
+        &-src {
+          path {
+            @apply fill-light;
+          }
+        }
+      }
+
       &__list {
         @apply flex text-gray pr-20 hover:cursor-pointer;
       }
@@ -87,17 +95,17 @@
   }
 
   &__link {
-    @apply text-blue text-h3 font-bold font-poppins hover:text-primary;
+    @apply text-blue text-h3 font-bold font-poppins hover:text-primary dark:hover:text-gray-2;
 
     &.nuxt-link-exact-active {
-      @apply lg:text-primary;
+      @apply lg:text-primary dark:lg:text-gray-2;
     }
 
     &--side {
-      @apply text-white hover:text-yellow;
+      @apply text-white hover:text-yellow dark:hover:text-yellow;
 
       &.nuxt-link-exact-active {
-        @apply no-underline lg:text-yellow;
+        @apply no-underline lg:text-yellow dark:lg:text-yellow;
       }
     }
 
