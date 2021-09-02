@@ -78,4 +78,17 @@
       }
     }
   }
+
+  .accordion {
+
+    &__chevron {
+      path {
+        @apply stroke-yellow;
+      }
+    }
+
+    &__item {
+      
+    }
+  }
 }

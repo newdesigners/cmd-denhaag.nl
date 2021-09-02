@@ -28,9 +28,9 @@ export default {
       let projectsRefResIXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: version });
       let projectsRefResUXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/projects/', version: version });
 
-      context.store.commit('stories/setProjectsIXD', projectsRefResIXD.data.stories);
-      context.store.commit('stories/setProjectsUXD', projectsRefResUXD.data.stories);
-      context.store.commit('stories/setLoaded', '1');
+      context.store.commit('projects/setProjectsIXD', projectsRefResIXD.data.stories);
+      context.store.commit('projects/setProjectsUXD', projectsRefResUXD.data.stories);
+      context.store.commit('projects/setLoaded', '1');
     }
   },
   data() {

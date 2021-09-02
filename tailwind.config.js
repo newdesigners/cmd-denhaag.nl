@@ -192,8 +192,11 @@ module.exports = {
         'gray-2' : theme('colors.gray.2'),
       }),
       stroke: theme => ({
-        'blue': theme('colors.blue'),
-        'primary': theme('colors.primary'),
+        'light': theme('colors.gray'),
+        'blue' : theme('colors.blue'),
+        'yellow' : theme('colors.yellow'),
+        'primary' : theme('colors.primary'),
+        'gray-2' : theme('colors.gray.2'),
       }),
       zIndex: {
         '-10': '-10',
