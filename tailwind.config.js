@@ -189,6 +189,7 @@ module.exports = {
         'blue' : theme('colors.blue'),
         'yellow' : theme('colors.yellow'),
         'primary' : theme('colors.primary'),
+        'gray-2' : theme('colors.gray.2'),
       }),
       stroke: theme => ({
         'blue': theme('colors.blue'),

@@ -45,6 +45,14 @@
     }
   }
 
+  .footer__menu-item--language .footer__link, .footer__menu-item--language {
+    @apply text-gray-2;
+  }
+
+  .footer__menu-item--language .footer__link--active {
+    @apply text-blue;
+  }
+
   .tabs {
     &__link {
       &:hover {
@@ -63,7 +71,7 @@
         .slick {
           &-active {
             .link {
-              @apply text-yellow;
+              @apply text-gray-2;
             }
           }
         }
