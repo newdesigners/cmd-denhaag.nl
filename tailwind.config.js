@@ -187,6 +187,7 @@ module.exports = {
       fill: theme => ({
         'light': theme('colors.gray'),
         'blue' : theme('colors.blue'),
+        'yellow' : theme('colors.yellow'),
       }),
       stroke: theme => ({
         'blue': theme('colors.blue'),
@@ -211,6 +212,8 @@ module.exports = {
   variants: {
     extend: {
       container: [],
+      display: ['dark'],
+      rotate: ['dark'],
     },
   },
   plugins: [

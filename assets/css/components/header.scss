@@ -1,8 +1,8 @@
 .header {
-  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible lg:relative z-50 bg-gray lg:h-initial;
+  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible lg:relative z-50 bg-gray lg:h-initial dark:bg-primary;
 
   &__top {
-    @apply hidden w-full lg:block bg-primary;
+    @apply hidden w-full lg:block bg-primary dark:lg:bg-primary-light;
 
     .container {
       @apply flex justify-end py-15 items-center;
@@ -22,14 +22,6 @@
 
         &--active {
           @apply text-yellow;
-        }
-      }
-
-      &__dark {
-        &-src {
-          path {
-            @apply fill-light;
-          }
         }
       }
     }
