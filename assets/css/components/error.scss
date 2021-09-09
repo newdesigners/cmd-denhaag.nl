@@ -1,0 +1,13 @@
+.error {
+  &-page {
+    @apply pt-header lg:pt-85;
+
+    &__title {
+      @apply dark:text-gray-2;
+
+      &-sub {
+        @apply dark:text-gray-2;
+      }
+    }
+  }
+}
