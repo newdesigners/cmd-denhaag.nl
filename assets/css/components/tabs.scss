@@ -4,7 +4,7 @@
   }
 
   &__title {
-    @apply lg:pb-20;
+    @apply lg:pb-20 dark:text-gray-2;
   }
 
   &__nav {
@@ -18,15 +18,11 @@
       @apply sm:pr-34 md:pr-40;
 
       &--active {
-        @apply text-primary;
+        @apply text-primary dark:text-yellow;
       }
     }
   }
   
-  &__section {
-
-  }
-
   &__content {
     @apply hidden;
 
@@ -35,7 +31,7 @@
     }
 
     &-copy {
-      @apply pb-10 md:flex justify-between lg:pb-20;
+      @apply pb-10 md:flex justify-between lg:pb-20 dark:text-gray-2;
 
       &-paragraph {
         @apply pb-20 md:w-48%;
@@ -46,12 +42,16 @@
       @apply md:flex justify-between mb-20;
 
       &-title {
-        @apply lg:pb-20;
+        @apply lg:pb-20 dark:text-gray-2;
       }
 
       &-left, &-right {
-        @apply bg-white px-20 py-30 mb-10 sm:pl-30 md:w-1/2 lg:pl-60 lg:py-60;
+        @apply bg-white px-20 py-30 mb-10 sm:pl-30 md:w-1/2 lg:pl-60 lg:py-60 dark:bg-primary-light;
         clip-path: polygon(4% 0, 100% 8%, 98% 91%, 0% 100%);
+      }
+
+      &-list {
+        @apply dark:text-gray-2;
       }
 
       &-item {
@@ -87,6 +87,14 @@
 
     &:first-of-type {
       @apply pb-10;
+    }
+
+    &:hover {
+      .tabs__icon {
+        path {
+          @apply fill-primary;
+        }
+      }
     }
   }
 

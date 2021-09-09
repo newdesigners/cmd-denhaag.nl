@@ -1,6 +1,6 @@
 .page-intro {
   &__title {
-    @apply lg:pb-30;
+    @apply lg:pb-30 dark:text-gray-2;
   }
 
   &__copy {
@@ -8,7 +8,7 @@
   }
 
   &__paragraph {
-    @apply pb-20 md:w-48% xl:w-45%;
+    @apply pb-20 md:w-48% xl:w-45% dark:text-gray-2;
   }
 
   &__play {

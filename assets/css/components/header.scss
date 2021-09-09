@@ -1,14 +1,22 @@
 .header {
-  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible lg:relative z-50 bg-gray lg:h-initial;
+  @apply h-header fixed top-0 w-full overflow-hidden lg:overflow-visible lg:relative z-50 bg-gray lg:h-initial dark:bg-primary;
 
   &__top {
-    @apply hidden w-full lg:block bg-primary;
+    @apply hidden w-full lg:block bg-primary dark:lg:bg-primary-light;
 
     .container {
       @apply flex justify-end py-15 items-center;
     }
 
     .header {
+      &__dark {
+        &-src {
+          path {
+            @apply fill-light;
+          }
+        }
+      }
+
       &__list {
         @apply flex text-gray pr-20 hover:cursor-pointer;
       }
@@ -22,14 +30,6 @@
 
         &--active {
           @apply text-yellow;
-        }
-      }
-
-      &__dark {
-        &-src {
-          path {
-            @apply fill-light;
-          }
         }
       }
     }
@@ -95,17 +95,17 @@
   }
 
   &__link {
-    @apply text-blue text-h3 font-bold font-poppins hover:text-primary;
+    @apply text-blue text-h3 font-bold font-poppins hover:text-primary dark:hover:text-gray-2;
 
     &.nuxt-link-exact-active {
-      @apply lg:text-primary;
+      @apply lg:text-primary dark:lg:text-gray-2;
     }
 
     &--side {
-      @apply text-white hover:text-yellow;
+      @apply text-white hover:text-yellow dark:hover:text-yellow;
 
       &.nuxt-link-exact-active {
-        @apply no-underline lg:text-yellow;
+        @apply no-underline lg:text-yellow dark:lg:text-yellow;
       }
     }
 

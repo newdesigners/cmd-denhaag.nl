@@ -1,0 +1,97 @@
+.dark {
+  body {
+    @apply bg-primary;
+  }
+
+  .header {
+    &__dark {
+      &-src {
+        path {
+          @apply fill-yellow;
+        }
+      }
+    }
+
+    &--open {
+      .header {
+        &__dark {
+          &-src {
+            path {
+              @apply fill-yellow;
+            }
+          }
+        }
+
+        &__logo {
+          &-src {
+           path.logo-text {
+             @apply fill-light;
+           } 
+          }
+        }
+      }
+    }
+
+    &__top {
+      .header {
+        &__dark {
+          &-src {
+            path {
+              @apply fill-yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__menu-item--language .footer__link, .footer__menu-item--language {
+    @apply text-gray-2;
+  }
+
+  .footer__menu-item--language .footer__link--active {
+    @apply text-blue;
+  }
+
+  .tabs {
+    &__link {
+      &:hover {
+        .tabs__icon {
+          path {
+            @apply fill-yellow;
+          }
+        }
+      }
+    }
+  }
+
+  .image-slider {
+    &-text {
+      &__container {
+        .slick {
+          &-active {
+            .link {
+              @apply text-gray-2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .accordion {
+    &__chevron {
+      path {
+        @apply stroke-yellow;
+      }
+    }
+
+    &__article {
+      &-icon {
+        path {
+          @apply fill-gray-2;
+        }
+      }
+    }
+  }
+}

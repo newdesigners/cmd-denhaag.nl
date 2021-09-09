@@ -28,7 +28,7 @@
   }
 
   &__name {
-    @apply pb-10;
+    @apply pb-10 dark:text-gray-2;
 
     &-title {
       @apply text-blue pb-10;
@@ -36,6 +36,6 @@
   }
 
   &__quote {
-    @apply pb-20 pr-30;
+    @apply pb-20 pr-30 dark:text-gray-2;
   }
 }

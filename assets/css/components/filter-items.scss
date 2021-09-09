@@ -11,8 +11,12 @@
     @apply sm:flex justify-between items-center;
   }
 
+  &__title {
+    @apply dark:text-gray-2;
+  }
+
   &__description {
-    @apply sm:max-w-filter-items-text pb-30 lg:pb-40;
+    @apply sm:max-w-filter-items-text pb-30 lg:pb-40 dark:text-gray-2;
   }
 
   &__illustration {
@@ -31,17 +35,17 @@
     }
 
     &-item {
-      @apply capitalize pr-30;
+      @apply capitalize pr-30 dark:hover:text-yellow;
     }
 
     &--active {
-      @apply text-primary;
+      @apply text-primary dark:text-yellow;
     }
   }
 
   &__items {
     clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
-    @apply bg-white px-20 md:px-30 lg:px-40 xl:px-50 mb-20;
+    @apply bg-white px-20 md:px-30 lg:px-40 xl:px-50 mb-20 dark:bg-primary-light;
 
     &-list {
       @apply py-50 lg:py-100 flex flex-col items-center sm:flex-row sm:justify-start sm:items-start sm:flex-wrap lg:justify-start;
@@ -49,6 +53,14 @@
 
     &-item {
       @apply pb-20 sm:w-5/12 lg:w-31% md:mr-25 lg:mr-40 xl:mr-70 lg:pb-40 max-w-filter-items lg:mb-12;
+
+      &-title {
+        @apply dark:text-gray-2;
+      }
+
+      &-description {
+        @apply dark:text-gray-2;
+      }
     }
 
     &--hide {

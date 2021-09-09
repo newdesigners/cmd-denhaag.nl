@@ -54,7 +54,8 @@
       </div>
       <aside class="footer__pointer" @click="scrollToTop">
         <figure class="footer__pointer-figure">
-          <Resources type="hand-point-up" classes="footer__pointer-src" />
+          <Resources type="hand-point-up" classes="footer__pointer-src dark:hidden" />
+          <Resources type="hand-point-up-dark" classes="footer__pointer-src hidden dark:block" />
         </figure>
       </aside>
     </div>

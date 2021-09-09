@@ -24,7 +24,7 @@
           :class="{ 'filter-items__items--hide': selected !== '' && selected !== item.category, 'filter-items__items--active': item.category === selected }"
         >
           <h3 class="filter-items__items-item-title">{{ item.title }}</h3>
-          <p class="filter-items__item-item-description">{{ item.description }}</p>
+          <p class="filter-items__items-item-description">{{ item.description }}</p>
         </li>
       </ul>
     </div>
@@ -49,6 +49,10 @@ export default {
   },
   methods: {
     onClick(i) {
+      if(i === this.selected) {
+        return this.selected = '';
+      }
+      
       this.selected = i;
     },
 	}

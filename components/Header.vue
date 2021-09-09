@@ -10,18 +10,21 @@
             <NuxtLink to="/" class="header__link header__link--side" :class="{'header__link--active': variant === 'IXD'}" @click.native="setVariant('IXD')">CMD (Nederlands)</NuxtLink> | <NuxtLink to="/uxd" class="header__link header__link--side" :class="{'header__link--active': variant === 'UXD'}" @click.native="setVariant('UXD')">UXD (English)</NuxtLink>
           </li>
         </ul>
-        <div class="header__dark">
-          <Resources type="dark" classes="header__dark-src" />
+        <div class="header__dark" @click="darkModeToggle">
+          <Resources type="dark" classes="header__dark-src dark:hidden" />
+          <Resources type="dark-dark" classes="header__dark-src hidden dark:block dark:transform dark:rotate-180" />
         </div>
       </div>
     </div>
     <div class="container header__container">
       <NuxtLink :to="homeRoutes" class="header__logo">
-        <Resources type="logo" classes="header__logo-src" />
+        <Resources type="logo" classes="header__logo-src dark:hidden" />
+        <Resources type="logo-dark" classes="header__logo-src hidden dark:block" />
       </NuxtLink>
       <aside class="header__aside">
-        <div class="header__dark">
-          <Resources type="dark" classes="header__dark-src" />
+        <div class="header__dark" @click="darkModeToggle">
+          <Resources type="dark" classes="header__dark-src dark:hidden" />
+          <Resources type="dark-dark" classes="header__dark-src hidden dark:block dark:transform dark:rotate-180" />
         </div>
         <div class="header__menu">
           <Hamburger ref="hamburger" classes="header__menu-hamgbuger" />
@@ -56,6 +59,9 @@ export default {
     },
     setVariant(v) {
       this.$store.commit('variants/setVariant', v);
+    },
+    darkModeToggle() {
+      document.querySelector('html').classList.toggle('dark');
     }
   },
   computed: {

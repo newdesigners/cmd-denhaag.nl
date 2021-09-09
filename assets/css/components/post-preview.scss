@@ -14,10 +14,10 @@
   }
 
   &__title {
-    @apply font-roboto text-post-preview pb-10 md:text-h3-lg pt-20 lg:pt-25;
+    @apply font-roboto text-post-preview pb-10 md:text-h3-lg pt-20 lg:pt-25 dark:text-gray-2;
   }
 
   &__excerpt {
-    @apply md:text-h4;
+    @apply md:text-h4 dark:text-gray-2;
   }
 }

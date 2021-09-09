@@ -6,7 +6,11 @@
   }
 
   &__excerpt {
-    @apply pb-20;
+    @apply pb-20 dark:text-gray-2;
+  }
+
+  &__title {
+    @apply dark:text-gray-2;
   }
 
   &__figure {
@@ -23,6 +27,30 @@
 
   &__body {
     @apply lg:max-w-post;
+
+    & h2, & h3, & h4, & h5, & h6 {
+      @apply font-bold font-poppins dark:text-gray-2;
+    }
+    
+    & h4 {
+      @media screen and (min-width: 1024px) {
+        font-size: 1.3em;
+      }
+    }
+
+    & h5 {
+      @media screen and (min-width: 1024px) {
+        font-size: 1.1em;
+      }
+    }
+    
+    & p, & h2, & h3, & h4, & h5, & h6 {
+      @apply text-primary dark:text-gray-2;
+    }
+    
+    a {
+      @apply text-blue hover:text-primary dark:hover:text-yellow;
+    }
   }
 
   &__read-more {

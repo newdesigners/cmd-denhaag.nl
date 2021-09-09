@@ -4,7 +4,7 @@
   }
 
   &__title {
-    @apply pb-20 lg:pb-36;
+    @apply pb-20 lg:pb-36 dark:text-gray-2;
   }
 
   &__description {
@@ -19,17 +19,17 @@
     @apply border-b-2 border-yellow;
 
     &-aside {
-      @apply flex items-center justify-between /*border-b-2 border-yellow*/ hover:cursor-pointer pl-20;
+      @apply flex items-center justify-between hover:cursor-pointer pl-20;
     }
 
     &-title {
-      @apply py-10;
+      @apply py-10 dark:text-gray-2;
     }
 
     &--active {
       .accordion {
         &__article {
-          @apply block /*border-b-2 border-yellow*/ pb-10;
+          @apply block pb-10;
         }
 
         &__item {
@@ -46,7 +46,7 @@
   }
 
   &__article {
-    @apply hidden pl-20;
+    @apply hidden pl-20 dark:text-gray-2;
 
     div {
       @apply sm:w-11/12;
@@ -56,7 +56,7 @@
       }
 
       h2, h3, h4, h5, h6 {
-        @apply font-semibold
+        @apply font-semibold;
       }
 
       ol {
