@@ -1,5 +1,6 @@
 <template>
   <section>
+    <pre>{{ story }}</pre>
     <component
       v-if="story.content.component"
       :key="story.content._uid"
@@ -10,6 +11,8 @@
 </template>
 
 <script>
+import { createSEOMeta } from '~/assets/js/utils/seo';
+
 export default {
   async fetch(context) {
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
@@ -79,7 +82,16 @@ export default {
         context.error({ statusCode: res.response.status, message: res.response.data });
       }
     })
-  }
+  },
+  head() {
+    const url = this.story.slug;
+    const { title, description, og_image } = this.story.content.meta;
+
+    return {
+      title,
+      meta: createSEOMeta({title, description, url, image: og_image.filename ? og_image.filename : 'https://a.storyblok.com/f/117396/1200x627/8beb321b38/meta-image.png' })
+    }
+  },
 }
 </script>
 
