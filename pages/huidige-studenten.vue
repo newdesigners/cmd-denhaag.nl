@@ -83,7 +83,7 @@ export default {
     })
   },
   head() {
-    const url = this.story.slug;
+    const url = this.story.full_slug;
     const { title, description, og_image } = this.story.content.meta;
 
     return {

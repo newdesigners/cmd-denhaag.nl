@@ -7,7 +7,7 @@
           <div class="popup__option" @click="setupIXD">
             <div class="popup__copy">
               <h3 class="popup__option-title">Communication & Multimedia Design</h3>
-              <p class="popup__option-description">Communication & Multimedia Design (CMD) is a<b>4 year</b> programme taught in <b>Dutch</b>.</p>
+              <p class="popup__option-description">Communication & Multimedia Design (CMD) is a <b>4 year</b> programme taught in <b>Dutch</b>.</p>
             </div>
           </div>
           <div class="popup__option popup__option--right" @click="setupUXD">

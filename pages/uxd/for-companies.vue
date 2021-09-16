@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { createSEOMeta } from '~/assets/js/utils/seo';
+
 export default {
   async fetch(context) {
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
