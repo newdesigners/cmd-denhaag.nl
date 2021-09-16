@@ -29,8 +29,8 @@ export const createSEOMeta = (data) => [
     content: data.title,
   },
   {
-    hid: 'twitter:descripion',
-    name: 'twitter:descripion',
+    hid: 'twitter:description',
+    name: 'twitter:description',
     content: data.description,
   },
   {

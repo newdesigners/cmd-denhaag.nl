@@ -15,7 +15,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ...createSEOMeta({
-        title: 'CMD/ UXD Den Haag',
+        title: 'CMD / UXD Den Haag',
         url: '',
         image: 'https://a.storyblok.com/f/117396/1200x627/8beb321b38/meta-image.png',
         description: "Wil jij slimme digitale oplossingen ontwerpen? De schakel zijn tussen technologie en gebruiker? Dat kan met de HBO-opleiding Communication & Multimedia Design! Also available in English (UXD).",
