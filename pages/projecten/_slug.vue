@@ -1,6 +1,5 @@
 <template>
   <section>
-    <pre>{{ story }}</pre>
     <Post :blok="story"/>
   </section>
 </template>
