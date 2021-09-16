@@ -29,6 +29,7 @@ export default {
     { src: '~/plugins/composition-api.js' },
     { src: '~/plugins/storyblok-rich-text-renderer.js'},
     { src: '~/plugins/vue-slick-carousel.js' },
+    { src: '~/plugins/vue-plausible.js' },
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -48,6 +49,7 @@ export default {
       }
     ],
     'cookie-universal-nuxt',
+    'vue-plausible',
   ],
   privateRuntimeConfig: {
     storyBlokSpaceToken: process.env.STORYBLOK_SPACE_TOKEN,
