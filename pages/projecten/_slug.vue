@@ -1,10 +1,13 @@
 <template>
   <section>
+    <pre>{{ story }}</pre>
     <Post :blok="story"/>
   </section>
 </template>
  
 <script>
+import { createSEOMeta } from '~/assets/js/utils/seo';
+
 export default {
   async fetch(context) {
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
@@ -72,7 +75,16 @@ export default {
         context.error({ statusCode: res.response.status, message: res.response.data })
       }
     })
-  }
+  },
+  head() {
+    const url = this.story.full_slug;
+    const title = `${ this.story.content.name } - CMD / UXD Den Haag`;
+
+    return {
+      title,
+      meta: createSEOMeta({title, description: this.story.content.excerpt, url, image: this.story.content.image.filename ? this.story.content.image.filename : 'https://a.storyblok.com/f/117396/1200x627/8beb321b38/meta-image.png' })
+    }
+  },
 }
 </script>
 
