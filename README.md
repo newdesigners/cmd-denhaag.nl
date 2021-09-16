@@ -13,7 +13,7 @@ $ cp .env.example .env
 
 4. Copy preview token or create a token
 
-5. Edit the .env file and fill token for ``STORYBLOK_SPACE_TOKEN=TOKEN_HERE``
+5. Edit the .env file and set token for ``STORYBLOK_SPACE_TOKEN=TOKEN_HERE``
 
 
 ## Build Setup
