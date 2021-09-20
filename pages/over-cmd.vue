@@ -88,7 +88,7 @@ export default {
 
     return {
       title,
-      meta: createSEOMeta({title, description, url, image: og_image.filename ? og_image.filename : 'https://a.storyblok.com/f/117396/1200x627/8beb321b38/meta-image.png' })
+      meta: createSEOMeta({ title, description, url, image: og_image.filename ? og_image.filename : 'https://a.storyblok.com/f/117396/1200x627/8beb321b38/meta-image.png' })
     }
   },
 }
