@@ -1,9 +1,9 @@
 <template>
-  <header ref="header" class="header">
+  <header ref="header" class="header" :class="{ 'header--open' : isActive }">
     <div class="header__top">
       <div class="container">
-        <ul class="header__list">
-          <li class="header__item" v-for="item in sideRoutes" :key="item.text" @click="onClose">
+        <ul class="header__list" @click="onClose">
+          <li class="header__item" v-for="item in sideRoutes" :key="item.text">
             <NuxtLink :to="item.link" class="header__link header__link--side">{{ item.text }}</NuxtLink>
           </li>
           <li class="header__item">
@@ -27,19 +27,29 @@
           <Resources type="dark-dark" classes="header__dark-src hidden dark:block dark:transform dark:rotate-180" />
         </div>
         <div class="header__menu">
-          <Hamburger ref="hamburger" classes="header__menu-hamgbuger" />
+          <div id="burger-wrapper" class="header__menu-hamgbuger flex justify-center items-center rounded-full pl-3 pb-5">
+            <tasty-burger-button
+              ref="hamburger"
+              type="spin"
+              :active="isActive"
+              :color="color"
+              :active-color="activeColor"
+              :size="size"
+              @toggle="onToggle"
+            />
+          </div>
         </div>
       </aside>
       <div class="header__navigation">
-        <ul class="header__list">
-          <li v-for="item in mainRoutes" :key="item.text" class="header__item" @click="onClose">
+        <ul class="header__list" @click="onClose">
+          <li v-for="item in mainRoutes" :key="item.text" class="header__item" >
             <NuxtLink :to="item.link" class="header__link">{{ item.text }}</NuxtLink>
           </li>
         </ul>
       </div>
       <div class="header__navigation header__navigation--side">
-        <ul class="header__list">
-          <li v-for="item in sideRoutes" :key="item.text" class="header__item" @click="onClose">
+        <ul class="header__list" @click="onClose">
+          <li v-for="item in sideRoutes" :key="item.text" class="header__item">
             <NuxtLink :to="item.link" class="header__link header__link--side">{{ item.text }}</NuxtLink>
           </li>
           <li class="header__item">
@@ -53,9 +63,20 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isActive: false,
+      size: "xs",
+      color: "#F2F2F2",
+      activeColor: "#F2F2F2F2"
+    };
+  },
   methods: {
+    onToggle(active) {
+      this.isActive = active;
+    },
     onClose() {
-      this.$refs.hamburger.onToggle(false);
+      this.isActive = false;
     },
     setVariant(v) {
       this.$store.commit('variants/setVariant', v);

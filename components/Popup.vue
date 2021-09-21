@@ -1,6 +1,6 @@
 <template>
-  <client-only>
-    <div class="popup" :class="{ hidden: isSelected }" v-if="this.$cookies.get('popup') === false || this.$cookies.get('popup') == undefined">
+  <div class="popup" :class="{ hidden: isSelected }" v-if="this.$cookies.get('popup') === false || this.$cookies.get('popup') == undefined">
+    <client-only>
       <div class="container popup__container">
         <h2 class="popup__title">Choose which programme you’re interested in</h2>
         <div class="popup__select">
@@ -17,9 +17,9 @@
             </div>
           </div>
         </div>
-      </div>    
-    </div>
-  </client-only>
+      </div>  
+    </client-only>  
+  </div>
 </template>
  
 <script>

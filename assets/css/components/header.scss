@@ -144,3 +144,7 @@
 a.nuxt-link-exact-active {
   @apply underline lg:no-underline;
 }
+
+.hamburger:focus, .hamburger:hover {
+  @apply opacity-100;
+}
