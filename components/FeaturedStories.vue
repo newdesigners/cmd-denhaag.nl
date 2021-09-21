@@ -54,8 +54,5 @@ export default {
       return featuredStories;
     }
   }
-}
+};
 </script>
-
-<style>
-</style>

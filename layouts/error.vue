@@ -29,11 +29,8 @@
 </template>
 
 <script>
-  export default {
-    props: ['error'],
-    layout: 'error'
-  }
+export default {
+  props: ['error'],
+  layout: 'error'
+};
 </script>
-
-<style>
-</style>

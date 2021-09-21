@@ -12,9 +12,11 @@
       <figure class="page-intro__video">
         <video class="page-intro__video-src" ref="video" v-if="blok.video" :src="blok.video.filename" preload="metadata"></video>
       </figure>
-    <figure class="page-intro__button">
-      <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
-    </figure> 
+      <NuxtLink v-if="blok.link" :to="buttonUrl" class="page-intro__link">
+        <figure class="page-intro__button">
+          <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
+        </figure> 
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -54,9 +56,18 @@ export default {
         video.play();
       }
     },
+  },
+  computed: {
+    buttonUrl() {
+      if(this.blok.link.cached_url === 'uxd/home') {
+        return 'uxd/';
+      }
+
+      if(this.blok.link.cached_url === 'home') {
+        return '/';
+      }
+      return this.blok.link.cached_url;
+    }
   }
 };
 </script>
-
-<style>
-</style>

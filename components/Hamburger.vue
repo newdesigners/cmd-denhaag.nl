@@ -33,7 +33,7 @@ export default {
     onToggle(active) {
       this.$parent.$refs.header.classList.toggle('header--open');
     },
-  },
+  }
 };
 </script>
 
