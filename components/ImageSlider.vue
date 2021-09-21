@@ -52,9 +52,6 @@ export default {
 		onBeforeChange(o, n) {
 			this.current = n;
 		},
-	},
-}
+	}
+};
 </script>
-
-<style>
-</style>

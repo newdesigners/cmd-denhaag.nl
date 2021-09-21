@@ -54,8 +54,5 @@ export default {
       return featuredProjects;
     }
   }
-}
+};
 </script>
-
-<style>
-</style>

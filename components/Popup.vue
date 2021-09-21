@@ -43,5 +43,5 @@ export default {
       this.$router.push('/uxd');
     }
   }
-}
+};
 </script>

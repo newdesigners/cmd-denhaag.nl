@@ -9,10 +9,11 @@
       <figure class="page-intro__image">
         <img v-if="blok.image" :src="blok.image.filename" :alt="blok.image.alt" class="page-intro__image-src" />
       </figure>
+      <NuxtLink v-if="blok.link" :to="buttonUrl" class="page-intro__link">
         <figure class="page-intro__button">
-            <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
+          <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
         </figure>
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -24,9 +25,18 @@ export default {
       type: Object,
       required: true
     }
+  },
+  computed: {
+    buttonUrl() {
+      if(this.blok.link.cached_url === 'uxd/home') {
+        return 'uxd/';
+      }
+
+      if(this.blok.link.cached_url === 'home') {
+        return '/';
+      }
+      return this.blok.link.cached_url;
+    }
   }
 };
 </script>
-
-<style>
-</style>
