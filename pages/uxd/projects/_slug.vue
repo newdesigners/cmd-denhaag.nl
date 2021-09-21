@@ -83,7 +83,7 @@ export default {
       title,
       meta: createSEOMeta({ title, description: this.story.content.excerpt, url, image: this.story.content.image.filename ? this.story.content.image.filename : 'https://a.storyblok.com/f/117396/1200x627/7e3cea0eda/meta-image-uxd.png' })
     }
-  },
+  }
 }
 </script>
 

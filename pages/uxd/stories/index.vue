@@ -90,7 +90,7 @@ export default {
       title,
       meta: createSEOMeta({ title, description, url, image: og_image.filename ? og_image.filename : 'https://a.storyblok.com/f/117396/1200x627/7e3cea0eda/meta-image-uxd.png' })
     }
-  },
+  }
 }
 </script>
 
