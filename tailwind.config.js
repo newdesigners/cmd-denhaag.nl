@@ -173,7 +173,7 @@ module.exports = {
         'video': '250px',
         'video-lg': '450px',
         'post-image': '560px',
-        'post-preview-image': '180px',
+        'post-preview-image': '210px',
         'post-preview-image-lg': '200px',
         'page-intro-media': '200px',
         'slider-indicator': '5px',

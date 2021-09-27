@@ -10,10 +10,11 @@
   }
 
   &__copy {
-    @apply sm:flex-1 w-full sm:max-w-post-preview-copy sm:min-w-post-preview-copy 2xl:max-w-post-preview-copy-xl;
+    @apply sm:flex-1 w-full /*sm:max-w-post-preview-copy sm:min-w-post-preview-copy*/ 2xl:max-w-post-preview-copy-xl;
   }
 
   &__title {
+    hyphens: auto;
     @apply font-roboto text-post-preview pb-10 md:text-h3-lg pt-20 lg:pt-25 dark:text-gray-2;
   }
 
