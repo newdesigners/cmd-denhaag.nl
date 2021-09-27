@@ -19,7 +19,11 @@
     }
 
     .post-preview {
-      @apply lg:min-w-unset;
+      @apply lg:min-w-unset xl:min-w-post-preview xl:max-w-post-preview 2xl:max-w-post-preview-2xl;
+
+      &__copy {
+        @apply lg:max-w-post-preview-copy-lg xl:max-w-post-preview-copy 2xl:max-w-post-preview-copy-lg;
+      }
     }
   }
 
