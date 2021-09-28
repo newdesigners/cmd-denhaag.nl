@@ -63,9 +63,6 @@ export default {
 
       return titles;
     }
-  },
-}
+  }
+};
 </script>
-
-<style>
-</style>
