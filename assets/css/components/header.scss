@@ -28,12 +28,16 @@
       &__link {
         @apply text-small font-poppins font-semibold text-gray hover:text-yellow;
 
+        &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+          @apply text-yellow dark:lg:text-gray-2;
+        }
+
         &--active {
           @apply text-yellow;
           
-          &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
-            @apply text-yellow;
-          }
+          /* &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+             @apply text-yellow;
+           }*/
         }
       }
     }
