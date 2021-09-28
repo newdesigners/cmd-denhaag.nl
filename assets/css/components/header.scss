@@ -30,6 +30,10 @@
 
         &--active {
           @apply text-yellow;
+          
+          &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+            @apply text-yellow;
+          }
         }
       }
     }
