@@ -47,6 +47,10 @@
 
           &--active {
             @apply text-yellow dark:text-blue;
+
+            &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+              @apply text-yellow;
+            }
           }
         }
       }
