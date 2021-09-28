@@ -30,6 +30,10 @@
 
         &--active {
           @apply text-yellow;
+          
+          &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+            @apply text-yellow;
+          }
         }
       }
     }
@@ -98,7 +102,7 @@
     @apply text-blue text-h3 font-bold font-poppins hover:text-primary dark:hover:text-gray-2;
 
     &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
-      @apply text-yellow lg:text-primary dark:lg:text-gray-2;
+      @apply text-yellow no-underline lg:text-primary dark:lg:text-gray-2;
     }
 
     &--side {
@@ -142,6 +146,9 @@
 }
 
 a.nuxt-link-exact-active {
-  @apply no-underline;
+  @apply underline lg:no-underline;
 }
 
+.hamburger:focus, .hamburger:hover {
+  @apply opacity-100;
+}
