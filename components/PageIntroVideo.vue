@@ -5,11 +5,11 @@
       <p class="page-intro__paragraph">{{ blok.text_left }}</p>
       <p class="page-intro__paragraph">{{ blok.text_right }}</p>
     </div>
-    <div class="page-intro__media">
+    <div class="page-intro__media page-intro__media--video">
       <figure class="page-intro__play" @click="open">
         <Resources type="play" classes="page-intro__play-src" />
       </figure>
-      <figure class="page-intro__video">
+      <figure class="page-intro__video" @click="open">
         <video class="page-intro__video-src" ref="video" v-if="blok.video" :src="blok.video.filename" preload="metadata"></video>
       </figure>
       <NuxtLink v-if="blok.link" :to="buttonUrl" class="page-intro__link">
