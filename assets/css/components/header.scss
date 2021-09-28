@@ -30,6 +30,10 @@
 
         &--active {
           @apply text-yellow;
+          
+          &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+            @apply text-yellow;
+          }
         }
       }
     }
@@ -97,8 +101,8 @@
   &__link {
     @apply text-blue text-h3 font-bold font-poppins hover:text-primary dark:hover:text-gray-2;
 
-    &.nuxt-link-exact-active {
-      @apply lg:text-primary dark:lg:text-gray-2;
+    &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
+      @apply text-yellow no-underline lg:text-primary dark:lg:text-gray-2;
     }
 
     &--side {
@@ -143,4 +147,8 @@
 
 a.nuxt-link-exact-active {
   @apply underline lg:no-underline;
+}
+
+.hamburger:focus, .hamburger:hover {
+  @apply opacity-100;
 }

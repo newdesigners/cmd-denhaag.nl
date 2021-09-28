@@ -20,7 +20,7 @@
     "storyblok-nuxt": "^2.0.1",
     "vue-plausible": "^1.2.1",
     "vue-slick-carousel": "^1.0.6",
-    "vue-tasty-burgers": "^1.2.3"
+    "vue-tasty-burgers": "^1.1.8"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.1.3",
