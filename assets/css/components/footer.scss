@@ -110,7 +110,7 @@
   }
 
   &__pointer {
-    @apply absolute z-30 right-40 top-40 lg:top-170 lg:right-50;
+    @apply absolute z-30 right-40 top-40 lg:top-170 lg:right-50 hover:cursor-pointer;
 
     &-src {
       @apply w-hand-point;
