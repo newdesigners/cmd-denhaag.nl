@@ -18,8 +18,14 @@
     </div>
     <div class="container header__container">
       <NuxtLink :to="homeRoutes" class="header__logo">
-        <Resources type="logo" classes="header__logo-src dark:hidden" />
-        <Resources type="logo-dark" classes="header__logo-src hidden dark:block" />
+        <div v-if="variant === 'IXD'">
+          <Resources type="logo" classes="header__logo-src dark:hidden" />
+          <Resources type="logo-dark" classes="header__logo-src hidden dark:block" />
+        </div>
+        <div v-if="variant === 'UXD'">
+          <Resources type="logo-uxd" classes="header__logo-src dark:hidden" />
+          <Resources type="logo-uxd-dark" classes="header__logo-src hidden dark:block" />
+        </div>
       </NuxtLink>
       <aside class="header__aside">
         <div class="header__dark" @click="darkModeToggle">
