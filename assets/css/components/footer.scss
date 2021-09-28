@@ -46,11 +46,7 @@
           @apply text-primary-lightest dark:text-gray-2;
 
           &--active {
-            @apply text-yellow dark:text-blue;
-
-            &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
-              @apply text-yellow;
-            }
+            @apply text-blue dark:text-blue;
           }
         }
       }
