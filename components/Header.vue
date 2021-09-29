@@ -88,7 +88,15 @@ export default {
       this.$store.commit('variants/setVariant', v);
     },
     darkModeToggle() {
-      document.querySelector('html').classList.toggle('dark');
+      const HTML = document.querySelector('html');
+
+      if(this.$cookies.get('darkmode') === false) {
+        this.$cookies.set('darkmode', true);
+        HTML.classList.add('dark');
+      } else {
+        this.$cookies.set('darkmode', false);
+        HTML.classList.remove('dark');
+      }
     }
   },
   computed: {
