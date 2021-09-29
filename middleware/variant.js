@@ -1,7 +1,8 @@
 export default function ({ app, store, route }) {
-  const cookieRes = app.$cookies.get('popup');
+  const cookieResPopup = app.$cookies.get('popup');
+
   if(route.fullPath === '/') {
-    if(cookieRes === false || cookieRes === undefined) return;
+    if(cookieResPopup === false || cookieResPopup === undefined) return;
   }
 
   if(route.fullPath.substring(1).split('/')[0] === 'uxd') {
