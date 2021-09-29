@@ -17,9 +17,8 @@ export default {
   },
   mounted() {
     console.log(this.$cookies.get('darkmode'));
-    if(this.$cookies.get('darkmode') == undefined) {
-      this.$cookies.set('darkmode', false);
-      
+    if(this.$cookies.get('darkmode') === undefined) {
+      this.$cookies.set('darkmode', false); 
     }
   }
 };
