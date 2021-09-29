@@ -13,6 +13,11 @@
     &-src {
       @apply w-full h-full object-cover object-top;
     }
+
+    &::after {
+      content: '';
+      @apply w-home-video h-full bg-primary top-0 left-container absolute opacity-20;
+    }
   }
 
   &__button {

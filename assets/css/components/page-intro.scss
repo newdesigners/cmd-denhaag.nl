@@ -21,6 +21,10 @@
 
   &__media {
     @apply relative;
+
+    &--video {
+      @apply hover:cursor-pointer;
+    }
   }
 
   &__video {

@@ -46,11 +46,7 @@
           @apply text-primary-lightest dark:text-gray-2;
 
           &--active {
-            @apply text-yellow dark:text-blue;
-
-            &.nuxt-link-exact-active, &.nuxt-link-active[href]:not([href="/"]) {
-              @apply text-yellow;
-            }
+            @apply text-blue dark:text-blue;
           }
         }
       }
@@ -110,7 +106,7 @@
   }
 
   &__pointer {
-    @apply absolute z-30 right-40 top-40 lg:top-170 lg:right-50;
+    @apply absolute z-30 right-40 top-40 lg:top-170 lg:right-50 hover:cursor-pointer;
 
     &-src {
       @apply w-hand-point;
