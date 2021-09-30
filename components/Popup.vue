@@ -35,12 +35,15 @@ export default {
       this.$cookies.set('popup', true);
       this.$store.commit('variants/setVariant', 'IXD');
       this.$router.push('/');
+      console.log('clicked popup value:', this.$cookies.get('popup'));
+      this.$store.commit('popups/setPopup', true);
     },
     setupUXD() {
       this.isSelected = true;
       this.$cookies.set('popup', true);
       this.$store.commit('variants/setVariant', 'UXD');
       this.$router.push('/uxd');
+      this.$store.commit('popups/setPopup', true);
     }
   }
 };

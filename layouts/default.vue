@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
+    <Header v-if="this.$store.state.popups.popup" />
     <Nuxt />
-    <Footer />
+    <Footer v-if="this.$store.state.popups.popup" />
   </div>
 </template>
 <script>

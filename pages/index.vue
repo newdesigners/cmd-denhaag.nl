@@ -1,12 +1,15 @@
 <template>
   <section>
-    <Popup />
-    <component
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-      :is="story.content.component"
-    />
+    <Popup ref="popup" />
+    <div>
+      store state in index.html: {{ this.$store.state.popups.popup }}
+      <component
+        v-if="story.content.component"
+        :key="story.content._uid"
+        :blok="story.content"
+        :is="story.content.component"
+      />
+    </div>
   </section>
 </template>
 
@@ -36,7 +39,8 @@ export default {
   },
   data() {
     return {
-      story: { content: {} }
+      story: { content: {} },
+      popupClicked: false
     }
   },
   mounted() {
@@ -80,6 +84,18 @@ export default {
         context.error({ statusCode: res.response.status, message: res.response.data });
       }
     })
+  },
+  methods: {
+    isClicked(clicked) {
+      console.log('clicked send from popup component');
+      this.popupClicked = clicked;
+    }
+  },
+  computed: {
+    tests() {
+      console.log('popup value', this.$cookies.get('popup'));
+      return this.$cookies.get('popup');
+    }
   }
 };
 </script>
