@@ -75,8 +75,8 @@ export default {
       let footerIXDRefRes = await this.$storyapi.get(`cdn/stories/`, { starts_with: 'footer', version: version });
       let footerUXDRefRes = await this.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/footer', version: version });
 
-      this.$store.commit('footer/setFooterIXD', footerIXDRefRes.data.stories);
-      this.$store.commit('footer/setFooterUXD', footerUXDRefRes.data.stories);
+      this.$store.commit('footer/setFooterIXD', footerIXDRefRes.data.stories[0]);
+      this.$store.commit('footer/setFooterUXD', footerUXDRefRes.data.stories[0]);
       this.$store.commit('footer/setLoaded', '1');
     }
   },
@@ -94,11 +94,11 @@ export default {
     },
     footer() {
       if(this.$store.state.variants.variant === 'IXD') {
-        return this.$store.state.footer.footerIXD[0].content;
+        return this.$store.state.footer.footerIXD.content;
       }
 
       if(this.$store.state.variants.variant === 'UXD') {
-        return this.$store.state.footer.footerUXD[0].content;
+        return this.$store.state.footer.footerUXD.content;
       }
     },
     columnTwo() {

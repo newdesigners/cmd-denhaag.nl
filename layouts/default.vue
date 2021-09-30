@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
+    <Header v-show="isPopupShown" />
     <Nuxt />
-    <Footer />
+    <Footer v-show="isPopupShown" />
   </div>
 </template>
 <script>
@@ -29,6 +29,11 @@ export default {
     
     if(this.$cookies.get('darkmode') === false) {
       HTML.classList.remove('dark');
+    }
+  },
+  computed: {
+    isPopupShown() {
+      return this.$store.state.popups.popup;
     }
   }
 };

@@ -1,12 +1,14 @@
 <template>
   <section>
     <Popup />
-    <component
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-      :is="story.content.component"
-    />
+    <div v-show="isPopupShown">
+      <component
+        v-if="story.content.component"
+        :key="story.content._uid"
+        :blok="story.content"
+        :is="story.content.component"
+      />
+    </div>
   </section>
 </template>
 
@@ -36,7 +38,8 @@ export default {
   },
   data() {
     return {
-      story: { content: {} }
+      story: { content: {} },
+      popupClicked: false
     }
   },
   mounted() {
@@ -80,6 +83,11 @@ export default {
         context.error({ statusCode: res.response.status, message: res.response.data });
       }
     })
+  },
+  computed: {
+    isPopupShown() {
+      return this.$store.state.popups.popup;
+    }
   }
 };
 </script>
