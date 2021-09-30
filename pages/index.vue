@@ -1,7 +1,7 @@
 <template>
   <section>
-    <Popup ref="popup" />
-    <div>
+    <Popup />
+    <div v-if="this.$cookies.get('popup')">
       store state in index.html: {{ this.$store.state.popups.popup }}
       <component
         v-if="story.content.component"
