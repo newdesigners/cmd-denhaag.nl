@@ -70,7 +70,7 @@ export default {
   axios: {},
 
   router: {
-    middleware: 'variant'
+    middleware: ['variant', 'popup']
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

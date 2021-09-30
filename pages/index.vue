@@ -1,8 +1,7 @@
 <template>
   <section>
     <Popup />
-    <div v-if="this.$cookies.get('popup')">
-      store state in index.html: {{ this.$store.state.popups.popup }}
+    <div v-if="isPopupShown">
       <component
         v-if="story.content.component"
         :key="story.content._uid"
@@ -85,16 +84,9 @@ export default {
       }
     })
   },
-  methods: {
-    isClicked(clicked) {
-      console.log('clicked send from popup component');
-      this.popupClicked = clicked;
-    }
-  },
   computed: {
-    tests() {
-      console.log('popup value', this.$cookies.get('popup'));
-      return this.$cookies.get('popup');
+    isPopupShown() {
+      return this.$store.state.popups.popup;
     }
   }
 };
