@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ isPopupShown }}
     <Header v-show="isPopupShown" />
     <Nuxt />
     <Footer v-show="isPopupShown" />
