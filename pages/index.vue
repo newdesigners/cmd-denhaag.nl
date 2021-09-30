@@ -1,7 +1,7 @@
 <template>
   <section>
     <Popup />
-    <div v-if="isPopupShown">
+    <div v-show="isPopupShown">
       <component
         v-if="story.content.component"
         :key="story.content._uid"

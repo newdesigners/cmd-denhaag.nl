@@ -1,8 +1,9 @@
 <template>
   <div>
-    <Header v-if="isPopupShown" />
+    {{ isPopupShown }}
+    <Header v-show="isPopupShown" />
     <Nuxt />
-    <Footer v-if="isPopupShown" />
+    <Footer v-show="isPopupShown" />
   </div>
 </template>
 <script>
