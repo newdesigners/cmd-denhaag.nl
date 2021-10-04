@@ -14,6 +14,7 @@
         width="740"
         height="450"
         provider="storyblok"
+        loading="lazy"
         :src="blok.image.filename"
         :alt="blok.image.alt"
       />

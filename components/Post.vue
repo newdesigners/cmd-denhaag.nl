@@ -5,7 +5,18 @@
       <p class="post__excerpt">{{ blok.content.excerpt }}</p>
     </div>
     <figure class="container post__figure">
-      <img class="post__image" v-if="blok.content.image" :src="blok.content.image.filename" :alt="blok.content.image.alt" />
+      <NuxtImg
+        v-if="blok.content.image"
+        class="post__image"
+        width="1280"
+        height="560"
+        loading="lazy"
+        :modifiers="{ smart: true }"
+        provider="storyblok"
+        :src="blok.content.image.filename"
+        :alt="blok.content.image.alt"
+      />
+      <!-- <img class="post__image" v-if="blok.content.image" :src="blok.content.image.filename" :alt="blok.content.image.alt" /> -->
     </figure>
     <div class="container prose lg:prose-lg xl:prose-xl post__content post__body">
       <rich-text-renderer v-if="blok.content.body" :document="blok.content.body" />
