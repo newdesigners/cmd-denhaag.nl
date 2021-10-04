@@ -1,6 +1,6 @@
 <template>
   <section id="image-slider" class="image-slider" v-editable="blok">
-    <div class="container">
+    <div class="container">x
       <h2 class="image-slider__title" v-if="blok.title">{{ blok.title }}</h2>
     </div>
 		<div class="container image-slider__container" v-if="blok.slides.length > 0">
@@ -8,7 +8,18 @@
         <div class="image-slider__item" v-for="slide in blok.slides" :key="slide.id">
           <div class="image-slider__item-wrapper">
             <figure class="image-slider__item-figure">
-              <img v-if="slide.image" :src="slide.image.filename" :alt="slide.image.alt" class="image-slider__item-image" />
+              <NuxtImg
+                v-if="slide.image"
+                class="image-slider__item-image"
+                width="1280"
+                height="700"
+                loading="lazy"
+                :modifiers="{ smart: true }"
+                provider="storyblok"
+                :src="slide.image.filename"
+                :alt="slide.image.alt"
+              />
+              <!-- <img v-if="slide.image" :src="slide.image.filename" :alt="slide.image.alt" class="image-slider__item-image" /> -->
             </figure>
           </div>
         </div>

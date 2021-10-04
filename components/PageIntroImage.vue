@@ -7,7 +7,18 @@
     </div>
     <div class="page-intro__media">
       <figure class="page-intro__image">
-        <img v-if="blok.image" :src="blok.image.filename" :alt="blok.image.alt" class="page-intro__image-src" />
+        <NuxtImg
+          v-if="blok.image"
+          class="page-intro__image-src"
+          width="1280"
+          height="560"
+          loading="lazy"
+          :modifiers="{ smart: true }"
+          provider="storyblok"
+          :src="blok.image.filename"
+          :alt="blok.image.alt"
+        />
+        <!-- <img v-if="blok.image" :src="blok.image.filename" :alt="blok.image.alt" class="page-intro__image-src" /> -->
       </figure>
       <NuxtLink v-if="blok.link" :to="buttonUrl" class="page-intro__link">
         <figure class="page-intro__button">

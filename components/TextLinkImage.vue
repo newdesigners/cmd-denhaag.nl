@@ -9,7 +9,14 @@
       </div>
     </div>
     <figure class="text-link-image__figure" v-if="blok.image">
-      <img class="text-link-image__image" :src="blok.image.filename" :alt="blok.image.alt" />
+      <NuxtImg
+        class="text-link-image__image"
+        width="740"
+        height="450"
+        provider="storyblok"
+        :src="blok.image.filename"
+        :alt="blok.image.alt"
+      />
     </figure>
   </div>
 </template>
