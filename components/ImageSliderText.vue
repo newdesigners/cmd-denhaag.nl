@@ -14,10 +14,32 @@
           </div>
           <div class="image-slider-text__item-wrapper">
             <figure class="image-slider-text__item-figure">
-              <img v-if="slide.image_left" :src="slide.image_left.filename" :alt="slide.image_left.alt" class="image-slider-text__item-image" />
+              <NuxtImg
+                v-if="slide.image_left"
+                class="page-intro__image-src"
+                width="470"
+                height="470"
+                loading="lazy"
+                :modifiers="{ smart: true }"
+                provider="storyblok"
+                :src="slide.image_left.filename"
+                :alt="slide.image_left.alt"
+              />
+              <!-- <img v-if="slide.image_left" :src="slide.image_left.filename" :alt="slide.image_left.alt" class="image-slider-text__item-image" /> -->
             </figure>
             <figure class="image-slider-text__item-figure">
-              <img v-if="slide.image_right" :src="slide.image_right.filename" :alt="slide.image_right.alt" class="image-slider-text__item-image" />
+              <NuxtImg
+                v-if="slide.image_right"
+                class="page-intro__image-src"
+                width="470"
+                height="470"
+                loading="lazy"
+                :modifiers="{ smart: true }"
+                provider="storyblok"
+                :src="slide.image_right.filename"
+                :alt="slide.image_right.alt"
+              />
+              <!-- <img v-if="slide.image_right" :src="slide.image_right.filename" :alt="slide.image_right.alt" class="image-slider-text__item-image" /> -->
             </figure>
           </div>
         </div>

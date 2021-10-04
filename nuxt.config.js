@@ -54,6 +54,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/google-fonts',
+    '@nuxt/image',
     [
       'storyblok-nuxt',
       {
@@ -74,6 +75,11 @@ export default {
     },
     display: 'swap',
     useStylesheet: true
+  },
+  image: {
+    storyblok: {
+      baseURL: 'https://img2.storyblok.com'
+    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

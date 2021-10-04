@@ -1,7 +1,17 @@
 <template>
   <NuxtLink :to="`/${ postLink }`" class="post-preview">
     <figure class="post-preview__figure">
-      <img v-if="postContent.image" :src="postContent.image.filename" :alt="postContent.image.alt" class="post-preview__image">
+      <NuxtImg
+        v-if="postContent.image"
+        class="post-preview__image"
+        width="605"
+        height="400"
+        :modifiers="{ smart: true }"
+        provider="storyblok"
+        :src="postContent.image.filename"
+        :alt="postContent.image.alt"
+      />
+      <!-- <img v-if="postContent.image" :src="postContent.image.filename" :alt="postContent.image.alt" class="post-preview__image"> -->
     </figure>
     <div class="post-preview__copy">
       <h2 class="post-preview__title">{{ postContent.name }}</h2>
