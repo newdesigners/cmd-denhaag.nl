@@ -15,7 +15,7 @@
 
   &__title {
     hyphens: auto;
-    @apply font-roboto text-post-preview pb-10 md:text-h3-lg pt-20 lg:pt-25 dark:text-gray-2;
+    @apply font-poppins font-semibold text-post-preview pb-10 md:text-h3-lg pt-20 lg:pt-25 dark:text-gray-2;
   }
 
   &__excerpt {
