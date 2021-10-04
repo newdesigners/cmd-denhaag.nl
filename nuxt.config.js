@@ -53,6 +53,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/google-fonts',
     [
       'storyblok-nuxt',
       {
@@ -65,6 +66,14 @@ export default {
   ],
   privateRuntimeConfig: {
     storyBlokSpaceToken: process.env.STORYBLOK_SPACE_TOKEN,
+  },
+  googleFonts: {
+    families: {
+      Roboto: [400, 600],
+      Poppins: [600, 700, 900],
+    },
+    display: 'swap',
+    useStylesheet: true
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
