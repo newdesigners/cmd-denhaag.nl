@@ -14,11 +14,11 @@
       </div>
       <div class="footer__column footer__menu">
         <h3 class="footer__title">Menu</h3>
-        <ul class="footer__menu-list">
-          <div class="footer__menu-container">
+        <div class="footer__menu-list">
+          <ul class="footer__menu-container">
             <li class="footer__menu-item" v-for="item in columnTwo" :key="item.text"><NuxtLink :to="item.link" class="link footer__link">{{ item.text }}</NuxtLink></li>
-          </div>
-          <div class="footer__menu-container">
+          </ul>
+          <ul class="footer__menu-container">
             <li class="footer__menu-item" v-for="item in columnThree" :key="item.text"><NuxtLink :to="item.link" class="link footer__link">{{ item.text }}</NuxtLink></li>
             <li class="footer__menu-item footer__menu-item--language">
               <NuxtLink to="/" class="link footer__link" :class="{'footer__link--active': variant === 'IXD' }" @click.native="setVariant('IXD')">
@@ -28,8 +28,8 @@
               <NuxtLink to="/uxd" class="link footer__link" :class="{'footer__link--active': variant === 'UXD' }" @click.native="setVariant('UXD')">
                 <span class="language">UXD (English)</span>
               </NuxtLink></li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
       <div class="footer__column footer__social" v-if="footer">
         <h3 class="footer__title">Social media</h3>

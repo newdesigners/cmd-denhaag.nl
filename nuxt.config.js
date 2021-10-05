@@ -74,7 +74,8 @@ export default {
       Poppins: [600, 700, 900],
     },
     display: 'swap',
-    useStylesheet: true
+    useStylesheet: true,
+    prefetch: true
   },
   image: {
     storyblok: {

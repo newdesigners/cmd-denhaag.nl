@@ -1,6 +1,6 @@
 <template>
   <section id="image-slider" class="image-slider" v-editable="blok">
-    <div class="container">x
+    <div class="container">
       <h2 class="image-slider__title" v-if="blok.title">{{ blok.title }}</h2>
     </div>
 		<div class="container image-slider__container" v-if="blok.slides.length > 0">
