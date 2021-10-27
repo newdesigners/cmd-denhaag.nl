@@ -11,7 +11,7 @@
     </div>
     <div class="filter-items__filter">
       <ul class="filter-items__filter-list">
-        <li class="link filter-items__filter-item" v-for="(item, key) in blok.filters" :key="key" :class="{ 'filter-items__filter--active': item === selected  }" @click="onClick(item)">
+        <li class="link filter-items__filter-item" v-for="(item, key) in tags" :key="key" :class="{ 'filter-items__filter--active': item === selected }" @click="onClick(item)">
           {{ item }}
         </li>
       </ul>
@@ -21,7 +21,7 @@
         <li class="filter-items__items-item"
           v-for="item in blok.items"
           :key="item._uid"
-          :class="{ 'filter-items__items--hide': selected !== '' && selected !== item.category, 'filter-items__items--active': item.category === selected }"
+          :class="{'filter-items__items-item--active': item.category === selected || selected === allNL || selected === allEN }"
         >
           <h3 class="filter-items__items-item-title">{{ item.title }}</h3>
           <p class="filter-items__items-item-description">{{ item.description }}</p>
@@ -38,7 +38,9 @@
 export default {
   data() {
     return {
-      selected: ''
+      selected: '',
+      allNL: 'Alle rollen',
+      allEN: 'All roles',
     }
   },
   props: {
@@ -50,11 +52,39 @@ export default {
   methods: {
     onClick(i) {
       if(i === this.selected) {
-        return this.selected = '';
+        if(this.$store.state.variants.variant === 'IXD') {
+          return this.selected = this.allNL
+        } else {
+          return this.selected = this.allEN;
+        }
       }
       
       this.selected = i;
     },
-	}
+	},
+  computed: {
+    tags() {
+      if(this.blok.filters.includes(this.allNL) || this.blok.filters.includes(this.allEN)) {
+        return this.blok.filters;
+      } else {
+        if(this.$store.state.variants.variant === 'IXD') {
+          this.blok.filters.unshift(this.allNL);
+        }
+
+        if(this.$store.state.variants.variant === 'UXD') {
+          this.blok.filters.unshift(this.allEN);
+        } 
+      
+        return this.blok.filters;
+      }
+    }
+  },
+  mounted() {
+    if(this.$store.state.variants.variant === 'IXD') {
+      this.selected = this.allNL;
+    } else {
+      this.selected = this.allEN;
+    }
+  }
 };
 </script>
