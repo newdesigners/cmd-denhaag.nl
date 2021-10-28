@@ -12,6 +12,7 @@
         height="560"
         provider="storyblok"
         loading="lazy"
+        :modifiers="{ smart: true }"
         :src="blok.content.image.filename"
         :alt="blok.content.image.alt"
       />
