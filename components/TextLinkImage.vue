@@ -10,11 +10,13 @@
     </div>
     <figure class="text-link-image__figure" v-if="blok.image">
       <NuxtImg
+        v-if="blok.image"
         class="text-link-image__image"
         width="740"
         height="450"
         provider="storyblok"
         loading="lazy"
+        :modifiers="{ smart: true }"
         :src="blok.image.filename"
         :alt="blok.image.alt"
       />

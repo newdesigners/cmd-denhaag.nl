@@ -13,6 +13,7 @@
             width="330"
             height="330"
             provider="storyblok"
+            :modifiers="{ smart: true }"
             :src="quote.image.filename"
             :alt="quote.image.alt"
           />
