@@ -42,6 +42,7 @@ export default {
     { src: '~/plugins/storyblok-rich-text-renderer.js'},
     { src: '~/plugins/vue-slick-carousel.js' },
     { src: '~/plugins/vue-plausible.js' },
+    { src: '~/plugins/vue-snip.js', mode: 'client' },
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

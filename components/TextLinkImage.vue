@@ -1,6 +1,6 @@
 <template>
   <div class="container text-link-image__container" :class="{ 'text-link-image__container--reverse': blok.reverse }" v-editable="blok">
-    <div class="text-link-image__test">
+    <div class="text-link-image__copy">
       <h2 class="text-link-image__title">{{ blok.title }}</h2>
       <p class="text-link-image__description">{{ blok.description }}</p>
       <div v-if="blok.link_url">
@@ -9,7 +9,7 @@
       </div>
     </div>
     <figure class="text-link-image__figure" v-if="blok.image">
-      <NuxtImg
+      <!-- <NuxtImg
         v-if="blok.image"
         class="text-link-image__image"
         width="740"
@@ -19,7 +19,8 @@
         :modifiers="{ smart: true }"
         :src="blok.image.filename"
         :alt="blok.image.alt"
-      />
+      /> -->
+      <SlantedImage :reverse="blok.reverse" class="text-link-image__src" :url="blok.image.filename" />
     </figure>
   </div>
 </template>

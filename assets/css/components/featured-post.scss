@@ -1,6 +1,6 @@
 .featured-post {
   &__container {
-    @apply lg:flex xl:justify-between pt-60 lg:pt-130;
+    @apply xl:flex xl:justify-between pt-60 lg:pt-130;
   }
 
   &__title {
@@ -13,6 +13,10 @@
 
   &__copy {
     @apply mb-20 lg:w-3/5 lg:mr-60 lg:pt-30 xl:pt-50 xl:w-5/12;
+  }
+
+  &__list {
+    @apply lg:max-w-featured-post-post;
   }
 
   &__item {
