@@ -15,7 +15,7 @@
     </figure>
     <div class="post-preview__copy">
       <h2 class="post-preview__title">{{ postContent.name }}</h2>
-      <p class="post-preview__excerpt">{{ postContent.excerpt }}</p>
+      <p class="post-preview__excerpt" v-snip="3">{{ postContent.excerpt }}</p>
     </div>
   </NuxtLink>
 </template>
