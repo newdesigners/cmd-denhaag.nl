@@ -37,25 +37,25 @@ export default {
     },
   },
   mounted() {
-      if(this.blok.type === 'projects') {
-        if(this.$store.state.variants.variant === 'IXD') {
-          this.posts = this.$store.state.projects.projectsIXD.filter(p => p.full_slug !== 'projecten/');
-        }
-
-        if(this.$store.state.variants.variant === 'UXD') {
-          this.posts = this.$store.state.projects.projectsUXD.filter(p => p.full_slug !== 'uxd/projects/');
-        }
+    if(this.blok.type === 'projects') {
+      if(this.$store.state.variants.variant === 'IXD') {
+        this.posts = this.$store.state.projects.projectsIXD.filter(p => p.full_slug !== 'projecten/');
       }
 
-      if(this.blok.type === 'stories') {
-        if(this.$store.state.variants.variant === 'IXD') {
-          this.posts = this.$store.state.stories.storiesIXD.filter(p => p.full_slug !== 'verhalen/');
-        }
-        
-        if(this.$store.state.variants.variant === 'UXD') {
-          this.posts = this.$store.state.stories.storiesUXD.filter(p => p.full_slug !== 'uxd/stories/');
-        }
+      if(this.$store.state.variants.variant === 'UXD') {
+        this.posts = this.$store.state.projects.projectsUXD.filter(p => p.full_slug !== 'uxd/projects/');
       }
+    }
+
+    if(this.blok.type === 'stories') {
+      if(this.$store.state.variants.variant === 'IXD') {
+        this.posts = this.$store.state.stories.storiesIXD.filter(p => p.full_slug !== 'verhalen/');
+      }
+      
+      if(this.$store.state.variants.variant === 'UXD') {
+        this.posts = this.$store.state.stories.storiesUXD.filter(p => p.full_slug !== 'uxd/stories/');
+      }
+    }
   },
   methods: {
     change() {

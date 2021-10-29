@@ -56,7 +56,7 @@
     }
 
     &-item {
-      @apply hidden pb-20 sm:w-5/12 lg:w-31% md:mr-25 lg:mr-40 xl:mr-70 lg:pb-40 max-w-filter-items lg:mb-12;
+      @apply hidden pb-20 w-full sm:mr-25 lg:mr-40 xl:mr-70 lg:pb-40 md:max-w-filter-items lg:max-w-filter-items-lg xl:max-w-none xl:w-43% lg:mb-12;
 
       &-title {
         @apply dark:text-gray-2;
