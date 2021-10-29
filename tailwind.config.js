@@ -144,6 +144,7 @@ module.exports = {
         'home-intro-title-sm': '53%',
         'home-intro-title-md': '50%',
         'home-intro-title-lg': '690px',
+        'text-link-image-copy': '522px',
         'text-link-image-image': '740px',
         'post': '846px',
         'post-preview': '600px',
@@ -166,6 +167,7 @@ module.exports = {
         'image-slider-text-figure': '1000px',
         'footer-logo': '147px',
         'popup-title': '680px',
+        'featured-post-post': '700px',
       },
       height: {
         'header': '85px',

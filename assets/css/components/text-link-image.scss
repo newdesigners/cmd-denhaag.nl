@@ -9,11 +9,15 @@
         &__copy {
           @apply pr-0 md:pl-40 xl:pl-124;
         }
+
+        &__figure {
+          @apply pb-20;
+        }
       }
     }
   }
 
-  &__test {
+  &__copy {
     @apply mb-20 md:flex-1 md:pr-20 xl:pr-85;
   }
 
@@ -31,5 +35,9 @@
 
   &__figure {
     @apply w-full md:w-1/2 xl:max-w-text-link-image-image;
+  }
+
+  &__src {
+    @apply w-full h-auto;
   }
 }
