@@ -23,6 +23,12 @@
 
   &__description {
     @apply pb-10 lg:pb-20 dark:text-gray-2;
+
+    p {
+      a {
+        @apply text-blue no-underline hover:text-primary hover:cursor-pointer hover:underline dark:text-yellow;
+      }
+    }
   }
 
   &__title {
