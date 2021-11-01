@@ -21,7 +21,7 @@
   }
 
   &__button {
-    @apply w-home-button absolute -bottom-20 left-1/2 transform -translate-x-1/2 sm:w-initial sm:-bottom-30 lg:-bottom-50 lg:right-50 lg:-translate-x-0 lg:left-unset hover:cursor-pointer;
+    @apply w-home-button absolute -bottom-20 left-1/2 transform -translate-x-1/2 sm:w-initial sm:-bottom-36 md:-bottom-45 lg:-bottom-50 md:right-50 md:-translate-x-0 md:left-unset hover:cursor-pointer;
 
     &-src {
       @apply w-full; 
