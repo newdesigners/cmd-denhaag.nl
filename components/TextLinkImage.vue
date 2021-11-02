@@ -3,7 +3,7 @@
     <div class="text-link-image__copy">
       <h2 class="text-link-image__title">{{ blok.title }}</h2>
       <div class="text-link-image__description">
-        <rich-text-renderer v-if="blok.description" :document="blok.description" />
+        <rich-text-renderer :document="blok.description" />
       </div>
       <!-- <p class="text-link-image__description">{{ blok.description }}</p> -->
       <div v-if="blok.link_url">
