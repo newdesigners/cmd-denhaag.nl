@@ -47,6 +47,10 @@
 
   .footer__menu-item--language .footer__link, .footer__menu-item--language {
     @apply text-gray-2;
+
+    &:hover {
+      @apply text-blue;
+    }
   }
 
   .footer__menu-item--language .footer__link--active {
@@ -90,6 +94,16 @@
       &-icon {
         path {
           @apply fill-gray-2;
+        }
+      }
+    }
+  }
+
+  .text-link-image {
+    &__description {
+      p {
+        a {
+          @apply hover:text-yellow;
         }
       }
     }

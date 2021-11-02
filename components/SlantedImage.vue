@@ -10,7 +10,7 @@
     </defs>
     <image width="100%" height="100%" preserveAspectRatio="xMidYMid slice" :href="escapedUrl" :mask="maskUrl" opacity="1"></image>
   </svg>
-</template>
+</template>3
 
 <script>
 export default {
