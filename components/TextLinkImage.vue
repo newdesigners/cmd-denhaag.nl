@@ -23,7 +23,7 @@
         :src="blok.image.filename"
         :alt="blok.image.alt"
       /> -->
-      <SlantedImage :reverse="blok.reverse" class="text-link-image__src" :url="blok.image.filename" />
+      <SlantedImage :reverse="blok.reverse_image" class="text-link-image__src" :url="blok.image.filename" />
     </figure>
   </div>
 </template>
