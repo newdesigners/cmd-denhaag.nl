@@ -1,10 +1,10 @@
 .home-intro {
   &__container {
-    @apply relative h-video lg:h-video-lg mb-80 mt-20; 
+    @apply relative h-video lg:h-video-lg xl:h-video-xl mb-80 mt-20; 
   }
 
   &__title {
-    @apply text-white font-black text-h1-home lg:text-h1-home-lg px-10 pt-30 max-w-home-intro-title sm:max-w-home-intro-title-sm md:max-w-home-intro-title-md lg:max-w-home-intro-title-lg lg:px-50 lg:pt-100 lg:pr-0;
+    @apply text-white tracking-wide font-bold text-h1-home lg:text-h1-home-lg px-10 pt-30 max-w-home-intro-title sm:max-w-home-intro-title-sm md:max-w-home-intro-title-md lg:max-w-home-intro-title-lg lg:px-50 lg:pt-185 lg:pr-0;
   }
 
   &__background {
@@ -16,7 +16,7 @@
 
     &::after {
       content: '';
-      @apply w-home-video h-full bg-primary top-0 left-container absolute opacity-20;
+      @apply w-home-video h-full bg-primary top-0 left-container absolute opacity-30;
     }
   }
 
