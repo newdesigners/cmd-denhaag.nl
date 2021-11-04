@@ -8,10 +8,11 @@
       <li class="testimonial__item" v-for="quote in blok.testimonials" :key="quote._uid">
         <figure class="testimonial__figure">
           <NuxtImg
-            v-if="quote.image"
+            v-if="quote.image.filename"
             class="post-preview__image"
             width="330"
             height="330"
+            sizes="sm:75vw md:100vw lg:100vw"
             provider="storyblok"
             :modifiers="{ smart: true }"
             :src="quote.image.filename"

@@ -4,8 +4,9 @@
       <NuxtImg
         v-if="postContent.image"
         class="post-preview__image"
-        width="605"
-        height="400"
+        width="1280"
+        height="560"
+        sizes="sm:100vw md:100vw"
         :modifiers="{ smart: true }"
         provider="storyblok"
         :src="postContent.image.filename"

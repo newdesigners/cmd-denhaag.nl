@@ -14,6 +14,7 @@
                 width="1280"
                 height="700"
                 loading="lazy"
+                sizes="sm:150vw md:100vw lg:100vw xl:100vw"
                 :modifiers="{ smart: true }"
                 provider="storyblok"
                 :src="slide.image.filename"

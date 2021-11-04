@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     escapedUrl() {
-      return this.transformImage(this.url, '740x0/smart/').replace(/&/g, "&amp;");
+      return this.transformImage(this.url, '1480x0/smart/').replace(/&/g, "&amp;");
     },
     maskUrl() {
       return this.reverse ? 'url(#shape-mask-reverse)' : 'url(#shape-mask)';
