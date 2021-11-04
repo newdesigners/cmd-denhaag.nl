@@ -4,9 +4,8 @@
       <h1 class="post__title">{{ blok.content.name }}</h1>
       <p class="post__excerpt">{{ blok.content.excerpt }}</p>
     </div>
-    <figure class="container post__figure">
+    <figure class="container post__figure" v-if="blok.content.image.filename">
       <NuxtImg
-        v-if="blok.content.image"  
         class="post__image"
         width="1280"
         height="560"
