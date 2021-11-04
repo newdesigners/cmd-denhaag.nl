@@ -6,13 +6,13 @@
       <p class="page-intro__paragraph">{{ blok.text_right }}</p>
     </div>
     <div class="page-intro__media">
-      <figure class="page-intro__image">
+      <figure class="page-intro__image" v-if="blok.image.filename">
         <NuxtImg
-          v-if="blok.image"
           class="page-intro__image-src"
           width="1280"
           height="560"
           loading="lazy"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
           :modifiers="{ smart: true }"
           provider="storyblok"
           :src="blok.image.filename"

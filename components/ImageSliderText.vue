@@ -13,13 +13,13 @@
             </figure>
           </div>
           <div class="image-slider-text__item-wrapper">
-            <figure class="image-slider-text__item-figure">
+            <figure class="image-slider-text__item-figure" v-if="slide.image_left.filename">
               <NuxtImg
-                v-if="slide.image_left"
                 class="page-intro__image-src"
                 width="470"
                 height="470"
                 loading="lazy"
+                sizes="xs:100vw sm:100vw md:100vw"
                 :modifiers="{ smart: true }"
                 provider="storyblok"
                 :src="slide.image_left.filename"
@@ -27,13 +27,13 @@
               />
               <!-- <img v-if="slide.image_left" :src="slide.image_left.filename" :alt="slide.image_left.alt" class="image-slider-text__item-image" /> -->
             </figure>
-            <figure class="image-slider-text__item-figure">
+            <figure class="image-slider-text__item-figure" v-if="slide.image_right.filename">
               <NuxtImg
-                v-if="slide.image_right"
                 class="page-intro__image-src"
                 width="470"
                 height="470"
                 loading="lazy"
+                sizes="xs:100vw sm:100vw md:100vw"
                 :modifiers="{ smart: true }"
                 provider="storyblok"
                 :src="slide.image_right.filename"
