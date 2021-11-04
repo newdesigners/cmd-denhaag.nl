@@ -11,7 +11,7 @@
             class="post-preview__image"
             width="330"
             height="330"
-            sizes="sm:75vw md:100vw lg:100vw"
+            sizes="xs:100vw sm:100vw md:100vw"
             provider="storyblok"
             :modifiers="{ smart: true }"
             :src="quote.image.filename"
