@@ -8,7 +8,6 @@
     <div class="page-intro__media">
       <figure class="page-intro__image" v-if="blok.image.filename">
         <NuxtImg
-          v-if="blok.image"
           class="page-intro__image-src"
           width="1280"
           height="560"

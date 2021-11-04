@@ -5,8 +5,8 @@
         <h1 class="filter-items__title">{{ blok.title }}</h1>
         <p class="filter-items__description">{{ blok.description }}</p>
       </div>
-      <figure class="filter-items__illustration">
-        <img v-if="blok.illustration" class="filter-items__image" :src="blok.illustration.filename" :alt="blok.illustration.alt" />
+      <figure class="filter-items__illustration" v-if="blok.illustration">
+        <img v-if="blok.illustration.filename" class="filter-items__image" :src="blok.illustration.filename" :alt="blok.illustration.alt" />
       </figure>
     </div>
     <div class="filter-items__filter">
