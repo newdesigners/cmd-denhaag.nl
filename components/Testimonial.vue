@@ -6,9 +6,8 @@
     </article>
     <ul class="testimonial__list">
       <li class="testimonial__item" v-for="quote in blok.testimonials" :key="quote._uid">
-        <figure class="testimonial__figure">
+        <figure class="testimonial__figure" v-if="quote.image.filename">
           <NuxtImg
-            v-if="quote.image.filename"
             class="post-preview__image"
             width="330"
             height="330"

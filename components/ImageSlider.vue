@@ -6,10 +6,9 @@
 		<div class="container image-slider__container" v-if="blok.slides.length > 0">
       <VueSlickCarousel ref="carousel" v-bind="slickOptions" @beforeChange="onBeforeChange">
         <div class="image-slider__item" v-for="slide in blok.slides" :key="slide.id">
-          <div class="image-slider__item-wrapper">
+          <div class="image-slider__item-wrapper" v-if="slide.image.filename">
             <figure class="image-slider__item-figure">
               <NuxtImg
-                v-if="slide.image"
                 class="image-slider__item-image"
                 width="1280"
                 height="700"
