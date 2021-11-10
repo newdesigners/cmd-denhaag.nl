@@ -11,7 +11,7 @@
         <a v-if="blok.link_url.linktype === 'url'" :href="blok.link_url.cached_url" class="link text-link-image__link" rel="noopener noreferrer" target="_blank">{{ blok.link_text }}</a>
       </div>
     </div>
-    <figure class="text-link-image__figure" v-if="blok.image">
+    <figure class="text-link-image__figure" v-if="blok.image.filename">
       <!-- <NuxtImg
         v-if="blok.image"
         class="text-link-image__image"
