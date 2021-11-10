@@ -3,7 +3,10 @@
     <div class="featured-post__copy">
       <h2 class="featured-post__title">{{ blok.title }}</h2>
       <p class="featured-post__description">{{ blok.description }}</p>
-      <NuxtLink v-if="blok.link_url" :to="blok.link_url.cached_url" class="link featured-post__link">{{ blok.link_text }}</NuxtLink>
+      <div v-if="blok.link_url">
+        <NuxtLink v-if="blok.link_url.linktype === 'story'" :to="blok.link_url.cached_url" class="link featured-post__link">{{ blok.link_text }}</NuxtLink>
+        <a v-if="blok.link_url.linktype === 'url'" :href="blok.link_url.cached_url" class="link featured-post__link" rel="noopener noreferrer" target="_blank">{{ blok.link_text }}</a>
+      </div>
     </div>
     <ul class="featured-post__list" v-if="sortedStories">
       <li

@@ -18,7 +18,10 @@
       </div>
       <Resources type="hand-point-left-top" classes="title-text-list__hand" />
     </div>
-    <p class="title-text-list__variant">{{ blok.text_last }}</p>
+    <div class="title-text-list__variant" v-if="blok.link_url">
+        <NuxtLink v-if="blok.link_url.linktype === 'story'" :to="blok.link_url.cached_url" class="link">{{ blok.link_label }}</NuxtLink>
+        <a v-if="blok.link_url.linktype === 'url'" :href="blok.link_url.cached_url" class="link" rel="noopener noreferrer" target="_blank">{{ blok.link_label }}</a>
+    </div>
   </div>
 </template>
 
