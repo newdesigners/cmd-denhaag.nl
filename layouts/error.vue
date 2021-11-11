@@ -5,7 +5,7 @@
         <h1 class="error-page__title" v-if="error.statusCode === 404">404</h1>
         <div v-if="this.$store.state.variants.variant === 'IXD'">
           <h2 class="error-page__title-sub">Pagina niet gevonden</h2>
-          <NuxtLink class="link" to="">Terug naar home pagina</NuxtLink>
+          <NuxtLink class="link" to="/">Terug naar home pagina</NuxtLink>
         </div>
         <div v-if="this.$store.state.variants.variant === 'UXD'">
           <h2 class="error-page__title-sub">Page not found</h2>
