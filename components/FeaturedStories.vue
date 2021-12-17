@@ -38,21 +38,29 @@ export default {
       let featuredStories = [];
 
       if(this.$store.state.variants.variant === 'IXD') {
-        featuredStories = this.$store.state.stories.storiesIXD.filter((story) => {
-          return this.blok.stories.includes(story.uuid);
-        })
+        if(this.blok.stories.length !== 0) {
+          featuredStories = this.$store.state.stories.storiesIXD.filter((story) => {
+            return this.blok.stories.includes(story.uuid);
+          });
+        } else {
+          featuredStories = this.$store.state.stories.storiesIXD.slice(0, 3);
+        }
       }
 
       if(this.$store.state.variants.variant === 'UXD') {
-        featuredStories = this.$store.state.stories.storiesUXD.filter((story) => {
-          return this.blok.stories.includes(story.uuid);
-        })
+        if(this.blok.stories.length !== 0) {
+          featuredStories = this.$store.state.stories.storiesUXD.filter((story) => {
+            return this.blok.stories.includes(story.uuid);
+          });
+        } else {
+          featuredStories = this.$store.state.stories.storiesUXD.slice(0, 3);
+        }
       }
 
       // Enable the ordering of the article previews
       featuredStories.sort((a, b) => {
         return this.blok.stories.indexOf(a.uuid) - this.blok.stories.indexOf(b.uuid);
-      })
+      });
  
       return featuredStories;
     }

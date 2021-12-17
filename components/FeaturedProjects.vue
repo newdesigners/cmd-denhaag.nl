@@ -35,22 +35,30 @@ export default {
       let featuredProjects = [];
 
       if(this.$store.state.variants.variant === 'IXD') {
-        featuredProjects = this.$store.state.projects.projectsIXD.filter((project) => {
-          return this.blok.projects.includes(project.uuid);
-        })
+        if(this.blok.projects.length !== 0) {
+          featuredProjects = this.$store.state.projects.projectsIXD.filter((project) => {
+            return this.blok.projects.includes(project.uuid);
+          });
+        } else {
+          featuredProjects = this.$store.state.projects.projectsIXD.slice(0, 3);
+        }
       }
 
       if(this.$store.state.variants.variant === 'UXD') {
-        featuredProjects = this.$store.state.projects.projectsUXD.filter((project) => {
-          return this.blok.projects.includes(project.uuid);
-        })
+        if(this.blok.projects.length !== 0) {
+          featuredProjects = this.$store.state.projects.projectsUXD.filter((project) => {
+            return this.blok.projects.includes(project.uuid);
+          });
+        } else {
+          featuredProjects = this.$store.state.projects.projectsUXD.slice(0, 3);
+        }
       }
  
-      // Enable the ordering of the article previews
+      //Enable the ordering of the article previews
       featuredProjects.sort((a, b) => {
         return this.blok.projects.indexOf(a.uuid) - this.blok.projects.indexOf(b.uuid);
-      })
- 
+      });
+
       return featuredProjects;
     }
   }

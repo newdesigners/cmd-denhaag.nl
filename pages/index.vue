@@ -18,8 +18,8 @@ export default {
     const version = context.query._storyblok || context.isDev ? 'draft' : 'published';
 
     if(context.store.state.stories.loaded !== '1') {
-      let storiesRefResIXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: version });
-      let storiesRefResUXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/stories/', version: version });
+      let storiesRefResIXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'verhalen/', version: version, is_startpage: 0 });
+      let storiesRefResUXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/stories/', version: version, is_startpage: 0 });
 
       context.store.commit('stories/setStoriesIXD', storiesRefResIXD.data.stories);
       context.store.commit('stories/setStoriesUXD', storiesRefResUXD.data.stories);
@@ -28,8 +28,8 @@ export default {
 
     if(context.store.state.projects.loaded !== '1') {
 
-      let projectsRefResIXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: version });
-      let projectsRefResUXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/projects/', version: version });
+      let projectsRefResIXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'projecten/', version: version, is_startpage: 0 });
+      let projectsRefResUXD = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'uxd/projects/', version: version, is_startpage: 0 });
 
       context.store.commit('projects/setProjectsIXD', projectsRefResIXD.data.stories);
       context.store.commit('projects/setProjectsUXD', projectsRefResUXD.data.stories);
