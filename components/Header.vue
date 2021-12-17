@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="container header__container">
-      <NuxtLink :to="homeRoutes" class="header__logo">
+      <NuxtLink :aria-label="variant === 'IXD' ? 'Ga terug naar de home pagina' : 'Go back to home page'" :to="homeRoutes" class="header__logo"> 
         <div v-if="variant === 'IXD'">
           <Resources type="logo" classes="header__logo-src dark:hidden" />
           <Resources type="logo-dark" classes="header__logo-src hidden dark:block" />
@@ -35,6 +35,8 @@
         <div class="header__menu">
           <div id="burger-wrapper" class="header__menu-hamgbuger flex justify-center items-center rounded-full pl-3 pb-5">
             <tasty-burger-button
+              aria-label="Open the menu"
+              aria-hidden="true"
               ref="hamburger"
               type="spin"
               :active="isActive"

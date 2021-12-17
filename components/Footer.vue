@@ -14,11 +14,11 @@
       </div>
       <div class="footer__column footer__menu">
         <h3 class="footer__title">Menu</h3>
-        <ul class="footer__menu-list">
-          <div class="footer__menu-container">
+        <div class="footer__menu-list">
+          <ul class="footer__menu-container">
             <li class="footer__menu-item" v-for="item in columnTwo" :key="item.text"><NuxtLink :to="item.link" class="link footer__link">{{ item.text }}</NuxtLink></li>
-          </div>
-          <div class="footer__menu-container">
+          </ul>
+          <ul class="footer__menu-container">
             <li class="footer__menu-item" v-for="item in columnThree" :key="item.text"><NuxtLink :to="item.link" class="link footer__link">{{ item.text }}</NuxtLink></li>
             <li class="footer__menu-item footer__menu-item--language">
               <NuxtLink to="/" class="link footer__link" :class="{'footer__link--active': variant === 'IXD' }" @click.native="setVariant('IXD')">
@@ -27,29 +27,36 @@
               <span class="footer__menu-divider">|</span>
               <NuxtLink to="/uxd" class="link footer__link" :class="{'footer__link--active': variant === 'UXD' }" @click.native="setVariant('UXD')">
                 <span class="language">UXD (English)</span>
-              </NuxtLink></li>
-          </div>
-        </ul>
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="footer__column footer__social" v-if="footer">
         <h3 class="footer__title">Social media</h3>
-        <a :href="footer.instagram_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
+        <a v-if="footer.instagram_link && footer.instagram_link_text" :href="footer.instagram_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
           <figure class="footer__social-icon">
             <img src="~/assets/images/icons/instagram.png" alt="instagram logo" class="footer__social-icon-src"/>
           </figure>
           <figcaption class="footer__link">{{ footer.instagram_link_text }}</figcaption>
         </a>
-        <a :href="footer.linkedin_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
+        <a v-if="footer.linkedin_link && footer.linkedin_link_text" :href="footer.linkedin_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
           <figure class="footer__social-icon">
             <img src="~/assets/images/icons/linkedin.png" alt="linkedin logo" class="footer__social-icon-src"/>
           </figure>
           <figcaption class="footer__link">{{ footer.linkedin_link_text }}</figcaption>
         </a>
-        <a :href="footer.facebook_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
+        <a v-if="footer.facebook_link && footer.facebook_link_text" :href="footer.facebook_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
           <figure class="footer__social-icon">
-            <img src="~/assets/images/icons/facebook.png" alt="facebook logo" class="footer__social-icon-src"/>
+            <img src="~/assets/images/icons/facebook.png" alt="Facebook logo" class="footer__social-icon-src"/>
           </figure>
           <figcaption class="footer__link">{{ footer.facebook_link_text }}</figcaption>
+        </a>
+        <a v-if="footer.tiktok_link && footer.tiktok_link_text" :href="footer.tiktok_link" rel="noopener noreferrer" target="_blank" class="footer__social-link">
+          <figure class="footer__social-icon">
+            <img src="~/assets/images/icons/tiktok.png" alt="TikTok logo" class="footer__social-icon-src"/>
+          </figure>
+          <figcaption class="footer__link">{{ footer.tiktok_link_text }}</figcaption>
         </a>
       </div>
       <aside class="footer__pointer" @click="scrollToTop">
