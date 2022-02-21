@@ -2,8 +2,8 @@
   <div class="container page-intro__container" v-editable="blok">
     <h1 class="page-intro__title">{{ blok.title }}</h1>
     <div class="page-intro__copy">
-      <p class="page-intro__paragraph"><rich-text-renderer v-if="blok.text_left.body" :document="blok.text_left.body" /></p>
-      <p class="page-intro__paragraph"><rich-text-renderer v-if="blok.text_right.body" :document="blok.text_right.body" /></p>
+      <p class="page-intro__paragraph"><rich-text-renderer v-if="blok.text_left" :document="blok.text_left" /></p>
+      <p class="page-intro__paragraph"><rich-text-renderer v-if="blok.text_right" :document="blok.text_right" /></p>
     </div>
     <div class="page-intro__media">
       <figure class="page-intro__image" v-if="blok.image.filename">
