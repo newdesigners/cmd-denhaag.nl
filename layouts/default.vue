@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header v-show="!isPopupShown" />
+    <Header v-show="isPopupShown" />
     <Nuxt />
-    <Footer v-show="!isPopupShown" />
+    <Footer v-show="isPopupShown" />
   </div>
 </template>
 <script>
