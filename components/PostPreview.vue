@@ -1,8 +1,7 @@
 <template>
   <NuxtLink :to="`/${ postLink }`" class="post-preview">
-    <figure class="post-preview__figure">
+    <figure class="post-preview__figure" v-if="postContent.image.filename">
       <NuxtImg
-        v-if="postContent.image"
         class="post-preview__image"
         width="1280"
         height="560"

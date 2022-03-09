@@ -35,7 +35,6 @@ export default {
       this.$cookies.set('popup', true);
       this.$store.commit('variants/setVariant', 'IXD');
       this.$router.push('/');
-      console.log('clicked popup value:', this.$cookies.get('popup'));
       this.$store.commit('popups/setPopup', true);
     },
     setupUXD() {
