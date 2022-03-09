@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Popup />
+    <!-- <Popup /> -->
     <div v-show="isPopupShown">
       <component
         v-if="story.content.component"

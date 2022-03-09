@@ -17,7 +17,15 @@ export default {
   },
   mounted() {
     const HTML = document.querySelector('html');
-    console.log('darkmode:', this.$cookies.get('darkmode'));
+
+    //Setting default values that is usually setted by popup
+    if(this.$route.fullPath.startsWith('/uxd')) {
+      this.$cookies.set('popup', true);
+      this.$store.commit('variants/setVariant', 'UXD');
+    } else {
+      this.$cookies.set('popup', true);
+      this.$store.commit('variants/setVariant', 'IXD');
+    }
 
     if(this.$cookies.get('darkmode') === undefined) {
       this.$cookies.set('darkmode', false); 
