@@ -20,11 +20,16 @@
         />
         <!-- <img v-if="blok.image" :src="blok.image.filename" :alt="blok.image.alt" class="page-intro__image-src" /> -->
       </figure>
-      <NuxtLink v-if="blok.link" :to="buttonUrl" class="page-intro__link">
+      <NuxtLink v-if="blok.link && blok.link.linktype === 'story'" :to="buttonUrl" class="page-intro__link">
         <figure class="page-intro__button">
           <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
         </figure>
       </NuxtLink>
+      <a v-else :href="blok.link.url" class="page-intro__link" rel="noopener noreferrer" target="_blank">
+        <figure class="page-intro__button">
+          <img class="page-intro__button-src" v-if="blok.button" :src="blok.button.filename" :alt="blok.button.alt" />
+        </figure>
+      </a>
     </div>
   </div>
 </template>
