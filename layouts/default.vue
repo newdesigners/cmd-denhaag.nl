@@ -21,11 +21,9 @@ export default {
 
     //Setting default values that is usually setted by popup
     if(this.$route.fullPath.startsWith('/uxd')) {
-      console.log('this is english');
       this.$cookies.set('popup', true);
       this.$store.commit('variants/setVariant', 'UXD');
     } else {
-      console.log('this is dutch');
       this.$cookies.set('popup', true);
       this.$store.commit('variants/setVariant', 'IXD');
     }
