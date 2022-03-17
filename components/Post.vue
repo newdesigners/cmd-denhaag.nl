@@ -24,8 +24,8 @@
     <aside class="post__gallery" v-for="slider in blok.content.gallery" :key="slider._uid">
       <ImageSlider :blok="slider" />
     </aside>
-    <aside class="container post__read-more">
-      <h2 class="post__read-more-title">Lees ook</h2>
+    <aside class="container post__read-more" v-if="readMorePosts.length > 1">
+      <h2 class="post__read-more-title">{{ readMoreText }}</h2>
       <ul class="list-post__list" v-if="readMorePosts">
         <li
           v-for="article in readMorePosts" :key="article.uuid" class="featured-post__item">
@@ -52,7 +52,7 @@ export default {
     readMorePosts() {
       //const type = this.$route.fullPath.substring(1).split('/')[0];
       const type = this.$route.fullPath.substring(1).split('/');
-      console.log(type);
+
       if(type.includes('projecten')) {
         return this.$store.state.projects.projectsIXD.filter((p) => {
           return p.uuid !== this.blok.uuid && p.full_slug !== 'projecten/';
@@ -76,6 +76,9 @@ export default {
           return p.uuid !== this.blok.uuid && p.full_slug !== 'uxd/stories/';
         }).sort((a, b) => 0.5 - Math.random()).slice(0, 2);
       }
+    },
+    readMoreText() {
+      return this.$store.state.variants.variant === 'IXD' ? 'Lees ook' : 'Also read';
     }
   }
 };
