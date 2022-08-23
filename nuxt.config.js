@@ -30,6 +30,13 @@ export default {
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
     ],
+    script: [
+      {
+        defer: true,
+        src: 'https://plausible.io/js/plausible.js',
+        'data-domain': 'cmd-denhaag.nl',
+      },
+    ],    
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -41,7 +48,6 @@ export default {
     { src: '~/plugins/composition-api.js' },
     { src: '~/plugins/storyblok-rich-text-renderer.js'},
     { src: '~/plugins/vue-slick-carousel.js' },
-    { src: '~/plugins/vue-plausible.js' },
     { src: '~/plugins/vue-snip.js', mode: 'client' },
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -64,7 +70,6 @@ export default {
       }
     ],
     'cookie-universal-nuxt',
-    'vue-plausible',
   ],
   privateRuntimeConfig: {
     storyBlokSpaceToken: process.env.STORYBLOK_SPACE_TOKEN,
