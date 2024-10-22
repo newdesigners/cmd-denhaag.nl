@@ -1,17 +1,7 @@
 # Redirects from what the browser requests to what we serve
-/artikelen/afwisselende-werkvormen-en-betrokken-docenten /verhalen/leren-bij-cmd-doe-je-samen
-/en /uxd
-/artikelen/afgestudeerd /verhalen/afgestudeerd-en-dan
-/en/artikelen/after-graduation /uxd
-/studentenleven /toekomst
-/artikelen/artikel-test-1 /verhalen/de-eerste-weken-bij-cmd
-/de-opdrachten /projecten
-/de-lessen /over-cmd
-/meer-informatie /
-/colofon /campus
-/jouw-toekomst /toekomst
-/artikelen/509 /verhalen/ontdekken-wat-je-wil-en-daar-voor-gaan
-/nl/teaser    https://www.youtube.com/watch?v=ChzPxCHeAsQ&t=4s&ab_channel=DeHaagseHogeschool
-/en/teaser    https://www.youtube.com/watch?v=ZVhBSIRSDcA&ab_channel=DeHaagseHogeschool
+/uxd    https://www.thuas.com/programmes/bachelors/user-experience-design    301
+/uxd/*  https://www.thuas.com/programmes/bachelors/user-experience-design    301
 
+/       https://www.dehaagsehogeschool.nl/opleidingen/hbo-bachelor/communication-and-multimedia-design    301
+/*      https://www.dehaagsehogeschool.nl/opleidingen/hbo-bachelor/communication-and-multimedia-design    301
 
